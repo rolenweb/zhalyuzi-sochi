@@ -50,6 +50,9 @@ header div.top-header div.social div.text {
 header div.top-header ul {
   margin-bottom: 0px;
 }
+header div.top-header ul li[name="menu-contact-lg"] {
+  border-right: 2px solid #ccc;
+}
 header div.top-header div.contact div.icon {
   color: #51a5d4;
 }
@@ -71,4 +74,56 @@ header div.top-header div.top-contact-xs {
   header div.top-header div.top-contact-xs div.contact ul {
     text-align: center;
   }
+}
+@media (mmi-width: 768px) {
+  header div.top-menu {
+    padding: 0 15px;
+  }
+}
+header div.top-menu ul.top-menu-md-lg li {
+  background-color: #51a5d4;
+  padding: 10px 35px;
+}
+@media (max-width: 1199px) {
+  header div.top-menu ul.top-menu-md-lg li {
+    padding: 10px 20px;
+  }
+}
+header div.top-menu ul.top-menu-md-lg li a {
+  color: #fff;
+  font-size: 16px;
+}
+header div.top-menu ul.top-menu-md-lg li a span {
+  color: #51a5d4;
+}
+header div.top-menu ul.top-menu-md-lg li:hover {
+  background-color: red;
+}
+header div.top-menu ul.top-menu-md-lg li:hover a {
+  text-decoration: none;
+}
+header div.top-menu ul.top-menu-md-lg li:hover a span {
+  color: red;
+}
+header div.top-menu ul.top-menu-sm-xs {
+  display: none;
+}
+header div.top-menu ul.top-menu-sm-xs li {
+  background-color: #51a5d4;
+  padding: 10px 35px;
+}
+@media (max-width: 1199px) {
+  header div.top-menu ul.top-menu-sm-xs li {
+    padding: 10px 20px;
+  }
+}
+header div.top-menu ul.top-menu-sm-xs li a {
+  color: #fff;
+  font-size: 16px;
+}
+header div.top-menu ul.top-menu-sm-xs li:hover {
+  background-color: red;
+}
+header div.top-menu ul.top-menu-sm-xs li:hover a {
+  text-decoration: none;
 }

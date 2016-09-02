@@ -1,6 +1,8 @@
 @border-color: #ccc;
 @border-gray: #555;
 @color-blue: #51a5d4;
+@color-white: #fff;
+@color-red: red;
 
 
 .top-10{
@@ -59,7 +61,11 @@ header{
 		}
 		ul{
 			margin-bottom: 0px;
+			li[name = "menu-contact-lg"]{
+				border-right: 2px solid @border-color;
+			}
 		}
+
 		div.contact{
 			div.icon{
 				.icon;
@@ -89,5 +95,57 @@ header{
 			}
 		}
 		
+	}
+	div.top-menu{
+		@media (mmi-width: 768px){
+			padding: 0 15px;
+		}
+		ul.top-menu-md-lg{
+			li{
+				background-color: @color-blue;
+				padding: 10px 35px;
+				@media (max-width: 1199px){
+					    padding: 10px 20px;
+				}
+				a{
+					color: @color-white;	
+					font-size: 16px;
+					span{
+						color: @color-blue;
+					}
+
+
+				}
+				&:hover{
+					background-color: @color-red;
+					a{
+						text-decoration: none;
+						span{
+							color: @color-red;		
+						}
+					}	
+				}
+			}
+		}
+		ul.top-menu-sm-xs{
+			display: none;
+			li{
+				background-color: @color-blue;
+				padding: 10px 35px;
+				@media (max-width: 1199px){
+					    padding: 10px 20px;
+				}
+				a{
+					color: @color-white;	
+					font-size: 16px;
+				}
+				&:hover{
+					background-color: @color-red;
+					a{
+						text-decoration: none;
+					}	
+				}
+			}
+		}
 	}	
 }
