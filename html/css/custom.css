@@ -61,14 +61,10 @@ header div.top-header ul.menu-xs {
 }
 header div.top-header ul.menu-xs li {
   cursor: pointer;
+  width: 50px;
 }
 header div.top-header div.top-contact-xs {
   display: none;
-}
-@media (min-width: 992px) {
-  header div.top-header div.top-contact-xs {
-    display: none;
-  }
 }
 @media (max-width: 767px) {
   header div.top-header div.top-contact-xs div.contact ul {
