@@ -82,6 +82,7 @@ header div.top-header div.top-contact-xs {
 }
 header div.top-menu ul.top-menu-md-lg li {
   background-color: #51a5d4;
+  border: 2px solid #fff;
   padding: 10px 35px;
 }
 @media (max-width: 1199px) {
@@ -98,6 +99,7 @@ header div.top-menu ul.top-menu-md-lg li a span {
 }
 header div.top-menu ul.top-menu-md-lg li:hover {
   background-color: red;
+  border: 2px solid #286090;
 }
 header div.top-menu ul.top-menu-md-lg li:hover a {
   text-decoration: none;
