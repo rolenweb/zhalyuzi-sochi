@@ -75,7 +75,7 @@ header div.top-header div.top-contact-xs {
     text-align: center;
   }
 }
-@media (mmi-width: 768px) {
+@media (min-width: 768px) {
   header div.top-menu {
     padding: 0 15px;
   }
@@ -128,4 +128,62 @@ header div.top-menu ul.top-menu-sm-xs li:hover {
 }
 header div.top-menu ul.top-menu-sm-xs li:hover a {
   text-decoration: none;
+}
+section div.container div.block-slider {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+section div.container div.block-slider div.title-slider {
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.title-slider {
+    font-size: 18px;
+  }
+}
+section div.container div.block-slider div.image-slider {
+  padding-left: 5px;
+}
+section div.container div.block-slider div.block-total {
+  padding: 5px;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+section div.container div.block-slider div.block-total ul li:last-child {
+  margin-left: 20px;
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.block-total ul li:last-child {
+    margin-left: 0px;
+  }
+}
+section div.container div.block-slider div.block-total ul li span[name="total"] {
+  font-size: 22px;
+  color: red;
+}
+section div.container div.block-slider div.block-total ul li span.rub {
+  font-size: 16px;
+  color: red;
+  margin-left: 5px;
+}
+section div.container div.block-slider div.block-total ul li button {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 0.8;
+  padding: 6px 40px;
+  border-radius: 0px;
+  background-color: #27ca8b;
+  border-color: #27ca8b;
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.block-total ul li button {
+    padding: 4px 20px;
+  }
+}
+section div.container div.block-slider div.block-total ul li button span {
+  font-size: 10px;
+  text-transform: lowercase;
 }

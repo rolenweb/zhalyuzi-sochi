@@ -4,6 +4,10 @@
 @color-white: #fff;
 @color-red: red;
 @color-dark-blue: #286090;
+@button-order-color: #27ca8b;
+
+@border-radius: 5px;
+
 
 
 .top-10{
@@ -23,6 +27,10 @@
 	color: @color-blue;
 }
 
+.container-padding(){
+	padding: 0 15px;
+}
+
 
 header{
 	div.top-header{
@@ -33,7 +41,7 @@ header{
 		border-left: 1px solid @border-color;
 		border-right: 1px solid @border-color;
 		border-bottom: 1px solid @border-color;
-		border-radius: 0px 0px 5px 5px;
+		border-radius: 0px 0px @border-radius @border-radius;
 		@media (max-width: 991px){
 			padding-top: 5px;
 			padding-bottom: 5px;
@@ -98,8 +106,8 @@ header{
 		
 	}
 	div.top-menu{
-		@media (mmi-width: 768px){
-			padding: 0 15px;
+		@media (min-width: 768px){
+			.container-padding;
 		}
 		ul.top-menu-md-lg{
 			li{
@@ -151,4 +159,65 @@ header{
 			}
 		}
 	}	
+}
+section{
+	div.container{
+		div.block-slider{
+			border: 1px solid @border-color;
+			border-radius: @border-radius;
+
+			div.title-slider{
+				padding: 5px 10px;
+				font-size: 20px;
+				@media (max-width: 767px){
+				    font-size: 18px;
+				}
+				font-weight: bold;
+			}
+			div.image-slider{
+				padding-left: 5px;
+			}
+			div.block-total{
+				padding: 5px;
+				font-size: 18px;
+				border-bottom: 1px solid @border-color;
+				border-right: 1px solid @border-color;
+				ul{
+					li:last-child{
+						margin-left: 20px;
+						@media (max-width: 767px){
+						    margin-left: 0px;
+						}
+					}
+					li{
+						span[name = "total"]{
+							font-size: 22px;
+							color: @color-red;
+						}
+						span.rub{
+							font-size: 16px;
+							color: @color-red;
+							margin-left: 5px;	
+						}
+						button{
+							text-transform: uppercase;
+							font-size: 18px;
+							line-height: 0.8;
+							padding: 6px 40px;
+							@media (max-width: 767px){
+							    padding: 4px 20px;
+							}
+							border-radius: 0px;
+							background-color: @button-order-color;
+							border-color: @button-order-color;
+							span{
+								font-size: 10px;
+								text-transform: lowercase;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
