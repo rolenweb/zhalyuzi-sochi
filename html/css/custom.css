@@ -60,6 +60,7 @@ header div.top-header ul.menu-xs {
   color: #555;
 }
 header div.top-header ul.menu-xs li {
+  text-align: center;
   cursor: pointer;
   width: 50px;
 }
