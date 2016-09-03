@@ -19,14 +19,14 @@ $(function() {
 		sliderImg();
     });
 
-    /*home.on('click', 'div.block-slider span.left',function( event ) {  
+    home.on('click', 'div.block-slider span.left',function( event ) {  
 		var slider = home.find('.image-slider').find('img[status = "active"]').stop();		
 		sliderImg('no','left',100);
     });
     home.on('click', 'div.block-slider span.right',function( event ) {  
 		var slider = home.find('.image-slider').find('img[status = "active"]').stop();		
 		sliderImg('no','right',100);
-    });*/
+    });
     
     sliderImg('yes','right',3000);
     //placePult();
