@@ -1,3 +1,9 @@
+.visible {
+  display: none;
+}
+.opacity {
+  opacity: 0;
+}
 .top-10 {
   margin-top: 10px;
 }
