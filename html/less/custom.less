@@ -4,6 +4,7 @@
 @color-white: #fff;
 @color-red: red;
 @color-dark-blue: #286090;
+@color-dark: #ccc;
 @button-order-color: #27ca8b;
 
 @border-radius: 5px;
@@ -19,6 +20,10 @@
 
 .padding-right-0{
 	padding-right: 0px;
+}
+
+.padding-right-25{
+	padding-right: 25px;
 }
 .active{
 	color: @color-blue;
@@ -172,10 +177,14 @@ section{
 				@media (max-width: 767px){
 				    font-size: 18px;
 				}
+				@media (max-width: 500px){
+				    font-size: 14px;
+				}
 				font-weight: bold;
 			}
 			div.image-slider{
 				padding-left: 5px;
+				border-right: 1px solid @border-color;
 			}
 			div.block-total{
 				padding: 5px;
@@ -206,6 +215,7 @@ section{
 							padding: 6px 40px;
 							@media (max-width: 767px){
 							    padding: 4px 20px;
+							    font-size: 16px;
 							}
 							border-radius: 0px;
 							background-color: @button-order-color;
@@ -213,7 +223,69 @@ section{
 							span{
 								font-size: 10px;
 								text-transform: lowercase;
+								@media (max-width: 767px){
+								    font-size: 8px;
+								}
 							}
+						}
+					}
+				}
+			}
+
+			div.category{
+				padding: 40px 70px 40px 0px;
+				font-size: 24px;
+				@media (max-width: 991px){
+				    font-size: 16px;
+				}
+				@media (max-width: 767px){
+				    font-size: 12px;
+				}
+
+				li{
+					cursor: pointer;
+					margin-bottom: 20px;
+					@media (max-width: 991px){
+					    margin-bottom: 10px;
+					}
+					@media (max-width: 767px){
+					    margin-bottom: 3px;
+					}
+					span.icon{
+						font-size:14px;
+						vertical-align: 3px;
+						@media (max-width: 991px){
+						    vertical-align: 1px;
+						}
+						@media (max-width: 767px){
+						    font-size:10px;
+							vertical-align: 1px;
+						}
+					}
+					span.price{
+						border: 2px solid @color-red;
+						font-size: 18px;
+						padding: 3px 10px;
+						@media (max-width: 991px){
+						    font-size: 14px;
+						}
+						@media (max-width: 767px){
+						    font-size: 10px;
+						    padding: 1px 5px;
+						}
+					}
+					img.img-category{
+						height: 70px;
+						@media (max-width: 991px){
+						    height: 50px;
+						}
+						@media (max-width: 767px){
+						    height: 30px;
+						}
+					}
+					&:hover{
+						span.title, span.icon{
+							color: @color-blue;
 						}
 					}
 				}
