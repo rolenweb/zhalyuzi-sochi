@@ -16,7 +16,7 @@ $(function() {
 		var slider = home.find('.image-slider').find('img[status = "active"]').stop();		
     });
     home.on('click', 'div.block-slider div.pult-slider span.play',function( event ) {  
-		sliderImg();
+		sliderImg('yes','right',3000);
     });
 
     home.on('click', 'div.block-slider span.left',function( event ) {  
