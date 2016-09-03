@@ -39,7 +39,7 @@ $(function() {
     	slider.animate({
     		left: "+300"
     	},{
-    		duration: dur,
+    		duration: 3000,
     		complete: function() {
 
 			    for (var i = 0; i < sliders.length; i++) {
