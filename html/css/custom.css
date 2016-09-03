@@ -216,6 +216,11 @@ section div.container div.block-slider div.category {
     font-size: 12px;
   }
 }
+@media (max-width: 500px) {
+  section div.container div.block-slider div.category {
+    font-size: 9px;
+  }
+}
 section div.container div.block-slider div.category li {
   cursor: pointer;
   margin-bottom: 20px;
@@ -271,7 +276,7 @@ section div.container div.block-slider div.category li img.img-category {
 }
 @media (max-width: 767px) {
   section div.container div.block-slider div.category li img.img-category {
-    height: 30px;
+    height: 40px;
   }
 }
 section div.container div.block-slider div.category li:hover span.title,
