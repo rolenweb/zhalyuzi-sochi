@@ -389,7 +389,7 @@ section div.container div.block-calculator ul.block-slider-width li span.input-w
 section div.container div.block-calculator ul.block-slider-height li span.input-width input,
 section div.container div.block-calculator ul.block-slider-width li span.input-height input,
 section div.container div.block-calculator ul.block-slider-height li span.input-height input {
-  width: 10%;
+  width: 20%;
   padding: 1px 5px;
 }
 section div.container div.block-calculator ul.block-slider-width li div#slider-width .ui-slider-range,
@@ -409,7 +409,7 @@ section div.container div.block-calculator ul.block-slider-height li div#slider-
   background-color: #51a5d4;
   border-color: #51a5d4;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   section div.container div.block-calculator ul.block-slider-width li div#slider-width span,
   section div.container div.block-calculator ul.block-slider-height li div#slider-width span,
   section div.container div.block-calculator ul.block-slider-width li div#slider-height span,
