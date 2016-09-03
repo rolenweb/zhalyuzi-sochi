@@ -174,9 +174,10 @@ header{
 section{
 	div.container{
 		div.block-slider{
-			border: 1px solid @border-color;
-			border-radius: @border-radius;
-
+			border-left: 1px solid @border-color;
+			border-top: 1px solid @border-color;
+			border-right: 1px solid @border-color;
+			border-radius: @border-radius @border-radius 0px 0px;
 			div.title-slider{
 				padding: 5px 10px;
 				font-size: 20px;
@@ -193,10 +194,15 @@ section{
 				border-right: 1px solid @border-color;
 				&:hover{
 					div.pult-slider{
-						display: block;
+						@media (min-width: 992px){
+						    display: block;
+						}
+						
 					}
 					span.left, span.right{
-						display: block;
+						@media (min-width: 992px){
+						    display: block;
+						}
 					}	
 				}
 				div.pult-slider{
@@ -357,6 +363,15 @@ section{
 						}
 					}
 				}
+			}
+		}
+		div.block-calculator{
+			border-left: 1px solid @border-color;
+			border-bottom: 1px solid @border-color;
+			border-right: 1px solid @border-color;
+			border-radius: 0px 0px @border-radius @border-radius;
+			ul.block-slider-width{
+				padding: 20px 10px 0px 20px;
 			}
 		}
 	}

@@ -139,8 +139,10 @@ header div.top-menu ul.top-menu-sm-xs li:hover a {
   text-decoration: none;
 }
 section div.container div.block-slider {
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-radius: 5px 5px 0px 0px;
 }
 section div.container div.block-slider div.title-slider {
   padding: 5px 10px;
@@ -161,12 +163,16 @@ section div.container div.block-slider div.image-slider {
   padding-left: 5px;
   border-right: 1px solid #ccc;
 }
-section div.container div.block-slider div.image-slider:hover div.pult-slider {
-  display: block;
+@media (min-width: 992px) {
+  section div.container div.block-slider div.image-slider:hover div.pult-slider {
+    display: block;
+  }
 }
-section div.container div.block-slider div.image-slider:hover span.left,
-section div.container div.block-slider div.image-slider:hover span.right {
-  display: block;
+@media (min-width: 992px) {
+  section div.container div.block-slider div.image-slider:hover span.left,
+  section div.container div.block-slider div.image-slider:hover span.right {
+    display: block;
+  }
 }
 section div.container div.block-slider div.image-slider div.pult-slider {
   display: none;
@@ -358,4 +364,13 @@ section div.container div.block-slider div.category li img.img-category {
 section div.container div.block-slider div.category li:hover span.title,
 section div.container div.block-slider div.category li:hover span.icon {
   color: #51a5d4;
+}
+section div.container div.block-calculator {
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-radius: 0px 0px 5px 5px;
+}
+section div.container div.block-calculator ul.block-slider-width {
+  padding: 20px 10px 0px 20px;
 }

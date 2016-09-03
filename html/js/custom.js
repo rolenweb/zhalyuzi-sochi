@@ -73,14 +73,19 @@ $(function() {
     	})
     }
 
-    /*function placePult() {
-    	var left = home.find('.image-slider').find('span.left');
-    	var right = home.find('.image-slider').find('span.right');
-    	var image = home.find('.image-slider').find('img[status = "active"]');
-    	left.css("top",image.height()/2);
-    	right.css("top",image.height()/2);
-    	left.css("left",30);
-    	right.css("left",image.width()-10);
-    }*/
     //slider
+    //
+    $('#slider-width').slider({
+		min: 0,
+		max: 100,
+		//value: home.find('div[name = "amount-slider"]').find('span[name = "current-amount"]').text(),
+		step:1,
+		slide: function(event, ui) {
+			//displayCurrentAmmount(ui.value);
+			$('div.block-total span[name = "total"]').text(ui.value);
+		},
+		change: function(event, ui) {
+			//calculate();
+		}
+	});
 });
