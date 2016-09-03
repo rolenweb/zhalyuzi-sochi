@@ -179,6 +179,16 @@ section div.container div.block-slider div.image-slider div.pult-slider span {
     font-size: 20px;
   }
 }
+section div.container div.block-slider div.image-slider span.left,
+section div.container div.block-slider div.image-slider span.right {
+  position: absolute;
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.image-slider span.left,
+  section div.container div.block-slider div.image-slider span.right {
+    display: none;
+  }
+}
 section div.container div.block-slider div.block-total {
   padding: 5px;
   font-size: 18px;

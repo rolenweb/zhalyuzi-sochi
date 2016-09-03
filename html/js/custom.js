@@ -20,6 +20,8 @@ $(function() {
     });
     
     sliderImg();
+    placePult();
+
     function sliderImg() {
     	var sliders = home.find('.image-slider').find('img');
 
@@ -48,6 +50,14 @@ $(function() {
     	})
     }
 
-    
+    function placePult() {
+    	var left = home.find('.image-slider').find('span.left');
+    	var right = home.find('.image-slider').find('span.right');
+    	var image = home.find('.image-slider').find('img[status = "active"]');
+    	left.css("top",image.height()/2);
+    	right.css("top",image.height()/2);
+    	left.css("left",30);
+    	right.css("left",image.width()-10);
+    }
     //slider
 });
