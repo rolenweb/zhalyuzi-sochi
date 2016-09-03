@@ -28,10 +28,10 @@ $(function() {
 		sliderImg('no','right',100);
     });*/
     
-    sliderImg();
+    sliderImg('yes');
     //placePult();
 
-    function sliderImg() {
+    function sliderImg(repit) {
     	var sliders = home.find('.image-slider').find('img');
 
     	var slider = home.find('.image-slider').find('img[status = "active"]');
@@ -65,9 +65,9 @@ $(function() {
 		    		}
 		    		
 		    	}
-		    	//if (repit === 'yes') {
+		    	if (repit === 'yes') {
 		    		sliderImg();	
-		    	//}
+		    	}
 		    	
 			},
     	})
