@@ -18,11 +18,20 @@ $(function() {
     home.on('click', 'div.block-slider div.pult-slider span.play',function( event ) {  
 		sliderImg();
     });
+
+    home.on('click', 'div.block-slider span.left',function( event ) {  
+		var slider = home.find('.image-slider').find('img[status = "active"]').stop();		
+		sliderImg('no','left',100);
+    });
+    home.on('click', 'div.block-slider span.right',function( event ) {  
+		var slider = home.find('.image-slider').find('img[status = "active"]').stop();		
+		sliderImg('no','right',100);
+    });
     
     sliderImg();
-    placePult();
+    //placePult();
 
-    function sliderImg() {
+    function sliderImg(repit = "yes", dir = "right", dur = 3000) {
     	var sliders = home.find('.image-slider').find('img');
 
     	var slider = home.find('.image-slider').find('img[status = "active"]');
@@ -30,22 +39,36 @@ $(function() {
     	slider.animate({
     		left: "+300"
     	},{
-    		duration:3000,
+    		duration: dur,
     		complete: function() {
 
 			    for (var i = 0; i < sliders.length; i++) {
 		    		if ($(sliders[i]).attr('status') === 'active') {
-		    			var curent = $(sliders[i]).attr('status','pending').hide();
-		    			if ($(sliders[i+1]).length !== 0) {
-			    			var next = $(sliders[i+1]).attr('status','active').show();
-			    		}else{
-			    			var next = $(sliders[0]).attr('status','active').show();
-			    		}
-		    			break;
+		    			if (dir === "right") {
+		    				var curent = $(sliders[i]).attr('status','pending').hide();
+			    			if ($(sliders[i+1]).length !== 0) {
+				    			var next = $(sliders[i+1]).attr('status','active').show();
+				    		}else{
+				    			var next = $(sliders[0]).attr('status','active').show();
+				    		}
+			    			break;	
+		    			}else{
+		    				var curent = $(sliders[i]).attr('status','pending').hide();
+			    			if ($(sliders[i-1]).length !== 0) {
+				    			var next = $(sliders[i-1]).attr('status','active').show();
+				    		}else{
+				    			var next = $(sliders[sliders.length-1]).attr('status','active').show();
+				    		}
+			    			break;	
+		    			}
+		    			
 		    		}
 		    		
 		    	}
-		    	sliderImg();
+		    	if (repit === "yes") {
+		    		sliderImg();	
+		    	}
+		    	
 			},
     	})
     }

@@ -194,6 +194,9 @@ section{
 				&:hover{
 					div.pult-slider{
 						display: block;
+					}
+					span.left, span.right{
+						display: block;
 					}	
 				}
 				div.pult-slider{
@@ -211,10 +214,35 @@ section{
 				}
 				span.left, span.right{
 					position: absolute;
+					color: @color-white;
+					cursor: pointer;
+					display: none;
 					@media (max-width: 767px){
 						display: none;
 					}
 
+				}
+				span.left{
+					left: 30px;
+					top: 150px;
+					@media (max-width: 1199px){
+					    top: 120px;
+					}
+					@media (max-width: 991px){
+					    top: 90px;
+					}
+				}
+				span.right{
+					left: 420px;
+					top: 150px;
+					@media (max-width: 1199px){
+						left: 340px;
+					    top: 120px;
+					}
+					@media (max-width: 991px){
+						left: 250px;
+					    top: 90px;
+					}
 				}
 			}
 			div.block-total{

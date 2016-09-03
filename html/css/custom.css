@@ -164,6 +164,10 @@ section div.container div.block-slider div.image-slider {
 section div.container div.block-slider div.image-slider:hover div.pult-slider {
   display: block;
 }
+section div.container div.block-slider div.image-slider:hover span.left,
+section div.container div.block-slider div.image-slider:hover span.right {
+  display: block;
+}
 section div.container div.block-slider div.image-slider div.pult-slider {
   display: none;
   cursor: pointer;
@@ -182,11 +186,44 @@ section div.container div.block-slider div.image-slider div.pult-slider span {
 section div.container div.block-slider div.image-slider span.left,
 section div.container div.block-slider div.image-slider span.right {
   position: absolute;
+  color: #fff;
+  cursor: pointer;
+  display: none;
 }
 @media (max-width: 767px) {
   section div.container div.block-slider div.image-slider span.left,
   section div.container div.block-slider div.image-slider span.right {
     display: none;
+  }
+}
+section div.container div.block-slider div.image-slider span.left {
+  left: 30px;
+  top: 150px;
+}
+@media (max-width: 1199px) {
+  section div.container div.block-slider div.image-slider span.left {
+    top: 120px;
+  }
+}
+@media (max-width: 991px) {
+  section div.container div.block-slider div.image-slider span.left {
+    top: 90px;
+  }
+}
+section div.container div.block-slider div.image-slider span.right {
+  left: 420px;
+  top: 150px;
+}
+@media (max-width: 1199px) {
+  section div.container div.block-slider div.image-slider span.right {
+    left: 340px;
+    top: 120px;
+  }
+}
+@media (max-width: 991px) {
+  section div.container div.block-slider div.image-slider span.right {
+    left: 250px;
+    top: 90px;
   }
 }
 section div.container div.block-slider div.block-total {
