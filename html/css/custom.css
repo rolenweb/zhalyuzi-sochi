@@ -371,6 +371,63 @@ section div.container div.block-calculator {
   border-right: 1px solid #ccc;
   border-radius: 0px 0px 5px 5px;
 }
-section div.container div.block-calculator ul.block-slider-width {
+section div.container div.block-calculator ul.block-slider-width,
+section div.container div.block-calculator ul.block-slider-height {
   padding: 20px 10px 0px 20px;
+}
+section div.container div.block-calculator ul.block-slider-width li:last-child,
+section div.container div.block-calculator ul.block-slider-height li:last-child {
+  margin-top: 10px;
+}
+section div.container div.block-calculator ul.block-slider-width li span.input-width,
+section div.container div.block-calculator ul.block-slider-height li span.input-width,
+section div.container div.block-calculator ul.block-slider-width li span.input-height,
+section div.container div.block-calculator ul.block-slider-height li span.input-height {
+  margin-left: 20px;
+}
+section div.container div.block-calculator ul.block-slider-width li span.input-width input,
+section div.container div.block-calculator ul.block-slider-height li span.input-width input,
+section div.container div.block-calculator ul.block-slider-width li span.input-height input,
+section div.container div.block-calculator ul.block-slider-height li span.input-height input {
+  width: 10%;
+  padding: 1px 5px;
+}
+section div.container div.block-calculator ul.block-slider-width li div#slider-width .ui-slider-range,
+section div.container div.block-calculator ul.block-slider-height li div#slider-width .ui-slider-range,
+section div.container div.block-calculator ul.block-slider-width li div#slider-height .ui-slider-range,
+section div.container div.block-calculator ul.block-slider-height li div#slider-height .ui-slider-range,
+section div.container div.block-calculator ul.block-slider-width li div#slider-width .ui-slider-handle,
+section div.container div.block-calculator ul.block-slider-height li div#slider-width .ui-slider-handle,
+section div.container div.block-calculator ul.block-slider-width li div#slider-height .ui-slider-handle,
+section div.container div.block-calculator ul.block-slider-height li div#slider-height .ui-slider-handle {
+  background: #729fcf;
+}
+section div.container div.block-calculator ul.block-slider-width li div#slider-width span,
+section div.container div.block-calculator ul.block-slider-height li div#slider-width span,
+section div.container div.block-calculator ul.block-slider-width li div#slider-height span,
+section div.container div.block-calculator ul.block-slider-height li div#slider-height span {
+  background-color: #51a5d4;
+  border-color: #51a5d4;
+}
+@media (max-width: 767px) {
+  section div.container div.block-calculator ul.block-slider-width li div#slider-width span,
+  section div.container div.block-calculator ul.block-slider-height li div#slider-width span,
+  section div.container div.block-calculator ul.block-slider-width li div#slider-height span,
+  section div.container div.block-calculator ul.block-slider-height li div#slider-height span {
+    width: 2em;
+    height: 2em;
+    top: -0.7em;
+  }
+}
+section div.container div.block-calculator ul.block-slider-width li div#slider-width .ui-slider-range,
+section div.container div.block-calculator ul.block-slider-height li div#slider-width .ui-slider-range,
+section div.container div.block-calculator ul.block-slider-width li div#slider-height .ui-slider-range,
+section div.container div.block-calculator ul.block-slider-height li div#slider-height .ui-slider-range {
+  background: #286090;
+}
+section div.container div.block-calculator ul.block-slider-width li div#slider-width .ui-slider-handle,
+section div.container div.block-calculator ul.block-slider-height li div#slider-width .ui-slider-handle,
+section div.container div.block-calculator ul.block-slider-width li div#slider-height .ui-slider-handle,
+section div.container div.block-calculator ul.block-slider-height li div#slider-height .ui-slider-handle {
+  border-color: #286090;
 }

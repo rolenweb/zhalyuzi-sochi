@@ -80,9 +80,27 @@ $(function() {
 		max: 100,
 		//value: home.find('div[name = "amount-slider"]').find('span[name = "current-amount"]').text(),
 		step:1,
+		range: "min",
+		value: 50,
 		slide: function(event, ui) {
 			//displayCurrentAmmount(ui.value);
-			$('div.block-total span[name = "total"]').text(ui.value);
+			$('div.block-calculator ul.block-slider-width input[name = "width"]').val(ui.value);
+		},
+		change: function(event, ui) {
+			//calculate();
+		}
+	});
+
+	$('#slider-height').slider({
+		min: 0,
+		max: 100,
+		//value: home.find('div[name = "amount-slider"]').find('span[name = "current-amount"]').text(),
+		step:1,
+		range: "min",
+		value: 60,
+		slide: function(event, ui) {
+			//displayCurrentAmmount(ui.value);
+			$('div.block-calculator ul.block-slider-height input[name = "height"]').val(ui.value);
 		},
 		change: function(event, ui) {
 			//calculate();

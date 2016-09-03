@@ -370,8 +370,45 @@ section{
 			border-bottom: 1px solid @border-color;
 			border-right: 1px solid @border-color;
 			border-radius: 0px 0px @border-radius @border-radius;
-			ul.block-slider-width{
+			ul.block-slider-width, ul.block-slider-height{
 				padding: 20px 10px 0px 20px;
+				li{
+					span.title{
+
+					}
+					&:last-child{
+						margin-top: 10px;	
+					}
+					span.input-width, span.input-height{
+						margin-left:20px;
+						input{
+							width: 10%;
+							padding: 1px 5px;
+
+						}
+					}
+					div#slider-width, div#slider-height{
+						.ui-slider-range, .ui-slider-handle{
+							background: #729fcf;
+						}
+						span{
+							background-color: @color-blue;
+							border-color: @color-blue;
+							@media (max-width: 767px){
+							    width: 2em;
+							    height: 2em;
+							    top: -0.7em;
+							}
+						}
+						.ui-slider-range {
+							background: @color-dark-blue;
+						}
+  						.ui-slider-handle {
+  							border-color: @color-dark-blue;
+  						}
+					}
+				}
+				
 			}
 		}
 	}
