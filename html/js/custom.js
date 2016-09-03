@@ -31,7 +31,7 @@ $(function() {
     //sliderImg('yes','right',3000);
     //placePult();
 
-    /*function sliderImg(repit = 'yes', dir = 'right', dur = 3000) {
+    function sliderImg(repit = 'yes', dir = 'right', dur = 3000) {
     	var sliders = home.find('.image-slider').find('img');
 
     	var slider = home.find('.image-slider').find('img[status = "active"]');
@@ -44,7 +44,7 @@ $(function() {
 
 			    for (var i = 0; i < sliders.length; i++) {
 		    		if ($(sliders[i]).attr('status') === 'active') {
-		    			if (dir === "right") {
+		    			if (dir === 'right') {
 		    				var curent = $(sliders[i]).attr('status','pending').hide();
 			    			if ($(sliders[i+1]).length !== 0) {
 				    			var next = $(sliders[i+1]).attr('status','active').show();
@@ -65,13 +65,13 @@ $(function() {
 		    		}
 		    		
 		    	}
-		    	if (repit === "yes") {
+		    	if (repit === 'yes') {
 		    		sliderImg();	
 		    	}
 		    	
 			},
     	})
-    }*/
+    }
 
     /*function placePult() {
     	var left = home.find('.image-slider').find('span.left');
