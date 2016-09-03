@@ -28,7 +28,7 @@ $(function() {
 		sliderImg('no','right',100);
     });*/
     
-    sliderImg('yes','right',3000);
+    //sliderImg('yes','right',3000);
     //placePult();
 
     function sliderImg(repit = 'yes', dir = 'right', dur = 3000) {
