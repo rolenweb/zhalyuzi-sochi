@@ -161,6 +161,15 @@ section div.container div.block-slider div.image-slider {
   padding-left: 5px;
   border-right: 1px solid #ccc;
 }
+section div.container div.block-slider div.image-slider div.pult-slider {
+  cursor: pointer;
+  position: absolute;
+  left: 40px;
+  top: 10px;
+}
+section div.container div.block-slider div.image-slider div.pult-slider span {
+  color: #fff;
+}
 section div.container div.block-slider div.block-total {
   padding: 5px;
   font-size: 18px;
