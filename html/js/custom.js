@@ -31,7 +31,7 @@ $(function() {
     //sliderImg('yes','right',3000);
     //placePult();
 
-    function sliderImg(repit = 'yes', dir = 'right', dur = 3000) {
+    /*function sliderImg(repit = 'yes', dir = 'right', dur = 3000) {
     	var sliders = home.find('.image-slider').find('img');
 
     	var slider = home.find('.image-slider').find('img[status = "active"]');
@@ -71,7 +71,7 @@ $(function() {
 		    	
 			},
     	})
-    }
+    }*/
 
     /*function placePult() {
     	var left = home.find('.image-slider').find('span.left');
