@@ -250,6 +250,11 @@ section div.container div.block-slider div.category li span.icon {
     vertical-align: 1px;
   }
 }
+@media (max-width: 500px) {
+  section div.container div.block-slider div.category li span.icon {
+    font-size: 7px;
+  }
+}
 section div.container div.block-slider div.category li span.price {
   border: 2px solid red;
   font-size: 18px;
