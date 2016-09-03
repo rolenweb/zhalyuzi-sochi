@@ -191,10 +191,13 @@ section{
 			div.image-slider{
 				padding-left: 5px;
 				border-right: 1px solid @border-color;
-				img{
-
+				&:hover{
+					div.pult-slider{
+						display: block;
+					}	
 				}
 				div.pult-slider{
+					display: none;
 					cursor: pointer;
 					position: absolute;
 					left:40px;
