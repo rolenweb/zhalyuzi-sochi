@@ -413,7 +413,26 @@
                       <div class="price-color"><span class="number">1121</span><span class="text">руб./ п.м.</span></div>
                     </li>
                     <li class="text-right">
-                      <button class="btn btn-info btn-lg btn-choose-color">Выбрать<br>материал</button></li>
+                      <button class="btn btn-info btn-lg btn-choose-color" data-toggle="modal" data-target="#choose-color">Выбрать<br>материал</button>
+                      <!-- Modal -->
+                      <div class="modal fade" id="choose-color" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                              ...
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
                   </ul>
                 </li>
               </ul>
