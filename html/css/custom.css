@@ -594,3 +594,61 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
 section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-footer {
   border-top: 0px solid #555;
 }
+footer {
+  margin-top: 20px;
+}
+footer div.call-gager button {
+  font-size: 16px;
+}
+footer div.call-gager button img {
+  height: 50px;
+}
+@media (min-width: 991px) {
+  footer div.footer-lg {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 991px) {
+  footer div.footer-xs {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
+footer div.bottom-footer {
+  padding: 15px 5px;
+}
+footer div.bottom-footer a div.logo {
+  display: inline-block;
+  width: 150px;
+  height: 20px;
+  background: url("../images/footer/logo_mini.png");
+}
+footer div.bottom-footer a div.logo:hover {
+  background: url("../images/footer/logo_mini_hover.png");
+}
+footer div.bottom-footer span.slogan {
+  vertical-align: 5px;
+}
+footer div.bottom-footer span.slogan span {
+  font-weight: bold;
+}
+footer div.bottom-footer span.tel {
+  vertical-align: 1px;
+}
+@media (max-width: 767px) {
+  footer div.bottom-footer span.tel {
+    display: none;
+  }
+}
+footer div.bottom-footer span.number {
+  font-weight: bold;
+  font-size: 16px;
+}
+footer div.bottom-footer span.email {
+  font-weight: bold;
+  font-size: 16px;
+}
+footer div.bottom-footer span.email a {
+  color: inherit;
+}
