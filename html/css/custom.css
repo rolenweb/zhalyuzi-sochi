@@ -494,3 +494,91 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
     width: 60%;
   }
 }
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content {
+  background-color: #555;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-header {
+  background-color: #333;
+  padding: 5px;
+  border-bottom: 0px solid #555;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-header h4.modal-title {
+  color: #fff;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-header button.close {
+  color: #fff;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body {
+  max-height: 420px;
+  overflow-y: auto;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.row {
+  padding: 0px 5px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.category-title {
+  font-size: 18px;
+  color: #fff;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material {
+  background-color: #fff;
+  padding: 5px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material {
+  padding-top: 5px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.code {
+  width: 30%;
+  vertical-align: 10px;
+}
+@media (max-width: 767px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.code {
+    font-size: 12px;
+  }
+}
+@media (max-width: 567px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.code {
+    font-size: 10px;
+  }
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.price {
+  width: 67%;
+}
+@media (max-width: 567px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.price {
+    width: 60%;
+  }
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.price span.number {
+  color: #27ca8b;
+  font-weight: bold;
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.price span.number {
+    font-size: 14px;
+  }
+}
+@media (max-width: 567px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.price span.number {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.price span.rub {
+    font-size: 12px;
+  }
+}
+@media (max-width: 567px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.price span.rub {
+    font-size: 6px;
+  }
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.image-material {
+  margin-top: 10px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.description-material {
+  width: 100%;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
