@@ -431,3 +431,60 @@ section div.container div.block-calculator ul.block-slider-width li div#slider-h
 section div.container div.block-calculator ul.block-slider-height li div#slider-height .ui-slider-handle {
   border-color: #286090;
 }
+section div.container div.block-calculator ul.block-choose-color {
+  padding: 10px 10px 10px 10px;
+}
+section div.container div.block-calculator ul.block-choose-color li.title {
+  font-weight: bold;
+  font-size: 16px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color {
+  margin-top: 10px;
+  background-color: #ccc;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color div.preview-color {
+  width: 100px;
+  height: 100px;
+  background-color: #555;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(2) {
+  vertical-align: 10px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(2) div.title-color {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(2) div.price-color {
+  margin-top: 30px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(2) div.price-color span.number {
+  color: #27ca8b;
+  font-size: 24px;
+  font-weight: bold;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(2) div.price-color span.text {
+  margin-left: 5px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) {
+  vertical-align: 45px;
+}
+@media (min-width: 400px) and (max-width: 766px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) {
+    width: 40%;
+  }
+}
+@media (min-width: 567px) and (max-width: 767px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) {
+    width: 60%;
+  }
+}
