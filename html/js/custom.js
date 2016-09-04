@@ -1,5 +1,7 @@
 $(function() {
-	home = $('body');
+	var home = $('body');
+	var modal = home.find('#choose-color');
+
 	home.on('click', 'div.top-header li[name = "show-contact"]',function( event ) {  
 		$(this).find('i').toggleClass('active');
     	home.find('div.top-header').find('div.top-contact-xs').toggle(1000);
@@ -106,4 +108,12 @@ $(function() {
 			//calculate();
 		}
 	});
+
+	//modal
+	modal.on('click', 'div.material',function( event ) {  
+		var block_price = $(this).parents('li.choose-color').find('span.number').text($(this).attr('price'));
+		modal.modal('hide');
+    });
+	//modal
+
 });

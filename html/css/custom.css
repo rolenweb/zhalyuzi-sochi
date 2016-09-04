@@ -522,6 +522,10 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
 section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material {
   background-color: #fff;
   padding: 5px;
+  cursor: pointer;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material:hover {
+  background-color: #ccc;
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material {
   padding-top: 5px;
