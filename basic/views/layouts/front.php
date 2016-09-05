@@ -233,13 +233,13 @@ FrontAsset::register($this);
           <div class="row">
             <div class="col-xs-6 col-sm-2 text-center">
               <ul class="list-unstyled">
-                <li><img src="images/footer/small_pack.jpg" alt=""></li>
+                <li><img src="images/footer/small_pack.png" alt="" height="80px;"></li>
                 <li>Москитная сетка</li>
               </ul>
             </div>
             <div class="col-xs-6 col-sm-2 text-center">
-              <ul class="list-unstyled">
-                <li><img src="images/footer/small_pack.jpg" alt=""></li>
+              <ul class="list-unstyled text-center">
+                <li><img src="images/footer/manual_mini.png" alt="" height="80px;"></li>
                 <li>Инструкция по установке</li>
               </ul>
             </div>
@@ -251,13 +251,13 @@ FrontAsset::register($this);
             </div>
             <div class="col-xs-6 col-sm-2 text-center">
               <ul class="list-unstyled">
-                <li><img src="images/footer/small_pack.jpg" alt=""></li>
+                <li><img src="images/footer/manual-measurement.png" alt="" height="80px;"></li>
                 <li>Инструкция замера</li>
               </ul>
             </div>
             <div class="col-xs-6 col-sm-2 text-center">
               <ul class="list-unstyled">
-                <li><img src="images/footer/small_pack.jpg" alt=""></li>
+                <li><img src="images/footer/small_pack.png" alt="" width="80px;"></li>
                 <li>Готовые рулоны</li>
               </ul>
             </div>
