@@ -106,7 +106,7 @@ header div.top-header div.top-contact-xs {
 header div.top-menu ul.top-menu-md-lg li {
   background-color: #51a5d4;
   border: 2px solid #fff;
-  padding: 10px 35px;
+  padding: 10px 34px;
 }
 @media (max-width: 1199px) {
   header div.top-menu ul.top-menu-md-lg li {
