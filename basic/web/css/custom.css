@@ -1,0 +1,674 @@
+.visible {
+  display: none;
+}
+.opacity {
+  opacity: 0;
+}
+.top-10 {
+  margin-top: 10px;
+}
+.padding-left-0 {
+  padding-left: 0px;
+}
+.padding-right-0 {
+  padding-right: 0px;
+}
+.padding-right-25 {
+  padding-right: 25px;
+}
+.active {
+  color: #51a5d4;
+}
+body {
+  background: url("../images/bg.jpg");
+}
+@media (max-width: 1200px) {
+  body {
+    background: url("../images/bg-md.jpg");
+  }
+}
+@media (max-width: 992px) {
+  body {
+    background: url("../images/bg-sm.jpg");
+  }
+}
+header div.top-header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0px 0px 5px 5px;
+  background-color: #fff;
+}
+@media (max-width: 991px) {
+  header div.top-header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+header div.top-header div.logo {
+  padding-top: 25px;
+}
+@media (max-width: 991px) {
+  header div.top-header div.logo {
+    padding-top: 0px;
+  }
+}
+header div.top-header div.icon {
+  color: #51a5d4;
+  padding-top: 5px;
+}
+header div.top-header div.social div.icon {
+  color: #51a5d4;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+header div.top-header div.social div.text {
+  text-transform: uppercase;
+  padding-top: 5px;
+}
+header div.top-header ul {
+  margin-bottom: 0px;
+}
+header div.top-header ul li[name="menu-contact-lg"] {
+  border-right: 2px solid #ccc;
+}
+header div.top-header div.contact div.icon {
+  color: #51a5d4;
+}
+header div.top-header div.contact div.text {
+  font-size: 16px;
+}
+header div.top-header ul.menu-xs {
+  color: #555;
+}
+header div.top-header ul.menu-xs li {
+  text-align: center;
+  cursor: pointer;
+  width: 50px;
+}
+header div.top-header div.top-contact-xs {
+  display: none;
+}
+@media (max-width: 767px) {
+  header div.top-header div.top-contact-xs div.contact ul {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  header div.top-menu {
+    padding: 0 15px;
+  }
+}
+header div.top-menu ul.top-menu-md-lg li {
+  background-color: #51a5d4;
+  border: 2px solid #fff;
+  padding: 10px 35px;
+}
+@media (max-width: 1199px) {
+  header div.top-menu ul.top-menu-md-lg li {
+    padding: 10px 20px;
+  }
+}
+header div.top-menu ul.top-menu-md-lg li a {
+  color: #fff;
+  font-size: 16px;
+}
+header div.top-menu ul.top-menu-md-lg li a span {
+  color: #51a5d4;
+}
+header div.top-menu ul.top-menu-md-lg li:hover {
+  background-color: red;
+  border: 2px solid #286090;
+}
+header div.top-menu ul.top-menu-md-lg li:hover a {
+  text-decoration: none;
+}
+header div.top-menu ul.top-menu-md-lg li:hover a span {
+  color: red;
+}
+header div.top-menu ul.top-menu-sm-xs {
+  display: none;
+}
+header div.top-menu ul.top-menu-sm-xs li {
+  background-color: #51a5d4;
+  padding: 10px 35px;
+}
+@media (max-width: 1199px) {
+  header div.top-menu ul.top-menu-sm-xs li {
+    padding: 10px 20px;
+  }
+}
+header div.top-menu ul.top-menu-sm-xs li a {
+  color: #fff;
+  font-size: 16px;
+}
+header div.top-menu ul.top-menu-sm-xs li:hover {
+  background-color: red;
+}
+header div.top-menu ul.top-menu-sm-xs li:hover a {
+  text-decoration: none;
+}
+section div.container div.block-slider {
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #fff;
+}
+section div.container div.block-slider div.title-slider {
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.title-slider {
+    font-size: 18px;
+  }
+}
+@media (max-width: 500px) {
+  section div.container div.block-slider div.title-slider {
+    font-size: 14px;
+  }
+}
+section div.container div.block-slider div.image-slider {
+  padding-left: 5px;
+  border-right: 1px solid #ccc;
+}
+@media (min-width: 992px) {
+  section div.container div.block-slider div.image-slider:hover div.pult-slider {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  section div.container div.block-slider div.image-slider:hover span.left,
+  section div.container div.block-slider div.image-slider:hover span.right {
+    display: block;
+  }
+}
+section div.container div.block-slider div.image-slider div.pult-slider {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  left: 40px;
+  top: 10px;
+}
+section div.container div.block-slider div.image-slider div.pult-slider span {
+  color: #fff;
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.image-slider div.pult-slider span {
+    font-size: 20px;
+  }
+}
+section div.container div.block-slider div.image-slider span.left,
+section div.container div.block-slider div.image-slider span.right {
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.image-slider span.left,
+  section div.container div.block-slider div.image-slider span.right {
+    display: none;
+  }
+}
+section div.container div.block-slider div.image-slider span.left {
+  left: 30px;
+  top: 150px;
+}
+@media (max-width: 1199px) {
+  section div.container div.block-slider div.image-slider span.left {
+    top: 120px;
+  }
+}
+@media (max-width: 991px) {
+  section div.container div.block-slider div.image-slider span.left {
+    top: 90px;
+  }
+}
+section div.container div.block-slider div.image-slider span.right {
+  left: 420px;
+  top: 150px;
+}
+@media (max-width: 1199px) {
+  section div.container div.block-slider div.image-slider span.right {
+    left: 340px;
+    top: 120px;
+  }
+}
+@media (max-width: 991px) {
+  section div.container div.block-slider div.image-slider span.right {
+    left: 250px;
+    top: 90px;
+  }
+}
+section div.container div.block-slider div.block-total {
+  padding: 5px;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+section div.container div.block-slider div.block-total ul li:last-child {
+  margin-left: 20px;
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.block-total ul li:last-child {
+    margin-left: 0px;
+  }
+}
+section div.container div.block-slider div.block-total ul li span[name="total"] {
+  font-size: 22px;
+  color: red;
+}
+section div.container div.block-slider div.block-total ul li span.rub {
+  font-size: 16px;
+  color: red;
+  margin-left: 5px;
+}
+section div.container div.block-slider div.block-total ul li button {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 0.8;
+  padding: 6px 40px;
+  border-radius: 0px;
+  background-color: #27ca8b;
+  border-color: #27ca8b;
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.block-total ul li button {
+    padding: 4px 20px;
+    font-size: 16px;
+  }
+}
+section div.container div.block-slider div.block-total ul li button span {
+  font-size: 10px;
+  text-transform: lowercase;
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.block-total ul li button span {
+    font-size: 8px;
+  }
+}
+section div.container div.block-slider div.category {
+  padding: 40px 70px 40px 0px;
+  font-size: 24px;
+}
+@media (max-width: 991px) {
+  section div.container div.block-slider div.category {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.category {
+    font-size: 12px;
+  }
+}
+@media (max-width: 500px) {
+  section div.container div.block-slider div.category {
+    font-size: 9px;
+  }
+}
+section div.container div.block-slider div.category li {
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+@media (max-width: 991px) {
+  section div.container div.block-slider div.category li {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.category li {
+    margin-bottom: 3px;
+  }
+}
+section div.container div.block-slider div.category li span.icon {
+  font-size: 14px;
+  vertical-align: 3px;
+}
+@media (max-width: 991px) {
+  section div.container div.block-slider div.category li span.icon {
+    vertical-align: 1px;
+  }
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.category li span.icon {
+    font-size: 10px;
+    vertical-align: 1px;
+  }
+}
+@media (max-width: 500px) {
+  section div.container div.block-slider div.category li span.icon {
+    font-size: 7px;
+  }
+}
+section div.container div.block-slider div.category li span.title {
+  margin-left: 5px;
+}
+section div.container div.block-slider div.category li span.price {
+  border: 2px solid red;
+  font-size: 18px;
+  padding: 3px 10px;
+}
+@media (max-width: 991px) {
+  section div.container div.block-slider div.category li span.price {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.category li span.price {
+    font-size: 10px;
+    padding: 1px 5px;
+  }
+}
+section div.container div.block-slider div.category li img.img-category {
+  height: 70px;
+}
+@media (max-width: 991px) {
+  section div.container div.block-slider div.category li img.img-category {
+    height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.category li img.img-category {
+    height: 40px;
+  }
+}
+section div.container div.block-slider div.category li:hover span.title,
+section div.container div.block-slider div.category li:hover span.icon {
+  color: #51a5d4;
+}
+section div.container div.block-calculator {
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-radius: 0px 0px 5px 5px;
+  background-color: #fff;
+}
+section div.container div.block-calculator ul.block-slider-width,
+section div.container div.block-calculator ul.block-slider-height {
+  padding: 20px 10px 0px 20px;
+}
+section div.container div.block-calculator ul.block-slider-width li:last-child,
+section div.container div.block-calculator ul.block-slider-height li:last-child {
+  margin-top: 10px;
+}
+section div.container div.block-calculator ul.block-slider-width li span.input-width,
+section div.container div.block-calculator ul.block-slider-height li span.input-width,
+section div.container div.block-calculator ul.block-slider-width li span.input-height,
+section div.container div.block-calculator ul.block-slider-height li span.input-height {
+  margin-left: 20px;
+}
+section div.container div.block-calculator ul.block-slider-width li span.input-width input,
+section div.container div.block-calculator ul.block-slider-height li span.input-width input,
+section div.container div.block-calculator ul.block-slider-width li span.input-height input,
+section div.container div.block-calculator ul.block-slider-height li span.input-height input {
+  width: 20%;
+  padding: 1px 5px;
+}
+section div.container div.block-calculator ul.block-slider-width li div#slider-width .ui-slider-range,
+section div.container div.block-calculator ul.block-slider-height li div#slider-width .ui-slider-range,
+section div.container div.block-calculator ul.block-slider-width li div#slider-height .ui-slider-range,
+section div.container div.block-calculator ul.block-slider-height li div#slider-height .ui-slider-range,
+section div.container div.block-calculator ul.block-slider-width li div#slider-width .ui-slider-handle,
+section div.container div.block-calculator ul.block-slider-height li div#slider-width .ui-slider-handle,
+section div.container div.block-calculator ul.block-slider-width li div#slider-height .ui-slider-handle,
+section div.container div.block-calculator ul.block-slider-height li div#slider-height .ui-slider-handle {
+  background: #729fcf;
+}
+section div.container div.block-calculator ul.block-slider-width li div#slider-width span,
+section div.container div.block-calculator ul.block-slider-height li div#slider-width span,
+section div.container div.block-calculator ul.block-slider-width li div#slider-height span,
+section div.container div.block-calculator ul.block-slider-height li div#slider-height span {
+  background-color: #51a5d4;
+  border-color: #51a5d4;
+}
+@media (max-width: 991px) {
+  section div.container div.block-calculator ul.block-slider-width li div#slider-width span,
+  section div.container div.block-calculator ul.block-slider-height li div#slider-width span,
+  section div.container div.block-calculator ul.block-slider-width li div#slider-height span,
+  section div.container div.block-calculator ul.block-slider-height li div#slider-height span {
+    width: 2em;
+    height: 2em;
+    top: -0.7em;
+  }
+}
+section div.container div.block-calculator ul.block-slider-width li div#slider-width .ui-slider-range,
+section div.container div.block-calculator ul.block-slider-height li div#slider-width .ui-slider-range,
+section div.container div.block-calculator ul.block-slider-width li div#slider-height .ui-slider-range,
+section div.container div.block-calculator ul.block-slider-height li div#slider-height .ui-slider-range {
+  background: #286090;
+}
+section div.container div.block-calculator ul.block-slider-width li div#slider-width .ui-slider-handle,
+section div.container div.block-calculator ul.block-slider-height li div#slider-width .ui-slider-handle,
+section div.container div.block-calculator ul.block-slider-width li div#slider-height .ui-slider-handle,
+section div.container div.block-calculator ul.block-slider-height li div#slider-height .ui-slider-handle {
+  border-color: #286090;
+}
+section div.container div.block-calculator ul.block-choose-color {
+  padding: 10px 10px 10px 10px;
+  line-height: 0.9;
+}
+section div.container div.block-calculator ul.block-choose-color li.title {
+  font-weight: bold;
+  font-size: 16px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color {
+  margin-top: 10px;
+  background-color: #ccc;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color div.preview-color {
+  width: 100px;
+  height: 100px;
+  background-color: #555;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color div.preview-color img {
+  width: 100px;
+  height: 100px;
+  vertical-align: -1px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(2) {
+  vertical-align: 10px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(2) div.title-color {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(2) div.price-color {
+  margin-top: 30px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(2) div.price-color span.number {
+  color: #27ca8b;
+  font-size: 24px;
+  font-weight: bold;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(2) div.price-color span.text {
+  margin-left: 5px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) {
+  vertical-align: 45px;
+}
+@media (min-width: 400px) and (max-width: 450px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) {
+    width: 32%;
+  }
+}
+@media (min-width: 451px) and (max-width: 566px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) {
+    width: 37%;
+  }
+}
+@media (min-width: 567px) and (max-width: 767px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) {
+    width: 60%;
+  }
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content {
+  background-color: #555;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-header {
+  background-color: #333;
+  padding: 5px;
+  border-bottom: 0px solid #555;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-header h4.modal-title {
+  color: #fff;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-header button.close {
+  color: #fff;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body {
+  max-height: 420px;
+  overflow-y: auto;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.row {
+  padding: 0px 5px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.category-title {
+  font-size: 18px;
+  color: #fff;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material {
+  background-color: #fff;
+  padding: 5px;
+  cursor: pointer;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material:hover {
+  background-color: #ccc;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material {
+  padding-top: 5px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.code {
+  width: 30%;
+  vertical-align: 10px;
+}
+@media (max-width: 767px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.code {
+    font-size: 12px;
+  }
+}
+@media (max-width: 567px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.code {
+    font-size: 10px;
+  }
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.price {
+  width: 67%;
+}
+@media (max-width: 567px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.price {
+    width: 60%;
+  }
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.price span.number {
+  color: #27ca8b;
+  font-weight: bold;
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.price span.number {
+    font-size: 14px;
+  }
+}
+@media (max-width: 567px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.price span.number {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.price span.rub {
+    font-size: 12px;
+  }
+}
+@media (max-width: 567px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.title-material li.price span.rub {
+    font-size: 6px;
+  }
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.image-material {
+  margin-top: 10px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-body div.material li.description-material {
+  width: 100%;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-footer {
+  border-top: 0px solid #555;
+}
+footer {
+  margin-top: 20px;
+}
+footer div.call-gager button {
+  font-size: 16px;
+}
+footer div.call-gager button img {
+  height: 50px;
+}
+@media (min-width: 991px) {
+  footer div.footer-lg {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 991px) {
+  footer div.footer-xs {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
+footer div.bottom-footer {
+  background-color: #fff;
+  padding: 15px 5px;
+}
+footer div.bottom-footer a div.logo {
+  display: inline-block;
+  width: 150px;
+  height: 20px;
+  background: url("../images/footer/logo_mini.png");
+}
+footer div.bottom-footer a div.logo:hover {
+  background: url("../images/footer/logo_mini_hover.png");
+}
+footer div.bottom-footer span.slogan {
+  vertical-align: 5px;
+}
+footer div.bottom-footer span.slogan span {
+  font-weight: bold;
+}
+footer div.bottom-footer span.tel {
+  vertical-align: 1px;
+}
+@media (max-width: 767px) {
+  footer div.bottom-footer span.tel {
+    display: none;
+  }
+}
+footer div.bottom-footer span.number {
+  font-weight: bold;
+  font-size: 16px;
+}
+footer div.bottom-footer span.email {
+  font-weight: bold;
+  font-size: 16px;
+}
+footer div.bottom-footer span.email a {
+  color: inherit;
+}

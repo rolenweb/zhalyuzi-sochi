@@ -11,6 +11,7 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+    public $layout = "front";
     /**
      * @inheritdoc
      */
@@ -60,6 +61,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $this->layout = 'front';
         return $this->render('index');
     }
 
