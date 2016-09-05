@@ -495,12 +495,15 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
 }
 @media (min-width: 400px) and (max-width: 450px) {
   section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) {
-    width: 32%;
+    width: 31%;
+  }
+  section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) button {
+    padding: 5px 6px;
   }
 }
 @media (min-width: 451px) and (max-width: 566px) {
   section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) {
-    width: 37%;
+    width: 35%;
   }
 }
 @media (min-width: 567px) and (max-width: 767px) {
