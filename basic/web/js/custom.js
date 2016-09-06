@@ -34,9 +34,11 @@ $(function() {
     //placePult();
 
     function sliderImg(repit,dir,dur) {
-    	var sliders = home.find('.image-slider').find('img');
+    	var category = getCategorySlider();
 
-    	var slider = home.find('.image-slider').find('img[status = "active"]');
+    	var sliders = home.find('.image-slider').find('img[slider = "'+category+'"]');
+
+    	var slider = activeSlider(sliders);//home.find('.image-slider').find('img[status = "active"]');
     	
     	slider.animate({
     		left: "+300"
@@ -73,6 +75,24 @@ $(function() {
 		    	
 			},
     	})
+    }
+
+    function getCategorySlider() {
+    	var list = home.find('li[name = "category-slider"]');
+    	for (var i = 0; i < list.length; i++) {
+    		if ($(list[i]).attr('status') === 'active') {
+    			return $(list[i]).attr('slider');
+    		}
+    	}
+    }
+
+    function activeSlider(sliders) {
+    	home.find('.image-slider').find('img[status = "active"]').hide();
+    	for (var i = 0; i < sliders.length; i++) {
+    		if ($(sliders[i]).attr('status') === 'active') {
+    			return $(sliders[i]).show();
+    		}
+    	}
     }
 
     //slider
@@ -123,9 +143,13 @@ $(function() {
 	home.on('click', 'div.category div.col-single-category',function( event ) {  
 		home.find('div.col-single-category').removeClass('active-category');
 		home.find('div.col-single-category').find('span.icon i').removeClass('fa-dot-circle-o').addClass('fa-circle');
+		home.find('li[name = "category-slider"]').attr('status','noactive')
 		$(this).addClass('active-category');
 		$(this).find('span.icon i').removeClass('fa-circle').addClass('fa-dot-circle-o');
-
+		$(this).parents('li[name = "category-slider"]').attr('status','active');
+		home.find('div.block-slider div.title-slider').text($(this).find('span.title').text());
+		var slider = home.find('.image-slider').find('img[status = "active"]').stop();	
+		sliderImg('yes','right',3000);	
     });
 	//select category
 
