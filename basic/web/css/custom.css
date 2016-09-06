@@ -170,8 +170,13 @@ section div.container div.block-slider {
 }
 section div.container div.block-slider div.title-slider {
   padding: 5px 10px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section div.container div.block-slider div.title-slider {
+    font-size: 12px;
+  }
 }
 @media (max-width: 767px) {
   section div.container div.block-slider div.title-slider {
@@ -384,7 +389,7 @@ section div.container div.block-slider div.category li span.price {
   border: 2px solid red;
   font-size: 18px;
   padding: 3px 10px;
-  vertical-align: 1px;
+  vertical-align: 2px;
 }
 @media (max-width: 991px) {
   section div.container div.block-slider div.category li span.price {

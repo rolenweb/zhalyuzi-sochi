@@ -209,7 +209,10 @@ section{
 			background-color: @color-white;
 			div.title-slider{
 				padding: 5px 10px;
-				font-size: 20px;
+				font-size: 18px;
+				@media (min-width: 768px) and (max-width: 991px){
+					font-size: 12px;
+				}
 				@media (max-width: 767px){
 				    font-size: 18px;
 				}
@@ -399,7 +402,7 @@ section{
 						border: 2px solid @color-red;
 						font-size: 18px;
 						padding: 3px 10px;
-						vertical-align: 1px;
+						vertical-align: 2px;
 						@media (max-width: 991px){
 						    font-size: 14px;
 						}
