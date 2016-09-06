@@ -147,7 +147,7 @@ class SiteController extends Controller
                 ]);
             }
 
-            var_dump($post_data);
+            var_dump("AJAX WORK, DATA WILL LOAD SOON");
         }
         
         else{
