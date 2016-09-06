@@ -27,7 +27,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'Zhalyuzi sochi',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -36,16 +36,18 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Главная', 'url' => ['/site/nimda'], 'visible' => Yii::$app->user->can('admin')],
+            ['label' => 'Категории', 'url' => ['/category/index'], 'visible' => Yii::$app->user->can('admin')],
+            ['label' => 'Подкатегории', 'url' => ['/sub-category/index'], 'visible' => Yii::$app->user->can('admin')],
+            ['label' => 'Группы', 'url' => ['/group/index'], 'visible' => Yii::$app->user->can('admin')],
+            ['label' => 'Материалы', 'url' => ['/material/index'], 'visible' => Yii::$app->user->can('admin')],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+                ['label' => 'Login', 'url' => ['/site/nigol']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post', ['class' => 'navbar-form'])
                 . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
+                    'Выход (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link']
                 )
                 . Html::endForm()
@@ -59,6 +61,7 @@ AppAsset::register($this);
     <div class="container">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            'homeLink' => false,
         ]) ?>
         <?= $content ?>
     </div>
@@ -66,9 +69,9 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; Zhalyuzi sochi <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right"><?= Html::a('RolenWeb','http://rolenweb.ru') ?></p>
     </div>
 </footer>
 

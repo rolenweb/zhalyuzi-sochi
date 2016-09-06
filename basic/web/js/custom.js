@@ -118,5 +118,15 @@ $(function() {
 		modal.modal('hide');
     });
 	//modal
+	//
+	//select category
+	home.on('click', 'div.category div.col-single-category',function( event ) {  
+		home.find('div.col-single-category').removeClass('active-category');
+		home.find('div.col-single-category').find('span.icon i').removeClass('fa-dot-circle-o').addClass('fa-circle');
+		$(this).addClass('active-category');
+		$(this).find('span.icon i').removeClass('fa-circle').addClass('fa-dot-circle-o');
+
+    });
+	//select category
 
 });

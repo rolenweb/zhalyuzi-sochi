@@ -1,5 +1,6 @@
 @border-color: #ccc;
 @border-gray: #555;
+@border-gray2: #eee;
 @color-blue: #51a5d4;
 @color-white: #fff;
 @color-red: red;
@@ -7,6 +8,7 @@
 @color-dark: #ccc;
 @color-black: #333;
 @button-order-color: #27ca8b;
+@button-order-color-hover: #3c763d;
 
 @border-radius: 5px;
 
@@ -22,6 +24,14 @@
 }
 .opacity{
 	opacity: 0;
+}
+
+.active-category{
+	background-color: @button-order-color;
+}
+
+.top-5{
+	margin-top: 5px;
 }
 
 .top-10{
@@ -61,8 +71,8 @@ body{
 
 header{
 	div.top-header{
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: 0px;
+		padding-bottom: 0px;
 		padding-left: 15px;
 		padding-right: 15px;
 		border-left: 1px solid @border-color;
@@ -138,6 +148,7 @@ header{
 			.container-padding;
 		}
 		ul.top-menu-md-lg{
+			margin-bottom: 5px;
 			li{
 				background-color: @color-blue;
 				border: 2px solid @color-white;
@@ -248,23 +259,23 @@ section{
 				}
 				span.left{
 					left: 30px;
-					top: 150px;
+					top: 110px;
 					@media (max-width: 1199px){
-					    top: 120px;
+					    top: 90px;
 					}
 					@media (max-width: 991px){
 					    top: 90px;
 					}
 				}
 				span.right{
-					left: 420px;
-					top: 150px;
+					left: 330px;
+					top: 110px;
 					@media (max-width: 1199px){
-						left: 340px;
-					    top: 120px;
+						left: 260px;
+					    top: 90px;
 					}
 					@media (max-width: 991px){
-						left: 250px;
+						left: 260px;
 					    top: 90px;
 					}
 				}
@@ -291,6 +302,7 @@ section{
 							color: @color-red;
 							margin-left: 5px;	
 						}
+
 						button{
 							text-transform: uppercase;
 							font-size: 18px;
@@ -303,6 +315,10 @@ section{
 							border-radius: 0px;
 							background-color: @button-order-color;
 							border-color: @button-order-color;
+							&:hover{
+								background-color: @button-order-color-hover;
+								border-color: @button-order-color-hover;
+							}
 							span{
 								font-size: 10px;
 								text-transform: lowercase;
@@ -316,8 +332,8 @@ section{
 			}
 
 			div.category{
-				padding: 40px 70px 40px 0px;
-				font-size: 24px;
+				padding: 40px 70px 0px 0px;
+				font-size: 22px;
 				@media (max-width: 991px){
 				    font-size: 16px;
 				}
@@ -326,19 +342,41 @@ section{
 				}
 
 				@media (max-width: 500px){
-				    font-size: 9px;
+				    font-size: 12px;
 				}
 
 				
 
 				li{
 					cursor: pointer;
-					margin-bottom: 20px;
+					margin-bottom: 10px;
 					@media (max-width: 991px){
 					    margin-bottom: 10px;
 					}
 					@media (max-width: 767px){
-					    margin-bottom: 3px;
+					    margin-bottom: 10px;
+					}
+					.row-single-category{
+						
+						@media (max-width: 767px){
+						    margin-right: -50px;
+						}
+						
+						.col-single-category{
+							&:hover{
+								background-color: @border-gray2;
+							}
+							@media (max-width: 767px){
+							    padding-right: 0px;
+							    padding-left: 0px;
+							}	
+						}
+						.active-category{
+							&:hover{
+								background-color: @button-order-color;
+							}
+						}
+
 					}
 					span.icon{
 						font-size:14px;
@@ -361,6 +399,7 @@ section{
 						border: 2px solid @color-red;
 						font-size: 18px;
 						padding: 3px 10px;
+						vertical-align: 1px;
 						@media (max-width: 991px){
 						    font-size: 14px;
 						}
@@ -379,8 +418,9 @@ section{
 						}
 					}
 					&:hover{
+
 						span.title, span.icon{
-							color: @color-blue;
+							//color: @color-blue;
 						}
 					}
 				}
@@ -393,7 +433,7 @@ section{
 			border-radius: 0px 0px @border-radius @border-radius;
 			background-color: @color-white;
 			ul.block-slider-width, ul.block-slider-height{
-				padding: 20px 10px 0px 20px;
+				padding: 5px 10px 0px 20px;
 				li{
 					span.title{
 
@@ -408,6 +448,9 @@ section{
 							padding: 1px 5px;
 
 						}
+					}
+					span.unit{
+						margin-left: 10px;
 					}
 					div#slider-width, div#slider-height{
 						.ui-slider-range, .ui-slider-handle{
@@ -433,7 +476,7 @@ section{
 				
 			}
 			ul.block-choose-color{
-				padding: 10px 10px 10px 10px;
+				padding: 0px 10px 10px 10px;
 				line-height: 0.9;
 				li.title{
 					font-weight: bold;

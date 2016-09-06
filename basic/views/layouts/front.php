@@ -203,7 +203,7 @@ FrontAsset::register($this);
             </div>
           </div>
         </div>
-        <div class="top-menu top-10">
+        <div class="top-menu top-5">
           <ul class="list-inline hidden-xs hidden-sm text-center top-menu-md-lg">
             <li><a href="">Рулонные<br> шторы</a></li>
             <li><a href="">Вертикальные<br> жалюзи</a></li>
