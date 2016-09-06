@@ -9,6 +9,11 @@ use app\models\Category;
 /* @var $this yii\web\View */
 /* @var $model app\models\SubCategory */
 /* @var $form yii\widgets\ActiveForm */
+
+if (Yii::$app->request->get('category') !== NULL) {
+	$model->category_id = Yii::$app->request->get('category');
+}
+
 ?>
 
 <div class="sub-category-form">

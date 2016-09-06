@@ -66,7 +66,7 @@ class SubCategoryController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
+    public function actionView($id,$category = null)
     {
         return $this->render('view', [
             'model' => $this->findModel($id),
@@ -78,12 +78,17 @@ class SubCategoryController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($category = null)
     {
         $model = new SubCategory();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            if ($category !== NULL) {
+                return $this->redirect(['category/view', 'id' => $category]);
+            }else{
+                return $this->redirect(['view', 'id' => $model->id]);    
+            }
+            
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -97,12 +102,12 @@ class SubCategoryController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
+    public function actionUpdate($id,$category = null)
     {
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->id, 'category' => $category]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -116,11 +121,15 @@ class SubCategoryController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id)
+    public function actionDelete($id,$category = null)
     {
         $this->findModel($id)->delete();
-
-        return $this->redirect(['index']);
+        if ($category == NULL) {
+            return $this->redirect(['index']);
+        }else{
+            return $this->redirect(['category/view','id' => $category]);
+        }
+        
     }
 
     /**

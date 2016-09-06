@@ -65,7 +65,7 @@ class SubCategory extends \yii\db\ActiveRecord
 
     public function getGroups()
     {
-        return $this->hasMany(Groups::className(), ['sub_category_id' => 'id']);
+        return $this->hasMany(Group::className(), ['sub_category_id' => 'id']);
     }
 
     public static function listSub()

@@ -37,7 +37,8 @@ class Group extends \yii\db\ActiveRecord
     {
         return [
             [['sub_category_id', 'created_at', 'updated_at'], 'integer'],
-            [['title'], 'string', 'max' => 255],
+            [['title', 'structure', 'density', 'composition', 'cleaning', 'country'], 'string', 'max' => 255],
+            [['price', 'max_height'], 'number'],
         ];
     }
 
@@ -50,6 +51,13 @@ class Group extends \yii\db\ActiveRecord
             'id' => 'ID',
             'sub_category_id' => 'Sub Category ID',
             'title' => 'Title',
+            'structure' => 'Structure',
+            'density' => 'Density',
+            'composition' => 'Composition',
+            'cleaning' => 'Cleaning',
+            'country' => 'Country',
+            'price' => 'Price',
+            'max_height' => 'Max height',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];

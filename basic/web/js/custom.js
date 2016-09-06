@@ -152,5 +152,23 @@ $(function() {
 		sliderImg('yes','right',3000);	
     });
 	//select category
+	//
+	$('#choose-color').on('show.bs.modal', function (e) {
+		var category = getCategorySlider();
+		var body = $(this).find('.modal-body').empty().append('<div class="text-center"><i class = "fa fa-spinner fa-pulse fa-4x"></i></div>');
+		$.post(
+            '/site/load-material',
+            {
+              'page':'rulon',
+              'category' : category,
+            }
+        ).done(function( data ) {
+          body.html(data);
+          }
+        ).fail( function(xhr, textStatus, errorThrown) {
+            alert(xhr.responseText);
+            }
+        );
+	});
 
 });

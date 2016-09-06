@@ -36,21 +36,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 
             ],
             [
-                'attribute'=>'code',
-                'label' => 'Код',
-                
-            ],
-            [
                 'attribute'=>'price',
                 'label' => 'Цена',
                 
             ],
             
-            [
-                'attribute'=>'unit',
-                'label' => 'Единица',
-                
-            ],
             
             
             [

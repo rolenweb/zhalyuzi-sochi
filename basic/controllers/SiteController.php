@@ -113,6 +113,48 @@ class SiteController extends Controller
             
         ]);
     }
+    
+    public function actionLoadMaterial()
+    {
+        
+        
+        if(Yii::$app->request->isAjax){
+
+            $error = [];
+            $info = [];
+
+            $post_data = Yii::$app->request->post();
+
+
+            if (!isset($post_data)) {
+                $error[] = 'The post data is not set';
+                return $this->renderAjax('_result', [
+                    'error' => $error,
+                ]);
+            }
+
+            if (!isset($post_data['page'])) {
+                $error[] = 'The page id is not set';
+                return $this->renderAjax('_result', [
+                    'error' => $error,
+                ]);
+            }
+
+            if (!isset($post_data['category'])) {
+                $error[] = 'The category id is not set';
+                return $this->renderAjax('_result', [
+                    'error' => $error,
+                ]);
+            }
+
+            var_dump($post_data);
+        }
+        
+        else{
+            Yii::$app->session->setFlash('error', 'Fuck, hands off of this page.');
+            return $this->redirect(['site/index']);
+        }
+    }
 
     /**
      * Logout action.

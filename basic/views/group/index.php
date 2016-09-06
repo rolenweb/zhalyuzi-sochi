@@ -29,6 +29,16 @@ $this->params['breadcrumbs'][] = $this->title;
                 
             ],
             [
+                'attribute'=>'price',
+                'label' => 'Цена',
+                
+            ],
+            [
+                'attribute'=>'max_height',
+                'label' => 'Цена',
+                
+            ],
+            [
                 'attribute'=>'sub_category_id',
                 'label' => 'Подкатегория',
                 'content'=>function($data){

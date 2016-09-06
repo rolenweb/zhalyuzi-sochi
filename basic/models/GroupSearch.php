@@ -19,6 +19,7 @@ class GroupSearch extends Group
     {
         return [
             [['id', 'sub_category_id', 'created_at', 'updated_at'], 'integer'],
+            [['price', 'max_height'], 'number'],
             [['title'], 'safe'],
         ];
     }
@@ -61,11 +62,18 @@ class GroupSearch extends Group
         $query->andFilterWhere([
             'id' => $this->id,
             'sub_category_id' => $this->sub_category_id,
+            'price' => $this->price,
+            'max_height' => $this->max_height,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title]);
+        $query->andFilterWhere(['like', 'structure', $this->structure]);
+        $query->andFilterWhere(['like', 'density', $this->density]);
+        $query->andFilterWhere(['like', 'composition', $this->composition]);
+        $query->andFilterWhere(['like', 'cleaning', $this->cleaning]);
+        $query->andFilterWhere(['like', 'country', $this->country]);
 
         return $dataProvider;
     }

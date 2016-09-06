@@ -68,7 +68,7 @@ class MaterialController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
+    public function actionView($id,$group = null)
     {
         $model_image = new UploadForm();
         
@@ -95,12 +95,12 @@ class MaterialController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($group = null)
     {
         $model = new Material();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->id, 'group' => $group]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -114,12 +114,13 @@ class MaterialController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
+    public function actionUpdate($id,$group = null)
     {
+
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->id, 'group' => $group]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -133,11 +134,21 @@ class MaterialController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id)
+    public function actionDelete($id,$group = null)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        if (file_exists(Yii::$app->basePath.'/web/images/material/'.$model->id.'.'.$model->extension)) {
+            unlink(Yii::$app->basePath.'/web/images/material/'.$model->id.'.'.$model->extension);    
+            $model->delete();
+        }
 
-        return $this->redirect(['index']);
+        
+        if ($group == NULL) {
+            return $this->redirect(['index']);
+        }else{
+            return $this->redirect(['group/view','id' => $group]);
+        }
+        
     }
 
     /**

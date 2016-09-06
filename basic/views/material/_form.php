@@ -10,6 +10,10 @@ use app\models\Group;
 /* @var $this yii\web\View */
 /* @var $model app\models\Material */
 /* @var $form yii\widgets\ActiveForm */
+
+if (Yii::$app->request->get('group') !== NULL) {
+    $model->group_id = Yii::$app->request->get('group');
+}
 ?>
 
 <div class="material-form">
@@ -24,7 +28,6 @@ use app\models\Group;
 
     <?= $form->field($model, 'price')->textInput() ?>
 
-    <?= $form->field($model, 'unit')->textInput(['maxlength' => true]) ?>
     
     
 

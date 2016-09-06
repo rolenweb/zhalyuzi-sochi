@@ -9,6 +9,10 @@ use app\models\SubCategory;
 /* @var $this yii\web\View */
 /* @var $model app\models\Group */
 /* @var $form yii\widgets\ActiveForm */
+
+if (Yii::$app->request->get('subcategory') !== NULL) {
+	$model->sub_category_id = Yii::$app->request->get('subcategory');
+}
 ?>
 
 <div class="group-form">
@@ -19,6 +23,13 @@ use app\models\SubCategory;
  ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'structure')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'density')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'composition')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'cleaning')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'country')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'max_height')->textInput(['maxlength' => true]) ?>
 
     
 

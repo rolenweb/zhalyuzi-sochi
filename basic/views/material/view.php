@@ -64,10 +64,6 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             
             [
-                'label' => 'Единица измерения',
-                'value' => $model->unit,
-            ],
-            [
                 'label' => 'Создана',
                 'value' => date("d/m/Y",$model->created_at),
             ],
@@ -79,8 +75,10 @@ $this->params['breadcrumbs'][] = $this->title;
     ]) ?>
 
     <p class="text-right">
-        <?= Html::a('Редактировать', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
+
+
+        <?= Html::a('Редактировать', ['update', 'id' => $model->id, 'group' => Yii::$app->request->get('group')], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->id, 'group' => Yii::$app->request->get('group')], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Вы уверены что хотиде удалить?',

@@ -40,14 +40,34 @@ $this->params['breadcrumbs'][] = $this->title;
     ]) ?>
 
     <p class="text-right">
-        <?= Html::a('Сохранить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
+        <?= Html::a('Редактировать', ['update', 'id' => $model->id, 'category' => Yii::$app->request->get('category')], ['class' => 'btn btn-primary']) ?>
+<?php
+if ($model->groups == NULL) {
+    echo Html::a('Удалить', ['delete', 'id' => $model->id, 'category' => Yii::$app->request->get('category')], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Вы уверены что хотите удалить?',
                 'method' => 'post',
             ],
-        ]) ?>
-    </p>
+        ]);
+}
+?>        
 
+    </p>
+    <h3>Группы</h3>
+<?php
+    if ($model->groups != NULL) {
+        echo Html::beginTag('ul');
+        foreach ($model->groups as $group) {
+            echo Html::beginTag('li');
+                echo Html::a($group->title,['group/view','id' => $group->id,'subcategory' => $model->id]);
+            echo Html::endTag('li');
+        }
+        echo Html::endTag('ul');
+
+    }
+    echo Html::beginTag('p',['class' => 'text-right']);
+        echo Html::a('Добавить группу',['group/create','subcategory' => $model->id],['class' => 'btn btn-primary']);
+    echo Html::endTag('p')
+?>    
 </div>
