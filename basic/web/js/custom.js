@@ -131,7 +131,8 @@ $(function() {
 
 	//modal
 	modal.on('click', 'div.material',function( event ) {  
-		var block_price = $(this).parents('li.choose-color').find('div.price-color').find('span.number').text($(this).attr('price'));
+		var block_price = $(this).parents('li.choose-color').find('div.price-color').find('span.number').text($(this).parents('div[name = "group"]').attr('price'));
+		var block_title = $(this).parents('li.choose-color').find('div.title-color').text($(this).parents('div[name = "group"]').attr('title'));
 		var block_preview = $(this).parents('li.choose-color').find('div.preview-color');
 		block_preview.empty();
 		block_preview.append('<img src = "'+$(this).find('li.image-material img').attr('src')+'">');

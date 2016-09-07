@@ -37,6 +37,9 @@
 .top-10{
 	margin-top: 10px;
 }
+.top-20{
+	margin-top: 20px;
+}
 .padding-left-0{
 	padding-left: 0px;
 }
@@ -498,50 +501,36 @@ section{
 							vertical-align: -1px;
 						}
 					}
-					li:nth-child(2){
-						vertical-align: 10px;
-						div.title-color{
+					div.title-color{
+							margin-top: 5px;
 							text-transform: uppercase;
-							font-size: 24px;
-						}
-						div.price-color{
+							font-size: 18px;
+							@media (max-width: 767px){
+									font-size: 14px;
+							}
+					}
+					div.title-material{
+							margin-top: 10px;
+					}
+					div.price-color{
 							margin-top: 30px;
 							span.number{
 								color: @button-order-color;
 								font-size: 24px;
 								font-weight: bold;
+								@media (max-width: 991px){
+									font-size: 14px;
+								}
 							}
 							span.text{
 								margin-left: 5px;
 							}
 						}
-
+					div.btn-choose-color{
+						margin-top: 20px;
+						
 					}
-					li:nth-child(3){
-						@media (min-width: 400px) and (max-width: 450px){
-							width: 31%;
-							button{
-								padding: 5px 6px;
-							}
-						}
-						@media (min-width: 451px) and (max-width: 566px){
-							width: 35%;
-						}
-
-						@media (min-width: 567px) and (max-width: 767px){
-							width: 50%;
-						}
-						
-						@media (min-width: 992px){
-							width: 50%;
-						}
-						
-						@media (min-width: 1200px){
-							width: 60%;
-						}
-						vertical-align: 45px;
-						
-						div.modal-content{
+					div.modal-content{
 							background-color: @border-gray;
 							div.modal-header{
 								background-color: @color-black;
@@ -557,19 +546,47 @@ section{
 							div.modal-body{
 								max-height: 420px;
 						    	overflow-y: auto;
+						    	background-color: @color-white;
 								div.row{
 									padding: 0px 5px;
 								}
-								div.category-title{
-									font-size: 18px;
-									color: @color-white;
+								div.group-title{
+									font-size: 22px;
+									@media (max-width: 767px){
+										font-size: 14px;
+									}
+									color: @color-black;
+									padding-bottom: 5px;
+									border-bottom: 1px solid @color-black;
+									span.number{
+										color: @button-order-color;
+										font-size: 20px;
+										font-weight: bold;
+										@media (max-width: 767px){
+											font-size: 18px;
+										}
+									}
 								}
+								ul.property-group{
+									li{
+										margin-bottom: 5px;
+										span.property-title{
+											font-weight: bold;
+										}
+										span.property-value{
+											margin-left: 5px;
+										}
+									}
+								}
+
+
+								
 								div.material{
-									background-color: @color-white;
+									background-color: @border-color;
 									padding: 5px;
 									cursor: pointer;
 									&:hover{
-										background-color: @border-color;
+										background-color: @border-gray;
 									}
 									li.title-material{
 										padding-top: 5px;
@@ -615,8 +632,173 @@ section{
 									li.description-material{
 										width: 100%;
 										margin-top: 10px;
-										text-transform: uppercase;
-										font-size:18px;
+										//text-transform: uppercase;
+										font-size:16px;
+									}
+								}
+							}
+							div.modal-footer{
+								border-top: 0px solid @border-gray;
+							}
+						}
+					/*li:nth-child(2){
+						vertical-align: 5px;
+						width: 60%;
+						@media (max-width: 767px){
+							width: 35%;
+						}
+						div.title-color{
+							text-transform: uppercase;
+							font-size: 18px;
+							@media (max-width: 767px){
+									font-size: 14px;
+							}
+						}
+						div.title-material{
+							margin-top: 10px;
+						}
+						div.price-color{
+							margin-top: 30px;
+							span.number{
+								color: @button-order-color;
+								font-size: 24px;
+								font-weight: bold;
+								@media (max-width: 991px){
+									font-size: 14px;
+								}
+							}
+							span.text{
+								margin-left: 5px;
+							}
+						}
+					
+					}*/
+					li:nth-child(3){
+						/*@media (min-width: 400px) and (max-width: 450px){
+							width: 20%;
+							button{
+								padding: 5px 6px;
+							}
+						}
+						@media (min-width: 451px) and (max-width: 566px){
+							width: 20%;
+						}
+
+						@media (min-width: 567px) and (max-width: 767px){
+							width: 20%;
+						}
+						
+						@media (min-width: 992px){
+							width: 30%;
+						}
+						
+						@media (min-width: 1200px){
+							width: 50%;
+						}*/
+						vertical-align: 45px;
+						
+						div.modal-content{
+							background-color: @border-gray;
+							div.modal-header{
+								background-color: @color-black;
+								padding: 5px;
+								border-bottom: 0px solid @border-gray;
+								h4.modal-title{
+									color: @color-white;
+								}
+								button.close{
+									color: @color-white;
+								}
+							}
+							div.modal-body{
+								max-height: 420px;
+						    	overflow-y: auto;
+						    	background-color: @color-white;
+								div.row{
+									padding: 0px 5px;
+								}
+								div.group-title{
+									font-size: 22px;
+									@media (max-width: 767px){
+										font-size: 14px;
+									}
+									color: @color-black;
+									padding-bottom: 5px;
+									border-bottom: 1px solid @color-black;
+									span.number{
+										color: @button-order-color;
+										font-size: 20px;
+										font-weight: bold;
+										@media (max-width: 767px){
+											font-size: 18px;
+										}
+									}
+								}
+								ul.property-group{
+									li{
+										margin-bottom: 5px;
+										span.property-title{
+											font-weight: bold;
+										}
+										span.property-value{
+											margin-left: 5px;
+										}
+									}
+								}
+								
+								div.material{
+									background-color: @border-color;
+									padding: 5px;
+									cursor: pointer;
+									&:hover{
+										background-color: @border-gray;
+									}
+									li.title-material{
+										padding-top: 5px;
+										li.code{
+											width:30%;
+											vertical-align: 10px;
+											@media (max-width: 767px){
+													font-size: 12px;
+											}
+											@media (max-width: 567px){
+												font-size: 10px;
+											}
+										}
+										li.price{
+											width: 67%;
+											@media (max-width: 567px){
+												width: 60%;
+											}
+											span.number{
+												color: @button-order-color;
+												font-weight: bold;
+												font-size: 16px;
+												@media (max-width: 767px){
+													font-size: 14px;
+												}
+												@media (max-width: 567px){
+													font-size: 12px;
+												}
+											}
+											span.rub{
+												@media (max-width: 767px){
+													font-size: 12px;
+												}	
+												@media (max-width: 567px){
+													font-size: 6px;
+												}	
+											}
+										}
+									}
+									li.image-material{
+										margin-top: 10px;
+									}
+									li.description-material{
+										width: 100%;
+										margin-top: 10px;
+										//text-transform: uppercase;
+										font-size:16px;
 									}
 								}
 							}

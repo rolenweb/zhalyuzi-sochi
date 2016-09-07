@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Group;
 
 class SiteController extends Controller
 {
@@ -146,8 +147,26 @@ class SiteController extends Controller
                     'error' => $error,
                 ]);
             }
-
-            var_dump("AJAX WORK, DATA WILL LOAD SOON");
+            $groups = NULL;
+            if ($post_data['page'] == 'rulon') {
+                if ($post_data['category'] == 1 || $post_data['category'] == 2) {
+                    $groups = Group::find()->joinWith(['subCategory.category'])->where(
+                        [
+                            'and',
+                                [
+                                    'sub_category.title' => 'Рулонные шторы',
+                                ],
+                                [
+                                    'category.title' => 'Рулонные шторы',
+                                ]
+                        ]
+                    )->all();
+                }
+            }    
+            
+            return $this->renderAjax('calculator/modal/_material_rulon', [
+                    'groups' => $groups,
+            ]);
         }
         
         else{
