@@ -175,6 +175,13 @@ $(function() {
         );
 	});
 
+	home.on('change', 'div.block-calculator input[name = "width"] ',function( event ) {
+		$('#slider-width').slider( "option", "value", parseFloat($(this).val()).toFixed());
+    });
+    home.on('change', 'div.block-calculator input[name = "height"] ',function( event ) {
+		$('#slider-height').slider( "option", "value", parseFloat($(this).val()).toFixed());
+    });
+
 	function calculatorRulon() {
 		var m = parseFloat(home.find('div.block-calculator div.price-color span.number').text());
 		var h = parseFloat($('#slider-height').slider( "option", "value" ));
