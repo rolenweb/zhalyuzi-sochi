@@ -854,6 +854,12 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
 footer {
   margin-top: 20px;
 }
+footer div.top-footer ul.border {
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+footer div.top-footer ul.border:hover {
+  border: 2px solid #51a5d4;
+}
 footer div.call-gager button {
   font-size: 16px;
 }
