@@ -16,7 +16,7 @@ echo Html::beginTag('div',['class' => 'block-slider']);
         	    	echo Html::beginTag('div',['class' => 'block-total']);
         	    		echo Html::beginTag('ul',['class' => 'list-inline text-center']);
         	    			echo Html::beginTag('li');
-        	    				echo 'Итого: '.Html::tag('span','750',['name' => 'total']).Html::tag('span','руб',['class' => 'rub']);
+        	    				echo 'Итого: '.Html::tag('span',round($group->price),['name' => 'total']).Html::tag('span','руб',['class' => 'rub']);
         	    			echo Html::endTag('li');
         	    			echo Html::beginTag('li');
         	    				echo Html::button('Заказать<br>'.Html::tag('span','* бесплатный замер'),['class' => 'btn btn-success']);

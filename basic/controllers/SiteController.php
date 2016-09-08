@@ -74,7 +74,20 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $this->layout = 'front';
-        return $this->render('index');
+        $group = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Рулонные шторы',
+                    ],
+                    [
+                        'category.title' => 'Рулонные шторы',
+                    ]
+            ]
+        )->limit(1)->one();
+        return $this->render('index',[
+                'group' => $group,
+            ]);
     }
 
     /**

@@ -7,7 +7,9 @@ echo Html::beginTag('div',['class' => 'block-calculator']);
 			echo $this->render('sliders/_slider');
 		echo Html::endTag('div');
 		echo Html::beginTag('div',['class' => 'col-sm-8']);
-			echo $this->render('color/_color');
+			echo $this->render('color/_color',[
+				'group' => $group,
+				]);
 		echo Html::endTag('div');
 	echo Html::endTag('div');
 echo Html::endTag('div');

@@ -98,45 +98,48 @@ $(function() {
     //slider
     //
     $('#slider-width').slider({
-		min: 0,
-		max: 100,
+		min: 30,
+		max: 300,
 		//value: home.find('div[name = "amount-slider"]').find('span[name = "current-amount"]').text(),
 		step:1,
 		range: "min",
-		value: 50,
+		value: 100,
 		slide: function(event, ui) {
 			//displayCurrentAmmount(ui.value);
 			$('div.block-calculator ul.block-slider-width input[name = "width"]').val(ui.value);
+			calculatorRulon();
 		},
 		change: function(event, ui) {
-			//calculate();
+			calculatorRulon();
 		}
 	});
 
 	$('#slider-height').slider({
-		min: 0,
-		max: 100,
+		min: 30,
+		max: 300,
 		//value: home.find('div[name = "amount-slider"]').find('span[name = "current-amount"]').text(),
 		step:1,
 		range: "min",
-		value: 60,
+		value: 100,
 		slide: function(event, ui) {
 			//displayCurrentAmmount(ui.value);
 			$('div.block-calculator ul.block-slider-height input[name = "height"]').val(ui.value);
+			calculatorRulon();
 		},
 		change: function(event, ui) {
-			//calculate();
+			calculatorRulon();
 		}
 	});
 
 	//modal
 	modal.on('click', 'div.material',function( event ) {  
-		var block_price = $(this).parents('li.choose-color').find('div.price-color').find('span.number').text($(this).parents('div[name = "group"]').attr('price'));
+		var block_price = $(this).parents('li.choose-color').find('div.price-color').find('span.number').text(parseFloat($(this).parents('div[name = "group"]').attr('price')).toFixed());
 		var block_title = $(this).parents('li.choose-color').find('div.title-color').text($(this).parents('div[name = "group"]').attr('title'));
 		var block_preview = $(this).parents('li.choose-color').find('div.preview-color');
 		block_preview.empty();
 		block_preview.append('<img src = "'+$(this).find('li.image-material img').attr('src')+'">');
 		modal.modal('hide');
+		calculatorRulon();
     });
 	//modal
 	//
@@ -171,5 +174,19 @@ $(function() {
             }
         );
 	});
+
+	function calculatorRulon() {
+		var m = parseFloat(home.find('div.block-calculator div.price-color span.number').text());
+		var h = parseFloat($('#slider-height').slider( "option", "value" ));
+		var w = $('#slider-width').slider( "option", "value" );
+		var total = home.find('div.block-total span[name = "total"]');
+		
+		if (h <= 180) {
+			price = ((m/10000)*100*w).toFixed();
+		}else{
+			price = ((((h-180)/100)*(m/10000) + m/10000)*100*w).toFixed();
+		}
+		total.text(price);
+	}
 
 });

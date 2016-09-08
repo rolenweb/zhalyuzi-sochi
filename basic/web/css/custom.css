@@ -271,7 +271,7 @@ section div.container div.block-slider div.block-total {
   border-right: 1px solid #ccc;
 }
 section div.container div.block-slider div.block-total ul li:last-child {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 @media (max-width: 767px) {
   section div.container div.block-slider div.block-total ul li:last-child {
