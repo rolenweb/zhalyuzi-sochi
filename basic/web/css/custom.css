@@ -1,3 +1,8 @@
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+}
 .visible {
   display: none;
 }
@@ -118,7 +123,7 @@ header div.top-menu ul.top-menu-md-lg {
 header div.top-menu ul.top-menu-md-lg li {
   background-color: #51a5d4;
   border: 2px solid #fff;
-  padding: 10px 34px;
+  padding: 10px 22px;
 }
 @media (max-width: 1199px) {
   header div.top-menu ul.top-menu-md-lg li {
@@ -574,6 +579,11 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.btn-choose-color {
   margin-top: 20px;
+}
+@media (max-width: 991px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color div.btn-choose-color button {
+    font-size: 10px;
+  }
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content {
   background-color: #555;

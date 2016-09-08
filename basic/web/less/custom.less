@@ -19,6 +19,12 @@
 @var-url-footer-logo-hover: url("../images/footer/logo_mini_hover.png");
 
 
+.container{
+	@media (min-width: 1200px){
+		width: 1000px;	
+	}
+	
+}
 .visible{
 	display: none;
 }
@@ -155,7 +161,7 @@ header{
 			li{
 				background-color: @color-blue;
 				border: 2px solid @color-white;
-				padding: 10px 34px;
+				padding: 10px 22px;
 				@media (max-width: 1199px){
 					    padding: 10px 20px;
 				}
@@ -528,6 +534,13 @@ section{
 						}
 					div.btn-choose-color{
 						margin-top: 20px;
+						button{
+							@media (max-width: 991px){
+								font-size: 10px;
+								
+							}	
+						}
+						
 						
 					}
 					div.modal-content{

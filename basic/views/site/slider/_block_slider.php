@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 echo Html::beginTag('div',['class' => 'block-slider']);
     echo Html::beginTag('div',['class' => 'row']);
-        echo Html::beginTag('div',['class' => 'col-xs-8 col-sm-4']);
+        echo Html::beginTag('div',['class' => 'col-xs-8 col-sm-5']);
           	echo Html::beginTag('div',['class' => 'row']);
             	echo Html::beginTag('div',['class' => 'col-xs-12 col-sm-12']);
               		echo Html::beginTag('div',['class' => 'title-slider']);
@@ -26,7 +26,7 @@ echo Html::beginTag('div',['class' => 'block-slider']);
         	    echo Html::endTag('div');
           	echo Html::endTag('div');  
         echo Html::endTag('div'); 
-        echo Html::beginTag('div',['class' => 'col-xs-4 col-sm-8 category']);
+        echo Html::beginTag('div',['class' => 'col-xs-4 col-sm-7 category']);
         	echo $this->render('_category');
         echo Html::endTag('div');
     echo Html::endTag('div');  
