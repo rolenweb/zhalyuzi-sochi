@@ -89,6 +89,30 @@ class SiteController extends Controller
                 'group' => $group,
             ]);
     }
+    
+    /**
+     * Displays homepage.
+     *
+     * @return string
+     */
+    public function actionVerticalBlinds()
+    {
+        $this->layout = 'front';
+        $group = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Вертикальные жалюзи',
+                    ],
+                    [
+                        'category.title' => 'Вертикальные жалюзи',
+                    ]
+            ]
+        )->limit(1)->one();
+        return $this->render('vertical_blinds',[
+                'group' => $group,
+            ]);
+    }
 
     /**
      * Login action.
@@ -161,7 +185,7 @@ class SiteController extends Controller
                 ]);
             }
             $groups = NULL;
-            if ($post_data['page'] == 'rulon') {
+            if ($post_data['page'] == 'index') {
                 if ($post_data['category'] == 1 || $post_data['category'] == 2) {
                     $groups = Group::find()->joinWith(['subCategory.category'])->where(
                         [
@@ -171,6 +195,21 @@ class SiteController extends Controller
                                 ],
                                 [
                                     'category.title' => 'Рулонные шторы',
+                                ]
+                        ]
+                    )->all();
+                }
+            }
+            if ($post_data['page'] == 'vertical-blinds') {
+                if ($post_data['category'] == 1) {
+                    $groups = Group::find()->joinWith(['subCategory.category'])->where(
+                        [
+                            'and',
+                                [
+                                    'sub_category.title' => 'Вертикальные жалюзи',
+                                ],
+                                [
+                                    'category.title' => 'Вертикальные жалюзи',
                                 ]
                         ]
                     )->all();

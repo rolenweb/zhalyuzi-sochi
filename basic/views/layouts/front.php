@@ -205,8 +205,8 @@ FrontAsset::register($this);
         </div>
         <div class="top-menu top-5">
           <ul class="list-inline hidden-xs hidden-sm text-center top-menu-md-lg">
-            <li><a href="">Рулонные<br> шторы</a></li>
-            <li><a href="">Вертикальные<br> жалюзи</a></li>
+            <li><?= Html::a('Рулонные<br> шторы',['index']) ?></li>
+            <li><?= Html::a('Вертикальные<br> жалюзи',['site/vertical-blinds']) ?><a href=""></a></li>
             <li><a href="">Горизонтальные<br> жалюзи</a></li>
             <li><a href="">Плиссе<br><span>.</span></a></li>
             <li><a href="">Карнизы<br><span>.</span></a></li>
@@ -214,8 +214,8 @@ FrontAsset::register($this);
             <li><a href="">Электро<br> жалюзи</a></li>
           </ul>
           <ul class="list-unstyled top-menu-sm-xs">
-            <li><a href="">Рулонные шторы</a></li>
-            <li><a href="">Вертикальные жалюзи</a></li>
+            <li><?= Html::a('Рулонные шторы',['index']) ?></li>
+            <li><?= Html::a('Вертикальные жалюзи',['site/vertical-blinds']) ?><a href=""></a></li>
             <li><a href="">Горизонтальные жалюзи</a></li>
             <li><a href="">Плиссе</a></li>
             <li><a href="">Карнизы</a></li>

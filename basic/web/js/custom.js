@@ -159,11 +159,12 @@ $(function() {
 	//
 	$('#choose-color').on('show.bs.modal', function (e) {
 		var category = getCategorySlider();
+
 		var body = $(this).find('.modal-body').empty().append('<div class="text-center"><i class = "fa fa-spinner fa-pulse fa-4x"></i></div>');
 		$.post(
             '/site/load-material',
             {
-              'page':'rulon',
+              'page':home.find('li.choose-color div.btn-choose-color button').attr('page'),
               'category' : category,
             }
         ).done(function( data ) {
@@ -183,17 +184,36 @@ $(function() {
     });
 
 	function calculatorRulon() {
-		var m = parseFloat(home.find('div.block-calculator div.price-color span.number').text());
-		var h = parseFloat($('#slider-height').slider( "option", "value" ));
-		var w = $('#slider-width').slider( "option", "value" );
-		var total = home.find('div.block-total span[name = "total"]');
-		
-		if (h <= 180) {
-			price = ((m/10000)*100*w).toFixed();
-		}else{
-			price = ((((h-180)/100)*(m/10000) + m/10000)*100*w).toFixed();
+		var page = home.find('div.block-calculator').attr('page-name');
+		if (page === 'index') {
+			var m = parseFloat(home.find('div.block-calculator div.price-color span.number').text());
+			var h = parseFloat($('#slider-height').slider( "option", "value" ));
+			var w = $('#slider-width').slider( "option", "value" );
+			var total = home.find('div.block-total span[name = "total"]');
+			
+			if (h <= 180) {
+				price = ((m/10000)*100*w).toFixed();
+			}else{
+				price = ((((h-180)/100)*(m/10000) + m/10000)*100*w).toFixed();
+			}
+			total.text(price);	
 		}
-		total.text(price);
+		if (page === 'vertical-blinds') {
+			var m = parseFloat(home.find('div.block-calculator div.price-color span.number').text());
+			var h = parseFloat($('#slider-height').slider( "option", "value" ));
+			var w = $('#slider-width').slider( "option", "value" );
+			var total = home.find('div.block-total span[name = "total"]');
+			
+			if (h*w <= 10000) {
+				price = m.toFixed();
+			}else{
+				price = ((m/10000)*h*w).toFixed();
+			}
+
+			
+			total.text(price);	
+		}
+		
 	}
 
 });
