@@ -133,11 +133,23 @@ $(function() {
 
 	//modal
 	modal.on('click', 'div.material',function( event ) {  
-		var block_price = $(this).parents('li.choose-color').find('div.price-color').find('span.number').text(parseFloat($(this).parents('div[name = "group"]').attr('price')).toFixed());
-		var block_title = $(this).parents('li.choose-color').find('div.title-color').text($(this).parents('div[name = "group"]').attr('title'));
-		var block_preview = $(this).parents('li.choose-color').find('div.preview-color');
-		block_preview.empty();
-		block_preview.append('<img src = "'+$(this).find('li.image-material img').attr('src')+'">');
+		var page = home.find('div.block-calculator').attr('page-name');
+		if (page === 'index' || page === 'vertical-blinds') {
+			
+			var pic = $(this).find('li.image-material img').attr('src');
+			var price = parseFloat($(this).parents('div[name = "group"]').attr('price')).toFixed();
+			var title = $(this).parents('div[name = "group"]').attr('title');
+			var name = $(this).find('li.description-material').text();
+			setColor(pic,price,title,name);
+		}
+		if (page === 'horizontal-blinds') {
+			var pic = $(this).find('li.image-material img').attr('src');
+			var price = parseFloat($(this).find('span.price').text()).toFixed();
+			var title = $(this).parents('div[name = "group"]').attr('title');
+			var name = $(this).find('li.description-material').text();
+			setColor(pic,price,title,name);
+		}
+		
 		modal.modal('hide');
 		calculatorRulon();
     });
@@ -202,7 +214,7 @@ $(function() {
 			}
 			total.text(price);	
 		}
-		if (page === 'vertical-blinds') {
+		if (page === 'vertical-blinds' || page === 'horizontal-blinds') {
 			var m = parseFloat(home.find('div.block-calculator div.price-color span.number').text());
 			var h = parseFloat($('#slider-height').slider( "option", "value" ));
 			var w = $('#slider-width').slider( "option", "value" );
@@ -222,7 +234,7 @@ $(function() {
 
 	function defaultCalculator() {
 		var page = home.find('div.block-calculator').attr('page-name');
-		if (page === 'index' || page === 'vertical-blinds') {
+		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds') {
 			$('#slider-width').slider( "option", "value", 100);
 			$('#slider-height').slider( "option", "value", 100);
 			$('div.block-calculator ul.block-slider-width input[name = "width"]').val(100);
@@ -232,7 +244,7 @@ $(function() {
 
 	function updateTotal(total) {
 		var page = home.find('div.block-calculator').attr('page-name');
-		if (page === 'index' || page === 'vertical-blinds') {
+		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds') {
 			var total = home.find('div.block-total span[name = "total"]').text(parseFloat(total).toFixed());
 		}
 		
@@ -252,6 +264,17 @@ $(function() {
 			setColor(pic,price,title,name);
 			
 		}
+		if (page === 'horizontal-blinds') {
+			if (slider == 1 || slider == 2) {
+
+				visibleColor('1');
+			}else{
+				visibleColor(slider);
+			}
+			setColor(pic,price,title,name);
+			
+		}
+
 	}
 
 	function setColor(pic,price,title,name) {

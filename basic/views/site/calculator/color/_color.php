@@ -14,7 +14,12 @@ echo Html::beginTag('ul',['class' => 'list-unstyled block-choose-color']);
 				echo Html::tag('div',$group->title,['class' => 'title-color']);
 				echo Html::tag('div',$group->materials[0]->title,['class' => 'title-material']);
 				echo Html::beginTag('div',['class' => 'price-color']);
-					echo Html::tag('span',round($group->price),['class' => 'number']);
+					if ($page == 'horizontal-blinds') {
+						$price = $group->materials[0]->price;
+					}else{
+						$price = $group->price;
+					}
+					echo Html::tag('span',round($price),['class' => 'number']);
 					echo Html::tag('span','руб./ п.м.',['class' => 'text']);
 				echo Html::endTag('div');
 			echo Html::endTag('div');

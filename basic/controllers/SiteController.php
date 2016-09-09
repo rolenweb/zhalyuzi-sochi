@@ -187,6 +187,68 @@ class SiteController extends Controller
             ]);
     }
 
+
+    /**
+     * Displays homepage.
+     *
+     * @return string
+     */
+    public function actionHorizontalBlinds()
+    {
+        $this->layout = 'front';
+       
+        $group1 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Алюминиевые жалюзи',
+                    ],
+                    [
+                        'category.title' => 'Горизонтальные жалюзи',
+                    ]
+            ]
+        )->limit(1)->one();
+        $group2 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Кассетные алюминевые',
+                    ],
+                    [
+                        'category.title' => 'Горизонтальные жалюзи',
+                    ]
+            ]
+        )->limit(1)->one();
+        $group3 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Деревянные жалюзи',
+                    ],
+                    [
+                        'category.title' => 'Горизонтальные жалюзи',
+                    ]
+            ]
+        )->limit(1)->one();
+        $group4 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Пластиковые жалюзи',
+                    ],
+                    [
+                        'category.title' => 'Горизонтальные жалюзи',
+                    ]
+            ]
+        )->limit(1)->one();
+        return $this->render('horizontal_blinds',[
+                'group1' => $group1,
+                'group2' => $group2,
+                'group3' => $group3,
+                'group4' => $group4,
+            ]);
+    }
+
     /**
      * Login action.
      *
@@ -311,6 +373,11 @@ class SiteController extends Controller
                         ]
                     )->all();
                 }
+
+                return $this->renderAjax('calculator/modal/_material_rulon', [
+                    'groups' => $groups,
+                    
+                ]);
             }
             if ($post_data['page'] == 'vertical-blinds') {
                 if ($post_data['category'] == 1) {
@@ -326,11 +393,47 @@ class SiteController extends Controller
                         ]
                     )->all();
                 }
+                return $this->renderAjax('calculator/modal/_material_rulon', [
+                    'groups' => $groups,
+                    
+                ]);
+            }   
+
+            if ($post_data['page'] == 'horizontal-blinds') {
+                if ($post_data['category'] == 1) {
+                    $groups = Group::find()->joinWith(['subCategory.category'])->where(
+                        [
+                            'and',
+                                [
+                                    'sub_category.title' => 'Алюминиевые жалюзи',
+                                ],
+                                [
+                                    'category.title' => 'Горизонтальные жалюзи',
+                                ]
+                        ]
+                    )->all();
+                }
+                if ($post_data['category'] == 2) {
+                    $groups = Group::find()->joinWith(['subCategory.category'])->where(
+                        [
+                            'and',
+                                [
+                                    'sub_category.title' => 'Кассетные алюминевые',
+                                ],
+                                [
+                                    'category.title' => 'Горизонтальные жалюзи',
+                                ]
+                        ]
+                    )->all();
+                }
+
+                return $this->renderAjax('calculator/modal/_material_horizontal_blinds', [
+                    'groups' => $groups,
+                    
+                ]);
             }    
             
-            return $this->renderAjax('calculator/modal/_material_rulon', [
-                    'groups' => $groups,
-            ]);
+
         }
         
         else{
