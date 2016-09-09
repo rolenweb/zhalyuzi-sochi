@@ -16,7 +16,7 @@ echo Html::beginTag('div',['class' => 'block-slider']);
         	    	echo Html::beginTag('div',['class' => 'block-total']);
         	    		echo Html::beginTag('ul',['class' => 'list-inline text-center']);
         	    			echo Html::beginTag('li');
-        	    				echo 'Итого: '.Html::tag('span',round($group->price),['name' => 'total']).Html::tag('span','руб',['class' => 'rub']);
+        	    				echo 'Итого: '.Html::tag('span',round($group1->price),['name' => 'total']).Html::tag('span','руб',['class' => 'rub']);
         	    			echo Html::endTag('li');
         	    			echo Html::beginTag('li');
         	    				echo Html::button('Заказать<br>'.Html::tag('span','* бесплатный замер'),['class' => 'btn btn-success']);
@@ -27,7 +27,12 @@ echo Html::beginTag('div',['class' => 'block-slider']);
           	echo Html::endTag('div');  
         echo Html::endTag('div'); 
         echo Html::beginTag('div',['class' => 'col-xs-4 col-sm-7 category']);
-        	echo $this->render('_category');
+        	echo $this->render('_category',[
+                    'group1' => $group1,
+                    'group2' => $group2,
+                    'group3' => $group3,
+                    'group4' => $group4,
+                ]);
         echo Html::endTag('div');
     echo Html::endTag('div');  
 echo Html::endTag('div');  

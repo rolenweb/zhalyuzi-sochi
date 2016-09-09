@@ -153,7 +153,11 @@ $(function() {
 		$(this).parents('li[name = "category-slider"]').attr('status','active');
 		home.find('div.block-slider div.title-slider').text($(this).find('span.title').text());
 		var slider = home.find('.image-slider').find('img[status = "active"]').stop();	
-		sliderImg('yes','right',3000);	
+		sliderImg('yes','right',3000);
+		defaultCalculator();
+		var pr_li = $(this).parents('li[name = "category-slider"]');
+		updateTotal(pr_li.attr('price'));
+		updateColor(pr_li.attr('file'),pr_li.attr('price'),pr_li.attr('name-group'),pr_li.attr('material-title'), pr_li.attr('slider'))
     });
 	//select category
 	//
@@ -214,6 +218,45 @@ $(function() {
 			total.text(price);	
 		}
 		
+	}
+
+	function defaultCalculator() {
+		var page = home.find('div.block-calculator').attr('page-name');
+		if (page === 'index' || page === 'vertical-blinds') {
+			$('#slider-width').slider( "option", "value", 100);
+			$('#slider-height').slider( "option", "value", 100);
+			$('div.block-calculator ul.block-slider-width input[name = "width"]').val(100);
+			$('div.block-calculator ul.block-slider-height input[name = "height"]').val(100);
+		}
+	}
+
+	function updateTotal(total) {
+		var page = home.find('div.block-calculator').attr('page-name');
+		if (page === 'index' || page === 'vertical-blinds') {
+			var total = home.find('div.block-total span[name = "total"]').text(parseFloat(total).toFixed());
+		}
+		
+	}
+
+	function updateColor(pic,price,title,name,slider) {
+		var page = home.find('div.block-calculator').attr('page-name');
+		if (page === 'index') {
+			setColor(pic,price,title,name);			
+		}
+		if (page === 'vertical-blinds') {
+			if (slider === 1) {
+				setColor(pic,price,title,name);
+			}
+		}
+	}
+
+	function setColor(pic,price,title,name) {
+		var block_price = home.find('li.choose-color').find('div.price-color').find('span.number').text(parseFloat(price).toFixed());
+		var block_title = home.find('li.choose-color').find('div.title-color').text(title);
+		var block_name = home.find('li.choose-color').find('div.title-material').text(name);
+		var block_preview = home.find('li.choose-color').find('div.preview-color');
+		block_preview.empty();
+		block_preview.append('<img src = "'+pic+'">');
 	}
 
 });

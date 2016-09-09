@@ -74,7 +74,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $this->layout = 'front';
-        $group = Group::find()->joinWith(['subCategory.category'])->where(
+        $group1 = Group::find()->joinWith(['subCategory.category'])->where(
             [
                 'and',
                     [
@@ -85,8 +85,44 @@ class SiteController extends Controller
                     ]
             ]
         )->limit(1)->one();
+        $group2 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Кассетные рулонные шторы',
+                    ],
+                    [
+                        'category.title' => 'Рулонные шторы',
+                    ]
+            ]
+        )->limit(1)->one();
+        $group3 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Рулонные шторы зебра',
+                    ],
+                    [
+                        'category.title' => 'Рулонные шторы',
+                    ]
+            ]
+        )->limit(1)->one();
+        $group4 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Кассетные рулонные шторы зебра',
+                    ],
+                    [
+                        'category.title' => 'Рулонные шторы',
+                    ]
+            ]
+        )->limit(1)->one();
         return $this->render('index',[
-                'group' => $group,
+                'group1' => $group1,
+                'group2' => $group2,
+                'group3' => $group3,
+                'group4' => $group4,
             ]);
     }
     
@@ -186,12 +222,51 @@ class SiteController extends Controller
             }
             $groups = NULL;
             if ($post_data['page'] == 'index') {
-                if ($post_data['category'] == 1 || $post_data['category'] == 2) {
+                if ($post_data['category'] == 1) {
                     $groups = Group::find()->joinWith(['subCategory.category'])->where(
                         [
                             'and',
                                 [
                                     'sub_category.title' => 'Рулонные шторы',
+                                ],
+                                [
+                                    'category.title' => 'Рулонные шторы',
+                                ]
+                        ]
+                    )->all();
+                }
+                if ($post_data['category'] == 2) {
+                    $groups = Group::find()->joinWith(['subCategory.category'])->where(
+                        [
+                            'and',
+                                [
+                                    'sub_category.title' => 'Кассетные рулонные шторы',
+                                ],
+                                [
+                                    'category.title' => 'Рулонные шторы',
+                                ]
+                        ]
+                    )->all();
+                }
+                if ($post_data['category'] == 3) {
+                    $groups = Group::find()->joinWith(['subCategory.category'])->where(
+                        [
+                            'and',
+                                [
+                                    'sub_category.title' => 'Рулонные шторы зебра',
+                                ],
+                                [
+                                    'category.title' => 'Рулонные шторы',
+                                ]
+                        ]
+                    )->all();
+                }
+                if ($post_data['category'] == 4) {
+                    $groups = Group::find()->joinWith(['subCategory.category'])->where(
+                        [
+                            'and',
+                                [
+                                    'sub_category.title' => 'Кассетные рулонные шторы зебра',
                                 ],
                                 [
                                     'category.title' => 'Рулонные шторы',
