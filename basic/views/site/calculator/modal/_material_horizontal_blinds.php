@@ -14,7 +14,7 @@ if ($groups != NULL) {
 						echo Html::beginTag('div');
 							echo Html::tag('span',$material->code,['class' => 'code']);
 							echo Html::tag('span',$material->price,['class' => 'price']);
-							echo Html::tag('span','руб/м2',['class' => 'pub']);
+							echo Html::tag('span','руб/м2',['class' => 'rub']);
 						echo Html::endTag('div');
 						echo Html::beginTag('ul',['class' => 'list-unstyled']);
 							echo Html::beginTag('li',['class' => 'image-material']);

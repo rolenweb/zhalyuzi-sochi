@@ -26,7 +26,7 @@ echo Html::beginTag('ul',['class' => 'list-unstyled']);
 			echo Html::endTag('div');
 		echo Html::endTag('div');
 	echo Html::endTag('li');
-	echo Html::beginTag('li',['name' => 'category-slider','slider' => '2', 'price' => $group2->materials[0]->price, 'file' => '/images/material/'.$group2->materials[0]->id.'.'.$group2->materials[0]->extension, 'material-title' => $group1->materials[0]->title, 'name-group' => $group2->title]);
+	echo Html::beginTag('li',['name' => 'category-slider','slider' => '2', 'price' => $group2->materials[0]->price, 'file' => '/images/material/'.$group2->materials[0]->id.'.'.$group2->materials[0]->extension, 'material-title' => $group2->materials[0]->title, 'name-group' => $group2->title]);
 		echo Html::beginTag('div',['class' => 'row row-single-category']);
 			echo Html::beginTag('div',['class' => 'col-xs-12 col-sm-10 col-single-category']);
 				echo Html::beginTag('div',['class' => 'row']);
