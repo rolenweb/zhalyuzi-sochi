@@ -245,8 +245,12 @@ $(function() {
 		}
 		if (page === 'vertical-blinds') {
 			if (slider === 1) {
-				setColor(pic,price,title,name);
+				visibleColor(slider);
+			}else{
+				visibleColor(slider);
 			}
+			setColor(pic,price,title,name);
+			
 		}
 	}
 
@@ -257,6 +261,17 @@ $(function() {
 		var block_preview = home.find('li.choose-color').find('div.preview-color');
 		block_preview.empty();
 		block_preview.append('<img src = "'+pic+'">');
+	}
+
+	function visibleColor(v) {
+		var block_color = home.find('ul.block-choose-color');
+		console.log(v);
+		if (v === '1') {
+			console.log('test');
+			block_color.show();
+		}else{
+			block_color.hide();
+		}
 	}
 
 });

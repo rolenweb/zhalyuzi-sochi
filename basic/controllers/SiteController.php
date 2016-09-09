@@ -134,7 +134,8 @@ class SiteController extends Controller
     public function actionVerticalBlinds()
     {
         $this->layout = 'front';
-        $group = Group::find()->joinWith(['subCategory.category'])->where(
+       
+        $group1 = Group::find()->joinWith(['subCategory.category'])->where(
             [
                 'and',
                     [
@@ -145,8 +146,44 @@ class SiteController extends Controller
                     ]
             ]
         )->limit(1)->one();
+        $group2 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Пластиковые вертикальные жалюзи',
+                    ],
+                    [
+                        'category.title' => 'Вертикальные жалюзи',
+                    ]
+            ]
+        )->limit(1)->one();
+        $group3 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Мультифактурные',
+                    ],
+                    [
+                        'category.title' => 'Вертикальные жалюзи',
+                    ]
+            ]
+        )->limit(1)->one();
+        $group4 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Бриз',
+                    ],
+                    [
+                        'category.title' => 'Вертикальные жалюзи',
+                    ]
+            ]
+        )->limit(1)->one();
         return $this->render('vertical_blinds',[
-                'group' => $group,
+                'group1' => $group1,
+                'group2' => $group2,
+                'group3' => $group3,
+                'group4' => $group4,
             ]);
     }
 
