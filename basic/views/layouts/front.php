@@ -208,7 +208,7 @@ FrontAsset::register($this);
             <li><?= Html::a('Рулонные<br> шторы',['index']) ?></li>
             <li><?= Html::a('Вертикальные<br> жалюзи',['site/vertical-blinds']) ?></li>
             <li><?= Html::a('Горизонтальные<br> жалюзи',['site/horizontal-blinds']) ?></li>
-            <li><a href="">Плиссе<br><span>.</span></a></li>
+            <li><?= Html::a('Плиссе<br>'.Html::tag('span','.'),['site/plisse']) ?></li></li>
             <li><a href="">Карнизы<br><span>.</span></a></li>
             <li><a href="">Москитные<br> сетки</a></li>
             <li><a href="">Электро<br> жалюзи</a></li>
@@ -217,7 +217,7 @@ FrontAsset::register($this);
             <li><?= Html::a('Рулонные шторы',['index']) ?></li>
             <li><?= Html::a('Вертикальные жалюзи',['site/vertical-blinds']) ?></li>
             <li><?= Html::a('Горизонтальные жалюзи',['site/horizontal-blinds']) ?></li>
-            <li><a href="">Плиссе</a></li>
+            <li><?= Html::a('Плиссе',['site/plisse']) ?></li>
             <li><a href="">Карнизы</a></li>
             <li><a href="">Москитные</a></li>
             <li><a href="">Электро жалюзи</a></li>

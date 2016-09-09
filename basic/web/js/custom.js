@@ -134,7 +134,7 @@ $(function() {
 	//modal
 	modal.on('click', 'div.material',function( event ) {  
 		var page = home.find('div.block-calculator').attr('page-name');
-		if (page === 'index' || page === 'vertical-blinds') {
+		if (page === 'index' || page === 'vertical-blinds' || page === 'plisse') {
 			
 			var pic = $(this).find('li.image-material img').attr('src');
 			var price = parseFloat($(this).parents('div[name = "group"]').attr('price')).toFixed();
@@ -214,7 +214,7 @@ $(function() {
 			}
 			total.text(price);	
 		}
-		if (page === 'vertical-blinds' || page === 'horizontal-blinds') {
+		if (page === 'vertical-blinds' || page === 'horizontal-blinds' || page === 'plisse') {
 			var m = parseFloat(home.find('div.block-calculator div.price-color span.number').text());
 			var h = parseFloat($('#slider-height').slider( "option", "value" ));
 			var w = $('#slider-width').slider( "option", "value" );
@@ -234,7 +234,7 @@ $(function() {
 
 	function defaultCalculator() {
 		var page = home.find('div.block-calculator').attr('page-name');
-		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds') {
+		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds' || page === 'plisse') {
 			$('#slider-width').slider( "option", "value", 100);
 			$('#slider-height').slider( "option", "value", 100);
 			$('div.block-calculator ul.block-slider-width input[name = "width"]').val(100);
@@ -244,7 +244,7 @@ $(function() {
 
 	function updateTotal(total) {
 		var page = home.find('div.block-calculator').attr('page-name');
-		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds') {
+		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds'  || page === 'plisse') {
 			var total = home.find('div.block-total span[name = "total"]').text(parseFloat(total).toFixed());
 		}
 		
@@ -273,6 +273,10 @@ $(function() {
 			}
 			setColor(pic,price,title,name);
 			
+		}
+
+		if (page === 'plisse') {
+			setColor(pic,price,title,name);	
 		}
 
 	}

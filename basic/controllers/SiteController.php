@@ -249,6 +249,47 @@ class SiteController extends Controller
             ]);
     }
 
+    
+
+    /**
+     * Displays homepage.
+     *
+     * @return string
+     */
+    public function actionPlisse()
+    {
+        $this->layout = 'front';
+       
+        $group1 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Плиссе',
+                    ],
+                    [
+                        'category.title' => 'Плиссе',
+                    ]
+            ]
+        )->limit(1)->one();
+        $group2 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Плиссе на мансардные окна',
+                    ],
+                    [
+                        'category.title' => 'Плиссе',
+                    ]
+            ]
+        )->limit(1)->one();
+
+        return $this->render('plisse',[
+                'group1' => $group1,
+                'group2' => $group2,
+                
+            ]);
+    }
+
     /**
      * Login action.
      *
@@ -428,6 +469,40 @@ class SiteController extends Controller
                 }
 
                 return $this->renderAjax('calculator/modal/_material_horizontal_blinds', [
+                    'groups' => $groups,
+                    
+                ]);
+            }
+
+            if ($post_data['page'] == 'plisse') {
+                if ($post_data['category'] == 1) {
+                    $groups = Group::find()->joinWith(['subCategory.category'])->where(
+                        [
+                            'and',
+                                [
+                                    'sub_category.title' => 'Плиссе',
+                                ],
+                                [
+                                    'category.title' => 'Плиссе',
+                                ]
+                        ]
+                    )->all();
+                }
+                if ($post_data['category'] == 2) {
+                    $groups = Group::find()->joinWith(['subCategory.category'])->where(
+                        [
+                            'and',
+                                [
+                                    'sub_category.title' => 'Плиссе на мансардные окна',
+                                ],
+                                [
+                                    'category.title' => 'Плиссе',
+                                ]
+                        ]
+                    )->all();
+                }
+
+                return $this->renderAjax('calculator/modal/_material_rulon', [
                     'groups' => $groups,
                     
                 ]);
