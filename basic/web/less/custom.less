@@ -61,6 +61,7 @@
 .active{
 	color: @color-blue;
 }
+
 .icon(){
 	color: @color-blue;
 }
@@ -185,6 +186,14 @@ header{
 						}
 					}	
 				}
+			}
+			li.active-menu{
+				background-color: @color-red;
+				a{
+					span{
+						color: @color-red;		
+					}
+				}	
 			}
 		}
 		ul.top-menu-sm-xs{
@@ -848,12 +857,17 @@ footer{
 
 	margin-top: 20px;
 	div.top-footer{
-
+		a{
+			color: @color-black;
+			&:hover{
+				text-decoration: none;
+			}
+		}
 		ul.border{
-			border: 2px solid @proz;
+			border: 4px solid @color-blue;
 			
 			&:hover{
-				border: 2px solid @color-blue;
+				border: 4px solid @color-red;
 			}
 		}
 

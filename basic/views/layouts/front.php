@@ -3,11 +3,14 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\FrontAsset;
+
 
 FrontAsset::register($this);
 ?>
@@ -203,12 +206,44 @@ FrontAsset::register($this);
             </div>
           </div>
         </div>
+        
         <div class="top-menu top-5">
           <ul class="list-inline hidden-xs hidden-sm text-center top-menu-md-lg">
-            <li><?= Html::a('Рулонные<br> шторы',['index']) ?></li>
-            <li><?= Html::a('Вертикальные<br> жалюзи',['site/vertical-blinds']) ?></li>
-            <li><?= Html::a('Горизонтальные<br> жалюзи',['site/horizontal-blinds']) ?></li>
-            <li><?= Html::a('Плиссе<br>'.Html::tag('span','.'),['site/plisse']) ?></li></li>
+<?php
+            if ($this->context->module->requestedAction->id == 'index') {
+              $li_option = ['class' => 'active-menu'];
+            }else{
+              $li_option = ['class' => NULL];
+            }
+            echo Html::beginTag('li',$li_option);
+                echo Html::a('Рулонные<br> шторы',['index']);
+            echo Html::endTag('li');
+            if ($this->context->module->requestedAction->id == 'vertical-blinds') {
+              $li_option = ['class' => 'active-menu'];
+            }else{
+              $li_option = ['class' => NULL];
+            }
+            echo Html::beginTag('li',$li_option);
+              echo Html::a('Вертикальные<br> жалюзи',['site/vertical-blinds']);
+            echo Html::endTag('li');
+            if ($this->context->module->requestedAction->id == 'horizontal-blinds') {
+              $li_option = ['class' => 'active-menu'];
+            }else{
+              $li_option = ['class' => NULL];
+            }
+            echo Html::beginTag('li',$li_option);
+              echo Html::a('Горизонтальные<br> жалюзи',['site/horizontal-blinds']);
+            echo Html::endTag('li');
+            if ($this->context->module->requestedAction->id == 'plisse') {
+              $li_option = ['class' => 'active-menu'];
+            }else{
+              $li_option = ['class' => NULL];
+            }
+            echo Html::beginTag('li',$li_option);
+              echo Html::a('Плиссе<br>'.Html::tag('span','.'),['site/plisse']);
+            echo Html::endTag('li');
+?>          
+            
             <li><a href="">Карнизы<br><span>.</span></a></li>
             <li><a href="">Москитные<br> сетки</a></li>
             <li><a href="">Электро<br> жалюзи</a></li>
@@ -232,16 +267,22 @@ FrontAsset::register($this);
         <div class="top-footer">
           <div class="row">
             <div class="col-xs-6 col-sm-2 text-center">
-              <ul class="list-unstyled border">
-                <li><img src="images/footer/small_pack.png" alt="" height="80px;"></li>
-                <li>Москитная сетка</li>
-              </ul>
+              <a href="">
+                <ul class="list-unstyled border">
+                  <li><img src="images/footer/small_pack.png" alt="" height="80px;"></li>
+                  <li>Москитная сетка</li>
+                </ul>  
+              </a>
+              
             </div>
             <div class="col-xs-6 col-sm-2 text-center">
-              <ul class="list-unstyled border text-center">
-                <li><img src="images/footer/manual_mini.png" alt="" height="60px;"></li>
-                <li>Инструкция по установке</li>
-              </ul>
+              <a href="">
+                <ul class="list-unstyled border text-center">
+                  <li><img src="images/footer/manual_mini.png" alt="" height="60px;"></li>
+                  <li>Инструкция по установке</li>
+                </ul>  
+              </a>
+              
             </div>
             <div class="col-xs-12 col-sm-4 call-gager text-center">
               <button class="btn btn-danger btn-xs">
@@ -250,16 +291,22 @@ FrontAsset::register($this);
               
             </div>
             <div class="col-xs-6 col-sm-2 text-center">
-              <ul class="list-unstyled border">
-                <li><img src="images/footer/manual-measurement.png" alt="" height="80px;"></li>
-                <li>Инструкция замера</li>
-              </ul>
+              <a href="">
+                <ul class="list-unstyled border">
+                  <li><img src="images/footer/manual-measurement.png" alt="" height="80px;"></li>
+                  <li>Инструкция замера</li>
+                </ul>  
+              </a>
+              
             </div>
             <div class="col-xs-6 col-sm-2 text-center">
-              <ul class="list-unstyled border">
-                <li><img src="images/footer/small_pack.png" alt="" width="80px;"></li>
-                <li>Готовые рулоны</li>
-              </ul>
+              <a href="">
+                <ul class="list-unstyled border">
+                  <li><img src="images/footer/small_pack.png" alt="" width="80px;"></li>
+                  <li>Готовые рулоны</li>
+                </ul>  
+              </a>
+              
             </div>
           </div>
         </div>

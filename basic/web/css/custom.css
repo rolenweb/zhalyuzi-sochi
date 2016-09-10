@@ -147,6 +147,12 @@ header div.top-menu ul.top-menu-md-lg li:hover a {
 header div.top-menu ul.top-menu-md-lg li:hover a span {
   color: red;
 }
+header div.top-menu ul.top-menu-md-lg li.active-menu {
+  background-color: red;
+}
+header div.top-menu ul.top-menu-md-lg li.active-menu a span {
+  color: red;
+}
 header div.top-menu ul.top-menu-sm-xs {
   display: none;
 }
@@ -870,11 +876,17 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
 footer {
   margin-top: 20px;
 }
+footer div.top-footer a {
+  color: #333;
+}
+footer div.top-footer a:hover {
+  text-decoration: none;
+}
 footer div.top-footer ul.border {
-  border: 2px solid rgba(0, 0, 0, 0);
+  border: 4px solid #51a5d4;
 }
 footer div.top-footer ul.border:hover {
-  border: 2px solid #51a5d4;
+  border: 4px solid red;
 }
 footer div.call-gager button {
   font-size: 16px;

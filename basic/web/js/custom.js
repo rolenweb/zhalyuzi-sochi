@@ -1,6 +1,7 @@
 $(function() {
 	var home = $('body');
 	var modal = home.find('#choose-color');
+	//backlightMenu();
 
 	home.on('click', 'div.top-header li[name = "show-contact"]',function( event ) {  
 		$(this).find('i').toggleClass('active');
@@ -11,9 +12,9 @@ $(function() {
 		$(this).find('i').toggleClass('active');
     	home.find('div.top-menu').find('ul.top-menu-sm-xs').toggle(1000);
     });
-
     //slider
     
+        
     home.on('click', 'div.block-slider div.pult-slider span.stop',function( event ) {  
 		var slider = home.find('.image-slider').find('img[status = "active"]').stop();		
     });
@@ -299,6 +300,24 @@ $(function() {
 		}else{
 			block_color.hide();
 		}
+	}
+
+	function backlightMenu() {
+		var page = home.find('div.block-calculator').attr('page-name');
+		console.log(page);
+		if (page === 'index') {
+			home.find('ul.top-menu-md-lg li:nth-child(1)').addClass('active-menu');
+		}
+		if (page === 'vertical-blinds') {
+			home.find('ul.top-menu-md-lg li:nth-child(2)').addClass('active-menu');
+		}
+		if (page === 'horizontal-blinds') {
+			home.find('ul.top-menu-md-lg li:nth-child(3)').addClass('active-menu');
+		}
+		if (page === 'plisse') {
+			home.find('ul.top-menu-md-lg li:nth-child(4)').addClass('active-menu');
+		}
+		
 	}
 
 });
