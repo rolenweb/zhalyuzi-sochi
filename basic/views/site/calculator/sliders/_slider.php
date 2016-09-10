@@ -16,8 +16,12 @@ echo Html::beginTag('ul',['class' => 'list-unstyled block-slider-width']);
 		echo Html::tag('div','',['id' => 'slider-width']);
 	echo Html::endTag('li');
 echo Html::endTag('ul');
-
-echo Html::beginTag('ul',['class' => 'list-unstyled block-slider-height']);
+if ($page == 'index' || $page == 'vertical-blinds' || $page == 'horizontal-blinds' || $page == 'plisse') {
+	$ul_option = ['class' => 'list-unstyled block-slider-height'];
+}else{
+	$ul_option = ['class' => 'list-unstyled block-slider-height visible'];
+}
+echo Html::beginTag('ul',$ul_option);
 	echo Html::beginTag('li');
 		echo Html::beginTag('span',['class' => 'title']);
 			echo 'Высота жалюзи';

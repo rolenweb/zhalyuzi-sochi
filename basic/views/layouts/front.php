@@ -242,9 +242,17 @@ FrontAsset::register($this);
             echo Html::beginTag('li',$li_option);
               echo Html::a('Плиссе<br>'.Html::tag('span','.'),['site/plisse']);
             echo Html::endTag('li');
+            if ($this->context->module->requestedAction->id == 'cornice') {
+              $li_option = ['class' => 'active-menu'];
+            }else{
+              $li_option = ['class' => NULL];
+            }
+            echo Html::beginTag('li',$li_option);
+              echo Html::a('Карнизы<br>'.Html::tag('span','.'),['site/cornice']);
+            echo Html::endTag('li');
 ?>          
             
-            <li><a href="">Карнизы<br><span>.</span></a></li>
+            
             <li><a href="">Москитные<br> сетки</a></li>
             <li><a href="">Электро<br> жалюзи</a></li>
           </ul>
@@ -253,7 +261,7 @@ FrontAsset::register($this);
             <li><?= Html::a('Вертикальные жалюзи',['site/vertical-blinds']) ?></li>
             <li><?= Html::a('Горизонтальные жалюзи',['site/horizontal-blinds']) ?></li>
             <li><?= Html::a('Плиссе',['site/plisse']) ?></li>
-            <li><a href="">Карнизы</a></li>
+            <li><?= Html::a('Карнизы',['site/cornice']) ?></li></li>
             <li><a href="">Москитные</a></li>
             <li><a href="">Электро жалюзи</a></li>
           </ul>

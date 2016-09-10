@@ -1,7 +1,11 @@
 <?php
 use yii\helpers\Html;
-
-echo Html::beginTag('ul',['class' => 'list-unstyled block-choose-color']);
+if ($page == 'index' || $page == 'vertical-blinds' || $page == 'horizontal-blinds' || $page == 'plisse') {
+	$ul_option = ['class' => 'list-unstyled block-choose-color'];
+}else{
+	$ul_option = ['class' => 'list-unstyled block-choose-color visible'];
+}
+echo Html::beginTag('ul',$ul_option);
 	echo Html::beginTag('li',['class' => 'title']);
 		echo "Выберите материал:";
 	echo Html::beginTag('li');

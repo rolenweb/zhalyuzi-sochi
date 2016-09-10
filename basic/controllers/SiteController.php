@@ -289,6 +289,62 @@ class SiteController extends Controller
                 
             ]);
     }
+    
+    public function actionCornice()
+    {
+        $this->layout = 'front';
+        $group1 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Однорядный карниз',
+                    ],
+                    [
+                        'category.title' => 'Карнизы',
+                    ]
+            ]
+        )->limit(1)->one();
+        $group2 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Карниз с липучкой',
+                    ],
+                    [
+                        'category.title' => 'Карнизы',
+                    ]
+            ]
+        )->limit(1)->one();
+        $group3 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Двухрядный карниз',
+                    ],
+                    [
+                        'category.title' => 'Карнизы',
+                    ]
+            ]
+        )->limit(1)->one();
+        $group4 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Карниз для раздвижных штор',
+                    ],
+                    [
+                        'category.title' => 'Карнизы',
+                    ]
+            ]
+        )->limit(1)->one();
+        
+        return $this->render('cornice',[
+                'group1' => $group1,
+                'group2' => $group2,
+                'group3' => $group3,
+                'group4' => $group4,
+            ]);
+    }
 
     /**
      * Login action.
