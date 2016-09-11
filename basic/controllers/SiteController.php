@@ -345,6 +345,74 @@ class SiteController extends Controller
                 'group4' => $group4,
             ]);
     }
+    
+    public function actionMosquitoNets()
+    {
+        $this->layout = 'front';
+        $group1 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Рамочная',
+                    ],
+                    [
+                        'category.title' => 'Москитные сетки',
+                    ]
+            ]
+        )->limit(1)->one();
+        $group2 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Рулонная',
+                    ],
+                    [
+                        'category.title' => 'Москитные сетки',
+                    ]
+            ]
+        )->limit(1)->one();
+        $group3 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Дверь',
+                    ],
+                    [
+                        'category.title' => 'Москитные сетки',
+                    ]
+            ]
+        )->limit(1)->one();
+        $group4 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Антикошка',
+                    ],
+                    [
+                        'category.title' => 'Москитные сетки',
+                    ]
+            ]
+        )->limit(1)->one();
+        $group5 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Дверь плиссе',
+                    ],
+                    [
+                        'category.title' => 'Москитные сетки',
+                    ]
+            ]
+        )->limit(1)->one();
+        
+        return $this->render('mosquito-nets',[
+                'group1' => $group1,
+                'group2' => $group2,
+                'group3' => $group3,
+                'group4' => $group4,
+                'group5' => $group5,
+            ]);
+    }
 
     /**
      * Login action.

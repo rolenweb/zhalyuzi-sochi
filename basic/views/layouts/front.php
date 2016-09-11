@@ -250,10 +250,18 @@ FrontAsset::register($this);
             echo Html::beginTag('li',$li_option);
               echo Html::a('Карнизы<br>'.Html::tag('span','.'),['site/cornice']);
             echo Html::endTag('li');
+            if ($this->context->module->requestedAction->id == 'mosquito-nets') {
+              $li_option = ['class' => 'active-menu'];
+            }else{
+              $li_option = ['class' => NULL];
+            }
+            echo Html::beginTag('li',$li_option);
+              echo Html::a('Москитные<br> сетки',['site/mosquito-nets']);
+            echo Html::endTag('li');
 ?>          
             
             
-            <li><a href="">Москитные<br> сетки</a></li>
+            
             <li><a href="">Электро<br> жалюзи</a></li>
           </ul>
           <ul class="list-unstyled top-menu-sm-xs">
@@ -262,7 +270,7 @@ FrontAsset::register($this);
             <li><?= Html::a('Горизонтальные жалюзи',['site/horizontal-blinds']) ?></li>
             <li><?= Html::a('Плиссе',['site/plisse']) ?></li>
             <li><?= Html::a('Карнизы',['site/cornice']) ?></li></li>
-            <li><a href="">Москитные</a></li>
+            <li><?= Html::a('Москитные сетки',['site/mosquito-nets']) ?></li>
             <li><a href="">Электро жалюзи</a></li>
           </ul>
         </div>

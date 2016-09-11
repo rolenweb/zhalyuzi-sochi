@@ -215,7 +215,7 @@ $(function() {
 			}
 			total.text(price);	
 		}
-		if (page === 'vertical-blinds' || page === 'horizontal-blinds' || page === 'plisse') {
+		if (page === 'vertical-blinds' || page === 'horizontal-blinds' || page === 'plisse' || page == 'mosquito-nets') {
 			var m = parseFloat(home.find('div.block-calculator div.price-color span.number').text());
 			var h = parseFloat($('#slider-height').slider( "option", "value" ));
 			var w = $('#slider-width').slider( "option", "value" );
@@ -246,7 +246,7 @@ $(function() {
 
 	function defaultCalculator() {
 		var page = home.find('div.block-calculator').attr('page-name');
-		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds' || page === 'plisse' || page === 'cornice') {
+		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds' || page === 'plisse' || page === 'cornice' || page == 'mosquito-nets') {
 			$('#slider-width').slider( "option", "value", 100);
 			$('#slider-height').slider( "option", "value", 100);
 			$('div.block-calculator ul.block-slider-width input[name = "width"]').val(100);
@@ -256,7 +256,7 @@ $(function() {
 
 	function updateTotal(total) {
 		var page = home.find('div.block-calculator').attr('page-name');
-		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds'  || page === 'plisse' || page === 'cornice') {
+		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds'  || page === 'plisse' || page === 'cornice' || page == 'mosquito-nets') {
 			var total = home.find('div.block-total span[name = "total"]').text(parseFloat(total).toFixed());
 		}
 		
@@ -294,6 +294,11 @@ $(function() {
 		if (page === 'cornice') {
 			setColor(pic,price,title,name);	
 		}
+
+		if (page === 'mosquito-nets') {
+			setColor(pic,price,title,name);		
+		}
+
 
 	}
 
