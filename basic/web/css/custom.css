@@ -898,7 +898,7 @@ footer div.call-gager div.modal-dialog {
   width: 350px;
   margin: 20px auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   footer div.call-gager div.modal-dialog {
     margin: 100px auto;
   }
