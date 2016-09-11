@@ -397,6 +397,11 @@ $(function() {
 	$('div[id ^= "order"]').on('show.bs.modal', function (event) {
 		var button = $(event.relatedTarget);
 	  	var modal = $(this)
+	  	modal.find('div.result').empty();
+	  	modal.find('input[name = "name"]').val('');
+	  	modal.find('input[name = "phone"]').val('');
+	  	modal.find('input[name = "captcha"]').val('');
+
 	  	if (button.attr('data-target') === '#order2') {
 	  		setOrderOption()
 	  	}

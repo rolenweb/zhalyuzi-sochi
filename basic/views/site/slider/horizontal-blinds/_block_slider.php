@@ -19,7 +19,7 @@ echo Html::beginTag('div',['class' => 'block-slider']);
         	    				echo 'Итого: '.Html::tag('span',round($group1->materials[0]->price),['name' => 'total']).Html::tag('span','руб',['class' => 'rub']);
         	    			echo Html::endTag('li');
         	    			echo Html::beginTag('li');
-        	    				echo Html::button('Заказать<br>'.Html::tag('span','* бесплатный замер'),['class' => 'btn btn-success']);
+        	    				echo Html::button('Заказать<br>'.Html::tag('span','* бесплатный замер'),['class' => 'btn btn-success', 'data-toggle' => 'modal', 'data-target' => '#order2']);
         	    			echo Html::endTag('li');
         	    		echo Html::endTag('ul');
         	    	echo Html::endTag('div');
