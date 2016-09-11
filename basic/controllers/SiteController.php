@@ -759,7 +759,7 @@ class SiteController extends Controller
     {
         Yii::$app->mailer->compose('order', ['order' => $order])
                 ->setTo(Yii::$app->params['orderEmail'])
-                ->setFrom([Yii::$app->params['adminEmail'] => 'Жалюзи в Сочи'])
+                ->setFrom(['rolenweb@yandex.ru' => 'Жалюзи в Сочи'])
                 ->setSubject('Заказ')
                 ->send();
 
