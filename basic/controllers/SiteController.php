@@ -709,7 +709,7 @@ class SiteController extends Controller
                     'error' => $error,
                 ]);
             }
-
+            
             if ($this->sendOrder($post_data)) {
                 $info[] = 'Спасибо за ваше обращение, мы свяжемся с вами в ближайшее время';
                 return $this->renderAjax('_result', [
