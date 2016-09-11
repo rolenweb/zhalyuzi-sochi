@@ -258,11 +258,15 @@ FrontAsset::register($this);
             echo Html::beginTag('li',$li_option);
               echo Html::a('Москитные<br> сетки',['site/mosquito-nets']);
             echo Html::endTag('li');
+            if ($this->context->module->requestedAction->id == 'electro-blinds') {
+              $li_option = ['class' => 'active-menu'];
+            }else{
+              $li_option = ['class' => NULL];
+            }
+            echo Html::beginTag('li',$li_option);
+              echo Html::a('Электро<br> жалюзи',['site/electro-blinds']);
+            echo Html::endTag('li');
 ?>          
-            
-            
-            
-            <li><a href="">Электро<br> жалюзи</a></li>
           </ul>
           <ul class="list-unstyled top-menu-sm-xs">
             <li><?= Html::a('Рулонные шторы',['index']) ?></li>
@@ -271,7 +275,7 @@ FrontAsset::register($this);
             <li><?= Html::a('Плиссе',['site/plisse']) ?></li>
             <li><?= Html::a('Карнизы',['site/cornice']) ?></li></li>
             <li><?= Html::a('Москитные сетки',['site/mosquito-nets']) ?></li>
-            <li><a href="">Электро жалюзи</a></li>
+            <li><?= Html::a('Электро жалюзи',['site/electro-blinds']) ?></li>
           </ul>
         </div>
       </div>

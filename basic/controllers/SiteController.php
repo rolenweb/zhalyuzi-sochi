@@ -413,6 +413,28 @@ class SiteController extends Controller
                 'group5' => $group5,
             ]);
     }
+    
+    public function actionElectroBlinds()
+    {
+        $this->layout = 'front';
+        $group1 = Group::find()->joinWith(['subCategory.category'])->where(
+            [
+                'and',
+                    [
+                        'sub_category.title' => 'Рамочная',
+                    ],
+                    [
+                        'category.title' => 'Москитные сетки',
+                    ]
+            ]
+        )->limit(1)->one();
+        
+        
+        return $this->render('electro-blinds',[
+                'group1' => $group1,
+        
+            ]);
+    }
 
     /**
      * Login action.
