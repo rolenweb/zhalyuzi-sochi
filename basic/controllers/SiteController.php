@@ -421,10 +421,10 @@ class SiteController extends Controller
             [
                 'and',
                     [
-                        'sub_category.title' => 'Рамочная',
+                        'sub_category.title' => 'Электро жалюзи',
                     ],
                     [
-                        'category.title' => 'Москитные сетки',
+                        'category.title' => 'Электро жалюзи',
                     ]
             ]
         )->limit(1)->one();
