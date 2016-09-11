@@ -48,26 +48,46 @@ echo Html::beginTag('table',['style' => 'border: 1px solid #000; text-align:left
 		echo Html::endTag('tr');
 	}
 	
-		if (isset($order['group'])) {
-			echo Html::beginTag('tr');
-				echo Html::beginTag('th');
-					echo 'Группа';
-				echo Html::endTag('th');
-				echo Html::beginTag('td');
-					echo $order['group'];
-				echo Html::endTag('td');
-			echo Html::endTag('tr');
-		}
-		if (isset($order['material'])) {
-			echo Html::beginTag('tr');
-				echo Html::beginTag('th');
-					echo 'Материал';
-				echo Html::endTag('th');
-				echo Html::beginTag('td');
-					echo $order['material'];
-				echo Html::endTag('td');
-			echo Html::endTag('tr');
-		}
+	if (isset($order['group'])) {
+		echo Html::beginTag('tr');
+			echo Html::beginTag('th');
+				echo 'Группа';
+			echo Html::endTag('th');
+			echo Html::beginTag('td');
+				echo $order['group'];
+			echo Html::endTag('td');
+		echo Html::endTag('tr');
+	}
+	if (isset($order['material'])) {
+		echo Html::beginTag('tr');
+			echo Html::beginTag('th');
+				echo 'Материал';
+			echo Html::endTag('th');
+			echo Html::beginTag('td');
+				echo $order['material'];
+			echo Html::endTag('td');
+		echo Html::endTag('tr');
+	}
+	if (isset($order['width'])) {
+		echo Html::beginTag('tr');
+			echo Html::beginTag('th');
+				echo 'Ширина';
+			echo Html::endTag('th');
+			echo Html::beginTag('td');
+				echo $order['width'];
+			echo Html::endTag('td');
+		echo Html::endTag('tr');
+	}
+	if (isset($order['height'])) {
+		echo Html::beginTag('tr');
+			echo Html::beginTag('th');
+				echo 'Высота';
+			echo Html::endTag('th');
+			echo Html::beginTag('td');
+				echo $order['height'];
+			echo Html::endTag('td');
+		echo Html::endTag('tr');
+	}
 		
 	
 	
