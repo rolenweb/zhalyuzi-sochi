@@ -1,4 +1,5 @@
 <?php
+use yii\helpers\Html;
 echo Html::beginTag('table');
 	echo Html::beginTag('tr');
 		echo Html::beginTag('th');
