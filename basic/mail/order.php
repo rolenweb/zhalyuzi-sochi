@@ -113,8 +113,9 @@ function catName($cat)
 	if ($cat == 'mosquito-nets') {
 		return 'Москитные сетки';
 	}
-	if ($cat == 'electro-blinds') {
+	if ($cat == NULL) {
 		return 'Электро жалюзи';
 	}
+	
 }
 ?>
