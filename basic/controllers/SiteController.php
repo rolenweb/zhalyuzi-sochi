@@ -758,8 +758,8 @@ class SiteController extends Controller
     public function sendOrder($order)
     {
         Yii::$app->mailer->compose('order', ['order' => $order])
-                ->setTo(Yii::$app->params['adminEmail'])
-                ->setFrom(['rolenweb@mail.ru' => 'Жалюзи в Сочи'])
+                ->setTo(Yii::$app->params['orderEmail'])
+                ->setFrom([Yii::$app->params['adminEmail'] => 'Жалюзи в Сочи'])
                 ->setSubject('Заказ')
                 ->send();
 
