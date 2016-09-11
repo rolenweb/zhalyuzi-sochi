@@ -663,6 +663,68 @@ class SiteController extends Controller
         }
     }
 
+    
+    public function actionSendOrder()
+    {
+        
+        
+        if(Yii::$app->request->isAjax){
+
+            $error = [];
+            $info = [];
+
+            $post_data = Yii::$app->request->post();
+
+
+            if (!isset($post_data)) {
+                $error[] = 'The post data is not set';
+                return $this->renderAjax('_result', [
+                    'error' => $error,
+                ]);
+            }
+
+            if (!isset($post_data['name'])) {
+                $error[] = 'The name id is not set';
+                return $this->renderAjax('_result', [
+                    'error' => $error,
+                ]);
+            }
+
+            if (!isset($post_data['phone'])) {
+                $error[] = 'The phone id is not set';
+                return $this->renderAjax('_result', [
+                    'error' => $error,
+                ]);
+            }
+            if (!isset($post_data['captcha'])) {
+                $error[] = 'The phone id is not set';
+                return $this->renderAjax('_result', [
+                    'error' => $error,
+                ]);
+            }
+
+            if ((int)$post_data['captcha'] !== (int)$post_data['c1']+(int)$post_data['c2']) {
+                $error[] = 'Пожалуйста введите код защиты еще раз';
+                return $this->renderAjax('_result', [
+                    'error' => $error,
+                ]);
+            }
+
+            if ($this->sendOrder($post_data)) {
+                $info[] = 'Спасибо за ваше обращение, мы свяжемся с вами в ближайшее время';
+                return $this->renderAjax('_result', [
+                    'info' => $info,
+                ]);   
+            }
+
+        }
+        
+        else{
+            Yii::$app->session->setFlash('error', 'Fuck, hands off of this page.');
+            return $this->redirect(['site/index']);
+        }
+    }
+
     /**
      * Logout action.
      *
@@ -693,13 +755,14 @@ class SiteController extends Controller
         ]);
     }
 
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
+    public function sendOrder($order)
     {
-        return $this->render('about');
+        Yii::$app->mailer->compose('order', ['order' => $order])
+                ->setTo(Yii::$app->params['adminEmail'])
+                ->setFrom(['rolenweb@yandex.ru' => 'Жалюзи в Сочи'])
+                ->setSubject('Заказ')
+                ->send();
+
+            return true;
     }
 }

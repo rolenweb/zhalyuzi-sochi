@@ -305,10 +305,10 @@ FrontAsset::register($this);
               
             </div>
             <div class="col-xs-12 col-sm-4 call-gager text-center">
-              <button class="btn btn-danger btn-xs">
+              <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#order1">
                 <img src="images/footer/roulette.png" alt=""> Вызвать замерщика
               </button>
-              
+              <?= $this->render('modal/_order') ?>
             </div>
             <div class="col-xs-6 col-sm-2 text-center">
               <a href="">

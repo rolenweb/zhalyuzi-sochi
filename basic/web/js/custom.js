@@ -324,7 +324,6 @@ $(function() {
 
 	function backlightMenu() {
 		var page = home.find('div.block-calculator').attr('page-name');
-		console.log(page);
 		if (page === 'index') {
 			home.find('ul.top-menu-md-lg li:nth-child(1)').addClass('active-menu');
 		}
@@ -339,5 +338,93 @@ $(function() {
 		}
 		
 	}
+
+
+	home.on('submit', 'form[name = "order1"], form[name = "order2"]',function( event ) {  
+		var block_reload = home.find('div[id ^= order] div.result');
+		$.post(
+            '/site/send-order',
+                $(this).serializeArray()
+            ).done(function( data ) {
+              block_reload.html(data);
+              }
+            ).fail( function(xhr, textStatus, errorThrown) {
+                alert(xhr.responseText);
+                }
+            );
+        event.preventDefault();		
+    });
+
+    home.on('click', 'form[name = "order1"] button, form[name = "order2"] button',function( event ) {  
+		customValidate();
+    });
+
+	function customValidate() {
+		if (home.find('input[name = "name"]').get(0).value == "") {
+			home.find('input[name = "name"]').get(0).setCustomValidity('Пожалуйста, введите ваше имя.');	
+		}else{
+			home.find('input[name = "name"]').get(0).setCustomValidity('');
+		}
+		if (home.find('input[name = "name"]').get(1).value == "") {
+			home.find('input[name = "name"]').get(1).setCustomValidity('Пожалуйста, введите ваше имя.');	
+		}else{
+			home.find('input[name = "name"]').get(1).setCustomValidity('');
+		}
+		if (home.find('input[name = "phone"]').get(0).value == "") {
+			home.find('input[name = "phone"]').get(0).setCustomValidity('Пожалуйста, введите ваш телефон.');	
+		}else{
+			home.find('input[name = "phone"]').get(0).setCustomValidity('');
+		}
+		if (home.find('input[name = "phone"]').get(1).value == "") {
+			home.find('input[name = "phone"]').get(1).setCustomValidity('Пожалуйста, введите ваш телефон.');	
+		}else{
+			home.find('input[name = "phone"]').get(1).setCustomValidity('');
+		}
+		if (home.find('input[name = "captcha"]').get(0).value == "") {
+			home.find('input[name = "captcha"]').get(0).setCustomValidity('Пожалуйста, введите код защиты от ботов.');	
+		}else{
+			home.find('input[name = "captcha"]').get(0).setCustomValidity('');
+		}
+		if (home.find('input[name = "captcha"]').get(1).value == "") {
+			home.find('input[name = "captcha"]').get(1).setCustomValidity('Пожалуйста, введите код защиты от ботов.');	
+		}else{
+			home.find('input[name = "captcha"]').get(1).setCustomValidity('');
+		}
+		
+    
+	}
+
+	$('div[id ^= "order"]').on('show.bs.modal', function (event) {
+		var button = $(event.relatedTarget);
+	  	var modal = $(this)
+	  	if (button.attr('data-target') === '#order2') {
+	  		setOrderOption()
+	  	}
+	  
+	});
+
+	function setOrderOption() {
+		var form = home.find('form[name = "order2"]');
+		var page = home.find('div.block-calculator').attr('page-name');
+		form.find('input[name = "total"]').val(home.find('div.block-total span[name = "total"]').text());
+		form.find('input[name = "category"]').val(page);
+		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds'  || page === 'plisse' || page === 'cornice' || page == 'mosquito-nets') {
+			form.find('input[name = "width"]').val($('#slider-width').slider( "option", "value" ));
+		}
+		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds'  || page === 'plisse' || page == 'mosquito-nets') {
+			form.find('input[name = "height"]').val($('#slider-height').slider( "option", "value" ));
+		}
+		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds'  || page === 'plisse' || page === 'cornice' || page == 'mosquito-nets') {
+			form.find('input[name = "sub-category"]').val(home.find('div.title-slider').text());
+		}
+		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds'  || page === 'plisse') {
+			form.find('input[name = "group"]').val(home.find('div.title-color').text());
+		}
+		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds'  || page === 'plisse') {
+			form.find('input[name = "material"]').val(home.find('div.title-material').text());
+		}
+		
+	}
+	
 
 });
