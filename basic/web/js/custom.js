@@ -342,6 +342,7 @@ $(function() {
 
 	home.on('submit', 'form[name = "order1"], form[name = "order2"]',function( event ) {  
 		var block_reload = home.find('div[id ^= order] div.result');
+		block_reload.append('<div class="text-center"><i class = "fa fa-spinner fa-pulse fa-4x"></i></div>');
 		$.post(
             '/site/send-order',
                 $(this).serializeArray()
