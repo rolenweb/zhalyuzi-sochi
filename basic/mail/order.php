@@ -18,7 +18,7 @@ echo Html::beginTag('table',['style' => 'border: 1px solid #000; text-align:left
 			echo $order['phone'];
 		echo Html::endTag('td');
 	echo Html::endTag('tr');
-	if ($order['total'] != NULL) {
+	if (isset($order['total'])) {
 		echo Html::beginTag('tr');
 			echo Html::beginTag('th');
 				echo 'Сумма';
@@ -28,7 +28,7 @@ echo Html::beginTag('table',['style' => 'border: 1px solid #000; text-align:left
 			echo Html::endTag('td');
 		echo Html::endTag('tr');
 	}
-	if ($order['category'] != NULL) {
+	if (isset($order['category'])) {
 		echo Html::beginTag('tr');
 			echo Html::beginTag('th');
 				echo 'Категория';
@@ -38,7 +38,7 @@ echo Html::beginTag('table',['style' => 'border: 1px solid #000; text-align:left
 			echo Html::endTag('td');
 		echo Html::endTag('tr');
 	}
-	if ($order['sub-category'] != NULL) {
+	if (isset($order['sub-category'])) {
 		echo Html::beginTag('tr');
 			echo Html::beginTag('th');
 				echo 'Подкатегория';
@@ -49,8 +49,7 @@ echo Html::beginTag('table',['style' => 'border: 1px solid #000; text-align:left
 		echo Html::endTag('tr');
 	}
 	
-	if ($order['category'] == 'index' || $order['category'] == 'vertical-blinds' || $order['category'] == 'horizontal-blinds' || $order['category'] == 'plisse') {
-		if ($order['group'] != NULL) {
+		if (isset($order['group'])) {
 			echo Html::beginTag('tr');
 				echo Html::beginTag('th');
 					echo 'Группа';
@@ -60,7 +59,7 @@ echo Html::beginTag('table',['style' => 'border: 1px solid #000; text-align:left
 				echo Html::endTag('td');
 			echo Html::endTag('tr');
 		}
-		if ($order['material'] != NULL) {
+		if (isset($order['material'])) {
 			echo Html::beginTag('tr');
 				echo Html::beginTag('th');
 					echo 'Материал';
@@ -71,7 +70,7 @@ echo Html::beginTag('table',['style' => 'border: 1px solid #000; text-align:left
 			echo Html::endTag('tr');
 		}
 		
-	}
+	
 	
 echo Html::endTag('table');
 
