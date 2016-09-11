@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Html;
-
+var_dump($order);
 echo Html::beginTag('table',['style' => 'border: 1px solid #000; text-align:left']);
 	echo Html::beginTag('tr');
 		echo Html::beginTag('th');
