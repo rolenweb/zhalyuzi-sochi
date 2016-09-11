@@ -74,7 +74,7 @@ echo Html::beginTag('table',['style' => 'border: 1px solid #000; text-align:left
 				echo 'Ширина';
 			echo Html::endTag('th');
 			echo Html::beginTag('td');
-				echo $order['width'];
+				echo $order['width'].' см';
 			echo Html::endTag('td');
 		echo Html::endTag('tr');
 	}
@@ -84,7 +84,7 @@ echo Html::beginTag('table',['style' => 'border: 1px solid #000; text-align:left
 				echo 'Высота';
 			echo Html::endTag('th');
 			echo Html::beginTag('td');
-				echo $order['height'];
+				echo $order['height'].' см';
 			echo Html::endTag('td');
 		echo Html::endTag('tr');
 	}
