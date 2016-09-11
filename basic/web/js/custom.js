@@ -159,10 +159,10 @@ $(function() {
 	//select category
 	home.on('click', 'div.category div.col-single-category',function( event ) {  
 		home.find('div.col-single-category').removeClass('active-category');
-		home.find('div.col-single-category').find('span.icon i').removeClass('fa-dot-circle-o').addClass('fa-circle');
+		home.find('div.col-single-category').find('span.icon i').removeClass('fa-dot-circle-o').addClass('fa-circle-thin');
 		home.find('li[name = "category-slider"]').attr('status','noactive')
 		$(this).addClass('active-category');
-		$(this).find('span.icon i').removeClass('fa-circle').addClass('fa-dot-circle-o');
+		$(this).find('span.icon i').removeClass('fa-circle-thin').addClass('fa-dot-circle-o');
 		$(this).parents('li[name = "category-slider"]').attr('status','active');
 		home.find('div.block-slider div.title-slider').text($(this).find('span.title').text());
 		var slider = home.find('.image-slider').find('img[status = "active"]').stop();	

@@ -32,9 +32,8 @@ FrontAsset::register($this);
           <div class="row">
             <div class="col-xs-7 col-sm-6 col-md-4">
               <div class="logo">
-                <a href="">
-                  <img src="images/logo.png" alt="" class="img-responsive">
-                </a>  
+                <?= Html::a(Html::img('@web/images/logo.png',['class' => 'img-responsive']),['site/index']) ?>
+                
               </div>
               
             </div>
@@ -332,7 +331,7 @@ FrontAsset::register($this);
         </div>
         <div class="bottom-footer footer-lg hidden-xs hidden-sm">
           <div class="row">
-            <div class="col-md-6"><a href=""><div class="logo"></div></a><span class="slogan"> - Жалюзи в Сочи. <span>С 8 до 19 часов, без выходных</span></span></div>
+            <div class="col-md-6"><?= Html::a(Html::tag('div','',['class' => 'logo']),['site/index']) ?><span class="slogan"> - Жалюзи в Сочи. <span>С 8 до 19 часов, без выходных</span></span></div>
             <div class="col-md-3 text-center">
               <span class="tel">тел:</span>
               <span class="number">+7 (918) 001-26-01</span>
