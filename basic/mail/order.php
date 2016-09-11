@@ -62,7 +62,7 @@ echo Html::beginTag('table',['style' => 'border: 1px solid #000; text-align:left
 	
 echo Html::endTag('table');
 
-public function catName($cat)
+function catName($cat)
 {
 	if ($cat == 'index') {
 		return 'Рулонные шторы';
