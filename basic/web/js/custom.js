@@ -203,19 +203,91 @@ $(function() {
 	function calculatorRulon() {
 		var page = home.find('div.block-calculator').attr('page-name');
 		if (page === 'index') {
-			var m = parseFloat(home.find('div.block-calculator div.price-color span.number').text());
-			var h = parseFloat($('#slider-height').slider( "option", "value" ));
-			var w = $('#slider-width').slider( "option", "value" );
-			var total = home.find('div.block-total span[name = "total"]');
-			
-			if (h <= 180) {
-				price = ((m/10000)*100*w).toFixed();
-			}else{
-				price = ((((h-180)/100)*(m/10000) + m/10000)*100*w).toFixed();
+			var slider = home.find('div.active-category').parents('li[name = "category-slider"]').attr('slider');
+			if (slider == '1' || slider == '2') {
+				var m = parseFloat(home.find('div.block-calculator div.price-color span.number').text());
+				var h = parseFloat($('#slider-height').slider( "option", "value" ));
+				var w = $('#slider-width').slider( "option", "value" );
+				
+				
+				if (h <= 180) {
+					price = ((m/10000)*100*w).toFixed();
+				}else{
+					price = ((((h-180)/100)*(m/10000) + m/10000)*100*w).toFixed();
+				}
 			}
+			if (slider == '3'){
+				$('#slider-width').slider({
+					min: 40,
+					max: 140,
+				});
+				$('#slider-height').slider({
+					min: 40,
+					max: 160,
+				});
+				var ar_w = ["40", "45", "50","55","60","65","70","75","80","85","90","95","100","105","110","115","120","125","130","135","140"];
+				var ar_p = ["1510","1610","1710","1810","1910","2010","2110","2210","2310","2410","2510","2610","2710","2810","2910","3010","3110","3210","3310","3410","3510"];
+				var h = parseFloat($('#slider-height').slider( "option", "value" ));
+				var w = parseFloat($('#slider-width').slider("option", "value"));
+				for (var i = 0; i < ar_w.length; i++) {
+					if (i !== ar_w.length -1) {
+						if (w >= parseFloat(ar_w[i]) && w < parseFloat(ar_w[i+1])) {
+							var price = parseFloat(ar_p[i]);
+							break;
+						}	
+					}else{
+						if (w == parseFloat(ar_w[i])) {
+							var price = parseFloat(ar_p[i]);
+							break;
+						}					
+					}
+				}
+				
+				if (h > 120) {
+					var n = Math.floor((h-120)/5);
+					price = price + n*100;
+
+				}
+			}
+
+			if (slider == '4'){
+				$('#slider-width').slider({
+					min: 40,
+					max: 140,
+				});
+				$('#slider-height').slider({
+					min: 40,
+					max: 160,
+				});
+				var ar_w = ["40", "45", "50","55","60","65","70","75","80","85","90","95","100","105","110","115","120","125","130","135","140"];
+				var ar_p = ["1806","1900","1986","2100","2234","2302","2474","2551","2660","2769","2879","2988","3097","3206","3315","3424","3533","3643","3752","3861","3970"];
+				var h = parseFloat($('#slider-height').slider( "option", "value" ));
+				var w = parseFloat($('#slider-width').slider("option", "value"));
+				for (var i = 0; i < ar_w.length; i++) {
+					if (i !== ar_w.length -1) {
+						if (w >= parseFloat(ar_w[i]) && w < parseFloat(ar_w[i+1])) {
+							var price = parseFloat(ar_p[i]);
+							break;
+						}	
+					}else{
+						if (w == parseFloat(ar_w[i])) {
+							var price = parseFloat(ar_p[i]);
+							break;
+						}					
+					}
+				}
+				
+				if (h > 120) {
+					var n = Math.floor((h-120)/5);
+					price = price + n*100;
+
+				}
+			}
+			
+			var total = home.find('div.block-total span[name = "total"]');
 			total.text(price);	
 		}
-		if (page === 'vertical-blinds' || page === 'horizontal-blinds' || page === 'plisse' || page == 'mosquito-nets') {
+		if (page === 'vertical-blinds' || page === 'horizontal-blinds') {
 			var m = parseFloat(home.find('div.block-calculator div.price-color span.number').text());
 			var h = parseFloat($('#slider-height').slider( "option", "value" ));
 			var w = $('#slider-width').slider( "option", "value" );
@@ -229,6 +301,95 @@ $(function() {
 
 			
 			total.text(price);	
+		}
+
+		if (page == 'mosquito-nets') {
+			var slider = home.find('div.active-category').parents('li[name = "category-slider"]').attr('slider');
+			if (slider == '2') {
+				$('#slider-width').slider({
+				min: 40,
+				max: 140,
+				});
+				$('#slider-height').slider({
+					min: 40,
+					max: 200,
+				});
+				var ar_w = ["40", "45", "50","55","60","65","70","75","80","85","90","95","100","105","110","115","120","125","130","135","140"];
+				var ar_p = ["2500","2650","2800","2950","3100","3250","3400","3550","3700","3850","4000","4150","4300","4450","4600","4750","4900","5050","5200","5350","5500"]
+				var h = parseFloat($('#slider-height').slider( "option", "value" ));
+				var w = parseFloat($('#slider-width').slider("option", "value"));
+				for (var i = 0; i < ar_w.length; i++) {
+					if (i !== ar_w.length -1) {
+						if (w >= parseFloat(ar_w[i]) && w < parseFloat(ar_w[i+1])) {
+							var price = parseFloat(ar_p[i]);
+							break;
+						}	
+					}else{
+						if (w == parseFloat(ar_w[i])) {
+							var price = parseFloat(ar_p[i]);
+							break;
+						}					
+					}
+				}
+				
+				if (h > 130) {
+					var n = Math.floor((h-130)/5);
+					price = price + n*100;
+
+				}
+			}else{
+				var m = parseFloat(home.find('div.block-calculator div.price-color span.number').text());
+				var h = parseFloat($('#slider-height').slider( "option", "value" ));
+				var w = $('#slider-width').slider( "option", "value" );
+				
+				
+				if (h*w <= 10000) {
+					price = m.toFixed();
+				}else{
+					price = ((m/10000)*h*w).toFixed();
+				}
+			}
+			var total = home.find('div.block-total span[name = "total"]');
+			total.text(price);
+		}
+
+		if (page === 'plisse') {
+			$('#slider-width').slider({
+				min: 50,
+				max: 140,
+			});
+			$('#slider-height').slider({
+				min: 50,
+				max: 200,
+			});
+			var ar_w = ["50","55","60","65","70","75","80","85","90","95","100","105","110","115","120","125","130","135","140"];
+			var ar_p = ["2450","2600","2750","2900","3050","3200","3350","3500","3560","3800","3950","4100","4250","4400","4550","4700","4850","5000","5150"]
+			var h = parseFloat($('#slider-height').slider( "option", "value" ));
+			var w = parseFloat($('#slider-width').slider("option", "value"));
+			for (var i = 0; i < ar_w.length; i++) {
+				if (i !== ar_w.length -1) {
+					if (w >= parseFloat(ar_w[i]) && w < parseFloat(ar_w[i+1])) {
+						var price = parseFloat(ar_p[i]);
+						break;
+					}	
+				}else{
+					if (w == parseFloat(ar_w[i])) {
+						var price = parseFloat(ar_p[i]);
+						break;
+					}					
+				}
+			}
+			
+			if (h > 120) {
+				var n = Math.floor((h-120)/5);
+				price = price + n*100;
+
+			}
+
+			
+
+			var total = home.find('div.block-total span[name = "total"]');
+			total.text(price);
 		}
 
 		if (page === 'cornice') {
