@@ -431,6 +431,11 @@ $(function() {
 		}
 		
 	}
+
+	home.on('click', 'div.top-menu li',function( event ) {  
+		var link = $(this).find('a').attr('href');        		
+		window.location.href = link;
+    });
 	
 
 });
