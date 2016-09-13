@@ -286,7 +286,7 @@ FrontAsset::register($this);
         <div class="top-footer">
           <div class="row">
             <div class="col-xs-6 col-sm-2 text-center">
-              <a tabindex="0" role="button" data-toggle="popover" data-trigger="click"  data-placement = "top" data-html = "true" data-content="<img src = 'images/footer/1.jpg'>">
+              <a tabindex="1" role="button" data-toggle="popover" data-placement = "auto top" data-trigger="click"   data-html = "true" data-content="<img src = 'images/footer/1.jpg'>">
                 <ul class="list-unstyled border">
                   <li><img src="images/footer/small_pack.png" alt="" height="80px;"></li>
                   <li>Москитная сетка</li>
@@ -319,7 +319,7 @@ FrontAsset::register($this);
               
             </div>
             <div class="col-xs-6 col-sm-2 text-center">
-              <a tabindex="0" role="button" data-toggle="popover" data-trigger="click"  data-placement = "top" data-html = "true" data-content="<img src = 'images/footer/2.png'>">
+              <a tabindex="1" role="button" data-toggle="popover" data-placement = "auto top" data-placement = "top" data-html = "true" data-content="<img src = 'images/footer/2.png'>">
                 <ul class="list-unstyled border">
                   <li><img src="images/footer/small_roll.jpg" alt="" width="80px;"></li>
                   <li>Готовые рулоны</li>
