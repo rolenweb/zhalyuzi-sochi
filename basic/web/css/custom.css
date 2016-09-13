@@ -27,6 +27,11 @@
 .padding-right-0 {
   padding-right: 0px;
 }
+@media (min-width: 768px) {
+  .padding-right-5-sm {
+    padding-right: 5px;
+  }
+}
 .padding-right-25 {
   padding-right: 25px;
 }

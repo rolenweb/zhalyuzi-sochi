@@ -11,21 +11,29 @@ $this->title = 'Жалюзи, Москитные сетки, Окна в Соч�
 echo Html::beginTag('section');
   echo Html::beginTag('div',['class' => 'container']);
     echo Html::beginTag('div',['class' => 'row contact-page']);
-        echo Html::beginTag('div',['class' => 'col-sm-6 padding-left-0']);
+        echo Html::beginTag('div',['class' => 'col-sm-6 padding-left-0 padding-right-0 padding-right-5-sm']);
             echo Html:: beginTag('div',['class' => 'block-map']);
                 echo Html::beginTag('div',['class' => 'title']);
                     echo 'гипермаркет "Магнит" на новой заре "Квартирный вопрос"';
                 echo Html:: endTag('div');
                 echo Html::beginTag('div',['class' => 'map']);
-    ?>
+                    echo Html:: beginTag('div',['class' => 'hidden-xs hidden-sm']);
+?>
     <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=qJurQ8SrJALrHir22i1UjyBGJCp7bJaj&width=450&height=490&lang=ru_RU&sourceType=constructor"></script>
-    <?php            
+<?php                                
+                    echo Html::endTag('div');
+                    echo Html:: beginTag('div',['class' => 'visible-xs-block visible-sm-block']);
+?>
+    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=qJurQ8SrJALrHir22i1UjyBGJCp7bJaj&width=350&height=490&lang=ru_RU&sourceType=constructor"></script>
+<?php                                
+                    echo Html::endTag('div');
+    
                 echo Html::endTag('div');
             echo Html::endTag('div');
             
 
         echo Html::endTag('div');
-        echo Html::beginTag('div',['class' => 'col-sm-6 padding-right-0']);
+        echo Html::beginTag('div',['class' => 'col-sm-6 padding-left-0 padding-right-0']);
             echo Html::beginTag('div',['class' => 'info']);
                 echo Html::beginTag('div',['class' => 'title']);
                     echo 'Магазин';
