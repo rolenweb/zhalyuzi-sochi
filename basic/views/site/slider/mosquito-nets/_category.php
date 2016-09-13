@@ -15,7 +15,7 @@ echo Html::beginTag('ul',['class' => 'list-unstyled']);
 					echo Html::endTag('div');
 					echo Html::beginTag('div',['class' => 'col-xs-12 text-right']);
 						echo Html::beginTag('span',['class' => 'price']);
-							echo 'от'.Html::tag('span','1231',['class' => 'number']).Html::tag('span','руб',['class' => 'rub']);
+							echo 'от '.Html::tag('span','850',['class' => 'number']).Html::tag('span','руб',['class' => 'rub']);
 						echo Html::endTag('span');
 
 					echo Html::endTag('div');
@@ -40,7 +40,7 @@ echo Html::beginTag('ul',['class' => 'list-unstyled']);
 					echo Html::endTag('div');
 					echo Html::beginTag('div',['class' => 'col-xs-12 text-right']);
 						echo Html::beginTag('span',['class' => 'price']);
-							echo 'от'.Html::tag('span','1231',['class' => 'number']).Html::tag('span','руб',['class' => 'rub']);
+							echo 'от '.Html::tag('span','2500',['class' => 'number']).Html::tag('span','руб',['class' => 'rub']);
 						echo Html::endTag('span');
 
 					echo Html::endTag('div');
@@ -65,7 +65,7 @@ echo Html::beginTag('ul',['class' => 'list-unstyled']);
 					echo Html::endTag('div');
 					echo Html::beginTag('div',['class' => 'col-xs-12 text-right']);
 						echo Html::beginTag('span',['class' => 'price']);
-							echo 'от'.Html::tag('span','1231',['class' => 'number']).Html::tag('span','руб',['class' => 'rub']);
+							echo 'от '.Html::tag('span','3800',['class' => 'number']).Html::tag('span','руб',['class' => 'rub']);
 						echo Html::endTag('span');
 
 					echo Html::endTag('div');
@@ -90,7 +90,7 @@ echo Html::beginTag('ul',['class' => 'list-unstyled']);
 					echo Html::endTag('div');
 					echo Html::beginTag('div',['class' => 'col-xs-12 text-right']);
 						echo Html::beginTag('span',['class' => 'price']);
-							echo 'от'.Html::tag('span','1231',['class' => 'number']).Html::tag('span','руб',['class' => 'rub']);
+							echo 'от '.Html::tag('span','1084',['class' => 'number']).Html::tag('span','руб',['class' => 'rub']);
 						echo Html::endTag('span');
 
 					echo Html::endTag('div');
@@ -115,7 +115,7 @@ echo Html::beginTag('ul',['class' => 'list-unstyled']);
 					echo Html::endTag('div');
 					echo Html::beginTag('div',['class' => 'col-xs-12 text-right']);
 						echo Html::beginTag('span',['class' => 'price']);
-							echo 'от'.Html::tag('span','1231',['class' => 'number']).Html::tag('span','руб',['class' => 'rub']);
+							echo 'от '.Html::tag('span','15000',['class' => 'number']).Html::tag('span','руб',['class' => 'rub']);
 						echo Html::endTag('span');
 
 					echo Html::endTag('div');

@@ -108,7 +108,7 @@ $(function() {
 		//value: home.find('div[name = "amount-slider"]').find('span[name = "current-amount"]').text(),
 		step:1,
 		range: "min",
-		value: 100,
+		value: 50,
 		slide: function(event, ui) {
 			//displayCurrentAmmount(ui.value);
 			$('div.block-calculator ul.block-slider-width input[name = "width"]').val(ui.value);
@@ -604,7 +604,7 @@ $(function() {
 	
 	//popver init
 	$('[data-toggle="popover"]').popover({
-		
+
 	})
 	//popover init
 });

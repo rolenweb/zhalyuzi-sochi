@@ -6,7 +6,7 @@ echo Html::beginTag('ul',['class' => 'list-unstyled block-slider-width']);
 			echo 'Ширина жалюзи';
 		echo Html::endTag('span');
 		echo Html::beginTag('span',['class' => 'input-width']);
-			echo Html::input('text', 'width', '100');
+			echo Html::input('text', 'width', '50');
 		echo Html::endTag('span');
 		echo Html::beginTag('span',['class' => 'unit']);
 			echo 'см';
