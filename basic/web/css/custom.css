@@ -686,9 +686,13 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
   margin-left: 5px;
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material {
-  background-color: #ccc;
   padding: 5px;
   cursor: pointer;
+  border-radius: 5px;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material div.single-material {
+  padding: 5px;
+  background-color: #ccc;
   border-radius: 5px;
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material:hover {
