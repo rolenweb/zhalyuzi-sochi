@@ -53,7 +53,7 @@ if ($groups != NULL) {
 			echo Html::beginTag('div',['class' => 'row top-10 text-left']);
 			if ($group->materials != NULL) {
 				foreach ($group->materials as $material) {
-					echo Html::beginTag('div',['class' => 'col-xs-4 material', 'name' => $material->title]);
+					echo Html::beginTag('div',['class' => 'col-xs-2 material', 'name' => $material->title]);
 						echo Html::beginTag('ul',['class' => 'list-unstyled']);
 							echo Html::beginTag('li',['class' => 'image-material']);
 								echo Html::img('@web/images/material/'.$material->id.'.'.$material->extension,['class' => 'img-responsive']);
