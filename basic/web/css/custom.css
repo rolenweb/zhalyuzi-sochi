@@ -704,7 +704,7 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
   color: #27ca8b;
   font-weight: bold;
   font-size: 16px;
-  margin-left: 60px;
+  margin-left: 45px;
 }
 @media (max-width: 600px) {
   section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material span.price {
