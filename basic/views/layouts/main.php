@@ -41,6 +41,7 @@ AppAsset::register($this);
             ['label' => 'Подкатегории', 'url' => ['/sub-category/index'], 'visible' => Yii::$app->user->can('admin')],
             ['label' => 'Группы', 'url' => ['/group/index'], 'visible' => Yii::$app->user->can('admin')],
             ['label' => 'Материалы', 'url' => ['/material/index'], 'visible' => Yii::$app->user->can('admin')],
+            ['label' => 'Настройки', 'url' => ['/site/setting'], 'visible' => Yii::$app->user->can('admin')],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/nigol']]
             ) : (

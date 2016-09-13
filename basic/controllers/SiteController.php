@@ -9,6 +9,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Group;
+use app\models\User;
 
 class SiteController extends Controller
 {
@@ -21,7 +22,7 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout','nimda'],
+                'only' => ['logout','nimda','setting','save-password'],
                 'rules' => [
                     [
                         'actions' => ['logout'],
@@ -35,7 +36,7 @@ class SiteController extends Controller
                         
                     ],
                     [
-                        'actions' => ['nimda'],
+                        'actions' => ['nimda','setting','save-password'],
                         'allow' => true,
                         'roles' => ['admin'],
                     ],
@@ -473,6 +474,23 @@ class SiteController extends Controller
             
         ]);
     }
+
+    /**
+     * admin action.
+     *
+     * @return string
+     */
+    public function actionSetting()
+    {
+        $this->layout = 'main';
+        if (Yii::$app->user->isGuest) {
+            return $this->redirect(['site/nigol']);
+        }
+
+        return $this->render('admin/setting', [
+            
+        ]);
+    }
     
     public function actionLoadMaterial()
     {
@@ -725,6 +743,66 @@ class SiteController extends Controller
         }
     }
 
+
+    public function actionSavePassword()
+    {
+        
+        
+        if(Yii::$app->request->isAjax){
+
+            $error = [];
+            $info = [];
+
+            $post_data = Yii::$app->request->post();
+
+
+            if (!isset($post_data)) {
+                $error[] = 'The post data is not set';
+                return $this->renderAjax('_result', [
+                    'error' => $error,
+                ]);
+            }
+
+            if (!isset($post_data['password'])) {
+                $error[] = 'The password id is not set';
+                return $this->renderAjax('_result', [
+                    'error' => $error,
+                ]);
+            }
+            
+            $user = User::findOne(Yii::$app->user->identity->id);
+
+            if ($user == NULL) {
+                $error[] = 'The user id is not found';
+                return $this->renderAjax('_result', [
+                    'error' => $error,
+                ]);
+            }
+            $user->setPassword(trim($post_data['password']));
+
+            if ($user->save()) {
+                $info[] = 'Пароль сохранен';
+                return $this->renderAjax('_result', [
+                    'info' => $info,
+                ]);
+            }else{
+                foreach ($user->getErrors() as $er) {
+                    $error[] = $er[0];
+                }
+                return $this->renderAjax('_error', [
+                   'error' => $error,
+                ]);
+            }
+                        
+            
+
+        }
+        
+        else{
+            Yii::$app->session->setFlash('error', 'Fuck, hands off of this page.');
+            return $this->redirect(['site/index']);
+        }
+    }
     /**
      * Logout action.
      *

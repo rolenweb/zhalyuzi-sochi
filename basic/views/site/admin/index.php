@@ -8,6 +8,6 @@ use yii\helpers\Html;
 
 $this->title = 'Admin';
 
-echo 'adminka'
+
 ?>
 
