@@ -946,6 +946,9 @@ footer div.top-footer ul.border {
 footer div.top-footer ul.border:hover {
   border: 4px solid red;
 }
+footer div.top-footer .popover {
+  max-width: 470px;
+}
 footer div.call-gager button {
   font-size: 16px;
 }

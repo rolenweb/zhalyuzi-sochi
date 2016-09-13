@@ -602,5 +602,7 @@ $(function() {
 		window.location.href = link;
     });
 	
-
+	//popver init
+	$('[data-toggle="popover"]').popover()
+	//popover init
 });
