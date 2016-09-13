@@ -96,6 +96,10 @@ header div.top-header div.contact div.icon {
 header div.top-header div.contact div.text {
   font-size: 16px;
 }
+header div.top-header div.contact div.text a {
+  text-decoration: none;
+  color: #333;
+}
 header div.top-header ul.menu-xs {
   color: #555;
 }
@@ -879,6 +883,48 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color li:nth-child(3) div.modal-content div.modal-footer {
   border-top: 0px solid #555;
+}
+section div.container div.contact-page {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+section div.container div.contact-page .block-map {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px 3px;
+}
+section div.container div.contact-page .block-map .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+section div.container div.contact-page .block-map .map {
+  padding: 5px 2px;
+}
+section div.container div.contact-page .info {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+section div.container div.contact-page .info .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+section div.container div.contact-page .info .addresses {
+  margin-top: 15px;
+}
+section div.container div.contact-page .info .addresses li {
+  font-size: 14px;
+}
+section div.container div.contact-page .info .addresses .title {
+  color: #f66549;
+}
+section div.container div.contact-page .info .phone .title {
+  font-size: 16px;
+  font-weight: normal;
+}
+section div.container div.contact-page .info .phone .number {
+  font-size: 26px;
+  font-weight: bold;
 }
 footer {
   margin-top: 20px;

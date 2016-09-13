@@ -41,41 +41,45 @@ $(function() {
 
     	var slider = activeSlider(sliders);//home.find('.image-slider').find('img[status = "active"]');
     	
-    	slider.animate({
+    	if (sliders.length !== 0) {
+    		slider.animate({
     		left: "+300"
-    	},{
-    		duration: dur,
-    		complete: function() {
+	    	},{
+	    		duration: dur,
+	    		complete: function() {
 
-			    for (var i = 0; i < sliders.length; i++) {
-		    		if ($(sliders[i]).attr('status') === 'active') {
-		    			if (dir === 'right') {
-		    				var curent = $(sliders[i]).attr('status','pending').hide();
-			    			if ($(sliders[i+1]).length !== 0) {
-				    			var next = $(sliders[i+1]).attr('status','active').show();
-				    		}else{
-				    			var next = $(sliders[0]).attr('status','active').show();
-				    		}
-			    			break;	
-		    			}else{
-		    				var curent = $(sliders[i]).attr('status','pending').hide();
-			    			if ($(sliders[i-1]).length !== 0) {
-				    			var next = $(sliders[i-1]).attr('status','active').show();
-				    		}else{
-				    			var next = $(sliders[sliders.length-1]).attr('status','active').show();
-				    		}
-			    			break;	
-		    			}
-		    			
-		    		}
-		    		
-		    	}
-		    	if (repit === 'yes') {
-		    		sliderImg('yes','right',3000);	
-		    	}
-		    	
-			},
-    	})
+				    for (var i = 0; i < sliders.length; i++) {
+			    		if ($(sliders[i]).attr('status') === 'active') {
+			    			if (dir === 'right') {
+			    				var curent = $(sliders[i]).attr('status','pending').hide();
+				    			if ($(sliders[i+1]).length !== 0) {
+					    			var next = $(sliders[i+1]).attr('status','active').show();
+					    		}else{
+					    			var next = $(sliders[0]).attr('status','active').show();
+					    		}
+				    			break;	
+			    			}else{
+			    				var curent = $(sliders[i]).attr('status','pending').hide();
+				    			if ($(sliders[i-1]).length !== 0) {
+					    			var next = $(sliders[i-1]).attr('status','active').show();
+					    		}else{
+					    			var next = $(sliders[sliders.length-1]).attr('status','active').show();
+					    		}
+				    			break;	
+			    			}
+			    			
+			    		}
+			    		
+			    	}
+			    	if (repit === 'yes') {
+			    		sliderImg('yes','right',3000);	
+			    	}
+			    	
+				},
+	    	})
+    	}
+
+    	
     }
 
     function getCategorySlider() {

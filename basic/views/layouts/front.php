@@ -91,7 +91,7 @@ FrontAsset::register($this);
                           </li>
                           <li>
                             <div class="text">
-                              Контакты  
+                              <?= Html::a('Контакты',['site/contact']) ?>
                             </div>
                           </li>
                         </ul>
@@ -177,7 +177,7 @@ FrontAsset::register($this);
                           </li>
                           <li>
                             <div class="text">
-                              Контакты  
+                              <?= Html::a('Контакты',['site/contact']) ?>
                             </div>
                           </li>
                         </ul>
