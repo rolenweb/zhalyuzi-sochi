@@ -376,6 +376,10 @@ section div.container div.block-slider div.category li .row-single-category .col
     padding-left: 0px;
   }
 }
+section div.container div.block-slider div.category li .row-single-category .col-single-category .sub-title {
+  font-size: 18px;
+  padding-left: 20px;
+}
 section div.container div.block-slider div.category li .row-single-category .active-category:hover {
   background-color: #27ca8b;
 }
