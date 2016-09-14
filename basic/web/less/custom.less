@@ -282,6 +282,13 @@ section{
 			div.image-slider{
 				padding-left: 5px;
 				border-right: 1px solid @border-color;
+				.img-responsive{
+					@media (min-width: 992px){
+						height: 300px;
+						width: 450px;
+					}
+					
+				}
 				&:hover{
 					div.pult-slider{
 						@media (min-width: 992px){
@@ -329,7 +336,7 @@ section{
 					}
 				}
 				span.right{
-					left: 360px;
+					left: 430px;
 					top: 120px;
 					@media (max-width: 1199px){
 						left: 350px;
@@ -460,6 +467,7 @@ section{
 					}
 					span.title{
 						margin-left:5px;
+						font-size: 20px;
 					}
 					span.price{
 						border: 2px solid @color-red;
@@ -475,7 +483,7 @@ section{
 						}
 					}
 					img.img-category{
-						height: 70px;
+						height: 60px;
 						@media (max-width: 991px){
 						    height: 50px;
 						}
@@ -498,6 +506,7 @@ section{
 			border-right: 1px solid @border-color;
 			border-radius: 0px 0px @border-radius @border-radius;
 			background-color: @color-white;
+			padding-top: 5px;
 			ul.block-slider-width, ul.block-slider-height{
 				padding: 5px 10px 0px 20px;
 				li{
