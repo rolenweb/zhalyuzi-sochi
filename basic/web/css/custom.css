@@ -598,6 +598,9 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
   height: 100px;
   vertical-align: -1px;
 }
+section div.container div.block-calculator ul.block-choose-color li.choose-color:hover {
+  background-color: #96D9F3;
+}
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.title-color {
   margin-top: 5px;
   text-transform: uppercase;
