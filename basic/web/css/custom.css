@@ -1005,6 +1005,10 @@ footer div.top-footer ul.border:hover {
 footer div.top-footer .popover {
   max-width: 470px;
 }
+footer div.top-footer .popover img {
+  height: 400px;
+  width: 400px;
+}
 footer div.call-gager button {
   font-size: 16px;
 }

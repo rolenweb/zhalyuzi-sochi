@@ -603,8 +603,6 @@ $(function() {
     });
 	
 	//popver init
-	$('[data-toggle="popover"]').popover({
-
-	})
+	$('[data-toggle="popover"]').popover();
 	//popover init
 });
