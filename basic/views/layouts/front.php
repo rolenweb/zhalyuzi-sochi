@@ -295,7 +295,7 @@ FrontAsset::register($this);
               
             </div>
             <div class="col-xs-6 col-sm-2 text-center">
-              <a href="">
+              <a href="/images/install.pdf" target="_blank">
                 <ul class="list-unstyled border text-center">
                   <li><img src="images/footer/manual_mini.png" alt="" height="60px;"></li>
                   <li>Инструкция по установке</li>
@@ -310,7 +310,7 @@ FrontAsset::register($this);
               <?= $this->render('modal/_order') ?>
             </div>
             <div class="col-xs-6 col-sm-2 text-center">
-              <a href="">
+              <a href="images/measurement.pdf" target="_blank">
                 <ul class="list-unstyled border">
                   <li><img src="images/footer/manual-measurement.png" alt="" height="80px;"></li>
                   <li>Инструкция замера</li>
