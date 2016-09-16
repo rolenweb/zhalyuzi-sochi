@@ -1,13 +1,13 @@
 @-webkit-keyframes zoom-t {
   from {
-    -webkit-transform: scale3d(1, 1, 1);
-    -ms-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
   }
   to {
-    -webkit-transform: scale3d(1.5, 1.5, 1.5);
-    -ms-transform: scale3d(1.5, 1.5, 1.5);
-    transform: scale3d(1.5, 1.5, 1.5);
+    -webkit-transform: scale(1.5, 1.5) translate(10%);
+    -ms-transform: scale(1.5, 1.5) translate(10%);
+    transform: scale(1.5, 1.5) translate(10%);
   }
 }
 @-webkit-keyframes trans {
@@ -658,7 +658,7 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
   color: #fff;
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body {
-  max-height: 420px;
+  max-height: 600px;
   overflow-y: auto;
   padding: 15px 25px;
   background-color: #fff;
@@ -698,22 +698,30 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material {
   padding: 5px;
+  z-index: 2000;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material div.material-container {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
   cursor: pointer;
   border-radius: 5px;
+  background-color: #eee;
+}
+section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material:hover {
+  background-color: #eee;
+  border-radius: 5px;
+  -webkit-animation: zoom-t 0.3s ease-out;
+  animation: zoom-t 0.3s ease-out;
+  z-index: 3000;
+  -webkit-transform: scale(1.5, 1.5) translate(10%);
+  -ms-transform: scale(1.5, 1.5) translate(10%);
+  transform: scale(1.5, 1.5) translate(10%);
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material div.single-material {
   padding: 5px;
   background-color: #ccc;
   border-radius: 5px;
-}
-section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material:hover {
-  background-color: #555;
-  -webkit-animation: zoom-t 1s ease-out;
-  animation: zoom-t 1s ease-out;
-  z-index: 2000;
-  -webkit-transform: scale3d(1.5, 1.5, 1.5);
-  -ms-transform: scale3d(1.5, 1.5, 1.5);
-  transform: scale3d(1.5, 1.5, 1.5);
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material span.price {
   color: #27ca8b;
