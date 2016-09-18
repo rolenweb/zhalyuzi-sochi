@@ -53,7 +53,7 @@ if ($groups != NULL) {
 			echo Html::beginTag('div',['class' => 'row top-10 text-left']);
 			if ($group->materials != NULL) {
 				foreach ($group->materials as $key => $material) {
-					if ($key == 5 || $key == 10 || $key == 15 || $key == 20 || $key == 25) {
+					if ($key == 5 || $key == 11 || $key == 17 || $key == 23 || $key == 29) {
 							$material_opt = ['class' => 'col-xs-2 material pic6 animation-left', 'name' => $material->title];
 						}else{
 							$material_opt = ['class' => 'col-xs-2 material pic6 animation-right', 'name' => $material->title];
