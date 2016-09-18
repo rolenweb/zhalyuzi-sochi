@@ -36,6 +36,21 @@
 	}
 }
 
+@-webkit-keyframes zoom-tl {
+	from {
+		-webkit-transform: scale(1,1);
+		-ms-transform: scale(1,1);
+		transform: scale(1,1);
+		
+	}
+	to {
+		-webkit-transform: scale(1.5,1.5) translate(-10%);;
+		-ms-transform: scale(1.5,1.5) translate(-10%);
+		transform: scale(1.5,1.5) translate(-10%);
+		
+	}
+}
+
 @-webkit-keyframes trans {
 	from {
 		transform: translate3d(0, 0, 0);
@@ -675,6 +690,28 @@ section{
 								div.pic6{
 									//width: 14%;
 								}
+								div.animation-right{
+									&:hover{
+										-webkit-animation: zoom-t 0.3s ease-out;
+											animation: zoom-t  0.3s ease-out;
+
+											z-index: 3000;
+											-webkit-transform: scale(1.5,1.5) translate(10%);
+											-ms-transform: scale(1.5,1.5) translate(10%);
+											transform: scale(1.5,1.5) translate(10%);
+									}
+								}
+								div.animation-left{
+									&:hover{
+										-webkit-animation: zoom-tl 0.3s ease-out;
+										animation: zoom-tl  0.3s ease-out;
+
+										z-index: 3000;
+										-webkit-transform: scale(1.5,1.5) translate(-10%);
+										-ms-transform: scale(1.5,1.5) translate(-10%);
+										transform: scale(1.5,1.5) translate(-10%);
+									}
+								}
 								div.material{
 									div.material-container{
 										width: 100%;
@@ -688,15 +725,10 @@ section{
 									&:hover{
 											background-color: @border-gray2;
 											border-radius: 5px;
-											-webkit-animation: zoom-t 0.3s ease-out;
-											animation: zoom-t  0.3s ease-out;
-
-											z-index: 3000;
-											-webkit-transform: scale(1.5,1.5) translate(10%);
-											-ms-transform: scale(1.5,1.5) translate(10%);
-											transform: scale(1.5,1.5) translate(10%);
+											
 											  
-										}
+									}
+
 									padding: 5px;
 									z-index: 2000;
 									div.single-material{

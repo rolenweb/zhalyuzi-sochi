@@ -52,8 +52,14 @@ if ($groups != NULL) {
 			echo Html::endTag('div');
 			echo Html::beginTag('div',['class' => 'row top-10 text-left']);
 			if ($group->materials != NULL) {
-				foreach ($group->materials as $material) {
-					echo Html::beginTag('div',['class' => 'col-xs-2 material pic6', 'name' => $material->title]);
+				foreach ($group->materials as $key => $material) {
+					if ($key == 5 || $key == 10 || $key == 15 || $key == 20 || $key == 25) {
+							$material_opt = ['class' => 'col-xs-2 material pic6 animation-left', 'name' => $material->title];
+						}else{
+							$material_opt = ['class' => 'col-xs-2 material pic6 animation-right', 'name' => $material->title];
+						}
+					echo Html::beginTag('div',$material_opt);
+						
 						echo Html::beginTag('div',['class' => 'material-container']);
 							echo Html::beginTag('ul',['class' => 'list-unstyled']);
 								echo Html::beginTag('li',['class' => 'image-material']);
