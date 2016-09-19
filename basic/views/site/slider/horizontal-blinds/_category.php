@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Html;
-echo Html::beginTag('ul',['class' => 'list-unstyled']);
+echo Html::beginTag('ul',['class' => 'list-unstyled desktop']);
 	echo Html::beginTag('li',['name' => 'category-slider','slider' => '1', 'status' => 'active', 'price' => $group1->materials[0]->price, 'file' => '/images/material/'.$group1->materials[0]->id.'.'.$group1->materials[0]->extension, 'material-title' => $group1->materials[0]->title, 'name-group' => $group1->title]);
 		echo Html::beginTag('div',['class' => 'row row-single-category']);
 			echo Html::beginTag('div',['class' => 'col-xs-12 col-sm-10 col-single-category active-category']);

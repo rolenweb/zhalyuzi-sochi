@@ -401,8 +401,25 @@ section div.container div.block-slider div.block-total ul li button span {
   }
 }
 section div.container div.block-slider div.category {
-  padding: 35px 70px 0px 0px;
+  padding: 0px 70px 0px 0px;
   font-size: 22px;
+}
+section div.container div.block-slider div.category ul.desktop {
+  padding-top: 35px;
+}
+@media (max-width: 767px) {
+  section div.container div.block-slider div.category ul.desktop {
+    display: none;
+  }
+}
+section div.container div.block-slider div.category ul.mobile {
+  list-style: none;
+  padding-top: 5px;
+}
+@media (min-width: 768px) {
+  section div.container div.block-slider div.category ul.mobile {
+    display: none;
+  }
 }
 @media (max-width: 991px) {
   section div.container div.block-slider div.category {

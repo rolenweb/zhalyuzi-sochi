@@ -2,7 +2,14 @@
 use yii\helpers\Html;
 echo Html::beginTag('div',['class' => 'block-slider']);
     echo Html::beginTag('div',['class' => 'row']);
-        echo Html::beginTag('div',['class' => 'col-xs-8 col-sm-6']);
+        echo Html::beginTag('div',['class' => 'col-xs-12 category']);
+            echo $this->render('_category_mobile',[
+                    'group1' => $group1,
+                    'group2' => $group2,
+                    
+                ]);
+        echo Html::endTag('div');
+        echo Html::beginTag('div',['class' => 'col-xs-12 col-sm-6']);
           	echo Html::beginTag('div',['class' => 'row']);
             	echo Html::beginTag('div',['class' => 'col-xs-12 col-sm-12']);
               		echo Html::beginTag('div',['class' => 'title-slider']);
