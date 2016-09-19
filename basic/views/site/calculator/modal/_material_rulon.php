@@ -54,9 +54,9 @@ if ($groups != NULL) {
 			if ($group->materials != NULL) {
 				foreach ($group->materials as $key => $material) {
 					if ($key == 5 || $key == 11 || $key == 17 || $key == 23 || $key == 29) {
-							$material_opt = ['class' => 'col-xs-2 material pic6 animation-left', 'name' => $material->title];
+							$material_opt = ['class' => 'col-xs-6 col-sm-2 material pic6 animation-left', 'name' => $material->title];
 						}else{
-							$material_opt = ['class' => 'col-xs-2 material pic6 animation-right', 'name' => $material->title];
+							$material_opt = ['class' => 'col-xs-6 col-sm-2 material pic6 animation-right', 'name' => $material->title];
 						}
 					echo Html::beginTag('div',$material_opt);
 						

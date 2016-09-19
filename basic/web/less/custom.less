@@ -51,6 +51,21 @@
 	}
 }
 
+@-webkit-keyframes zoom-mobile {
+	from {
+		-webkit-transform: scale(1,1);
+		-ms-transform: scale(1,1);
+		transform: scale(1,1);
+		
+	}
+	to {
+		-webkit-transform: scale(1.1,1.1);
+		-ms-transform: scale(1.1,1.1);
+		transform: scale(1.1,1.1);
+		
+	}
+}
+
 @-webkit-keyframes zoom-tl {
 	from {
 		-webkit-transform: scale(1,1);
@@ -65,6 +80,8 @@
 		
 	}
 }
+
+
 
 @-webkit-keyframes trans {
 	from {
@@ -657,8 +674,8 @@ section{
 								animation: zoom-tl  0.3s ease-out;
 								z-index: 3000;
 								-webkit-transform: scale(1.5,1.5) translate(-10%);;
-		-ms-transform: scale(1.5,1.5) translate(-10%);
-		transform: scale(1.5,1.5) translate(-10%);
+								-ms-transform: scale(1.5,1.5) translate(-10%);
+								transform: scale(1.5,1.5) translate(-10%);
 							}
 	
 						}
@@ -735,12 +752,21 @@ section{
 								div.animation-right{
 									&:hover{
 										-webkit-animation: zoom-t 0.3s ease-out;
-											animation: zoom-t  0.3s ease-out;
+										animation: zoom-t  0.3s ease-out;
+
+										z-index: 3000;
+										-webkit-transform: scale(1.5,1.5) translate(10%);
+										-ms-transform: scale(1.5,1.5) translate(10%);
+										transform: scale(1.5,1.5) translate(10%);
+										@media (max-width: 767px){
+											-webkit-animation: zoom-mobile 0.3s ease-out;
+											animation: zoom-mobile  0.3s ease-out;
 
 											z-index: 3000;
-											-webkit-transform: scale(1.5,1.5) translate(10%);
-											-ms-transform: scale(1.5,1.5) translate(10%);
-											transform: scale(1.5,1.5) translate(10%);
+											-webkit-transform: scale(1.1,1.1);
+											-ms-transform: scale(1.1,1.1);
+											transform: scale(1.1,1.1);
+										}
 									}
 								}
 								div.animation-left{
@@ -752,6 +778,15 @@ section{
 										-webkit-transform: scale(1.5,1.5) translate(-10%);
 										-ms-transform: scale(1.5,1.5) translate(-10%);
 										transform: scale(1.5,1.5) translate(-10%);
+										@media (max-width: 767px){
+											-webkit-animation: zoom-mobile 0.3s ease-out;
+											animation: zoom-mobile  0.3s ease-out;
+
+											z-index: 3000;
+											-webkit-transform: scale(1.1,1.1);
+											-ms-transform: scale(1.1,1.1);
+											transform: scale(1.1,1.1);
+										}
 									}
 								}
 								div.material{

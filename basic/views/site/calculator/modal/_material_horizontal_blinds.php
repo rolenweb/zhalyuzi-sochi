@@ -10,7 +10,7 @@ if ($groups != NULL) {
 			echo Html::beginTag('div',['class' => 'row top-10 text-left']);
 			if ($group->materials != NULL) {
 				foreach ($group->materials as $material) {
-					echo Html::beginTag('div',['class' => 'col-xs-3 material', 'name' => $material->title]);
+					echo Html::beginTag('div',['class' => 'col-xs-6 col-sm-3 material', 'name' => $material->title]);
 						echo Html::beginTag('div',['class' => 'single-material']);
 
 							echo Html::beginTag('div');

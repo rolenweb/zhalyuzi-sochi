@@ -22,6 +22,18 @@
     transform: scale(1.5, 1.5) translate(10%);
   }
 }
+@-webkit-keyframes zoom-mobile {
+  from {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  to {
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
+}
 @-webkit-keyframes zoom-tl {
   from {
     -webkit-transform: scale(1, 1);
@@ -753,6 +765,16 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
   -ms-transform: scale(1.5, 1.5) translate(10%);
   transform: scale(1.5, 1.5) translate(10%);
 }
+@media (max-width: 767px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.animation-right:hover {
+    -webkit-animation: zoom-mobile 0.3s ease-out;
+    animation: zoom-mobile 0.3s ease-out;
+    z-index: 3000;
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
+}
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.animation-left:hover {
   -webkit-animation: zoom-tl 0.3s ease-out;
   animation: zoom-tl 0.3s ease-out;
@@ -760,6 +782,16 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
   -webkit-transform: scale(1.5, 1.5) translate(-10%);
   -ms-transform: scale(1.5, 1.5) translate(-10%);
   transform: scale(1.5, 1.5) translate(-10%);
+}
+@media (max-width: 767px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.animation-left:hover {
+    -webkit-animation: zoom-mobile 0.3s ease-out;
+    animation: zoom-mobile 0.3s ease-out;
+    z-index: 3000;
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material {
   padding: 5px;
