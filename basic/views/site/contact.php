@@ -6,6 +6,9 @@
 
 use yii\helpers\Html;
 
+$this->registerJsFile('@web/js/jquery.fancybox.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
+$this->registerCssFile('@web/css/jquery.fancybox.css', ['depends' => [\yii\web\JqueryAsset::className()]]);
+
 $this->title = 'Жалюзи, Москитные сетки, Окна в Сочи" (zhalyuzi-sochi.ru)';
 
 echo Html::beginTag('section');
@@ -71,22 +74,22 @@ echo Html::beginTag('section');
                 echo Html::beginTag('div',['class' => 'pic']);
                     echo Html::beginTag('div',['class' => 'row']);
                         echo Html::beginTag('div',['class' => 'col-xs-4']);
-                            echo Html::img('@web/images/contact/1.png',['class' => 'img-thumbnail']);
+                            echo Html::a(Html::img('@web/images/contact/1.png',['class' => 'img-thumbnail']),'@web/images/contact/1b.png',['class' => 'fancybox', 'rel' => 'group']);
                         echo Html::endTag('div');    
                         echo Html::beginTag('div',['class' => 'col-xs-4']);
-                            echo Html::img('@web/images/contact/2.png',['class' => 'img-thumbnail']);
+                            echo Html::a(Html::img('@web/images/contact/2.png',['class' => 'img-thumbnail']),'@web/images/contact/2b.png',['class' => 'fancybox', 'rel' => 'group']);
                         echo Html::endTag('div');    
                         echo Html::beginTag('div',['class' => 'col-xs-4']);
-                            echo Html::img('@web/images/contact/3.png',['class' => 'img-thumbnail']);
+                            echo Html::a(Html::img('@web/images/contact/3.png',['class' => 'img-thumbnail']),'@web/images/contact/3b.png',['class' => 'fancybox', 'rel' => 'group']);
                         echo Html::endTag('div');    
                         echo Html::beginTag('div',['class' => 'col-xs-4']);
-                            echo Html::img('@web/images/contact/4.png',['class' => 'img-thumbnail']);
+                            echo Html::a(Html::img('@web/images/contact/4.png',['class' => 'img-thumbnail']),'@web/images/contact/4b.png',['class' => 'fancybox', 'rel' => 'group']);
                         echo Html::endTag('div');    
                         echo Html::beginTag('div',['class' => 'col-xs-4']);
-                            echo Html::img('@web/images/contact/5.png',['class' => 'img-thumbnail']);
+                            echo Html::a(Html::img('@web/images/contact/5.png',['class' => 'img-thumbnail']),'@web/images/contact/5b.png',['class' => 'fancybox', 'rel' => 'group']);
                         echo Html::endTag('div');    
                         echo Html::beginTag('div',['class' => 'col-xs-4']);
-                            echo Html::img('@web/images/contact/6.png',['class' => 'img-thumbnail']);
+                            echo Html::a(Html::img('@web/images/contact/6.png',['class' => 'img-thumbnail']),'@web/images/contact/6b.png',['class' => 'fancybox', 'rel' => 'group']);
                         echo Html::endTag('div');    
                     echo Html::endTag('div');
                 echo Html::endTag('div');
