@@ -118,7 +118,7 @@ $(function() {
 		change: function(event, ui) {
 			calculatorRulon();
 		}
-	});
+	}).draggable();
 
 	$('#slider-height').slider({
 		min: 30,
@@ -135,7 +135,7 @@ $(function() {
 		change: function(event, ui) {
 			calculatorRulon();
 		}
-	});
+	}).draggable();
 
 	calculatorRulon();
 

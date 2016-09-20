@@ -25,6 +25,7 @@ class FrontAsset extends AssetBundle
     public $js = [
         'jquery-ui/jquery-ui.js',
         'js/bootstrap.min.js',
+        'js/jquery.ui.touch-punch.min.js',
         'js/custom.js'
     ];
     public $depends = [
