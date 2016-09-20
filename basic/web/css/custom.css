@@ -923,9 +923,9 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material li.description-material {
   width: 100%;
-  margin-top: 10px;
-  font-size: 14px;
-  height: 30px;
+  margin-top: 5px;
+  font-size: 12px;
+  height: 25px;
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-footer {
   border-top: 0px solid #555;
