@@ -94,8 +94,16 @@
 	}
 }
 
-										
-//
+							
+/*div.image-slider:-webkit-full-screen{
+				.img-responsive{
+					@media (min-width: 992px){
+						max-width: 100%;
+						height: auto;
+					}
+	}					
+}*/
+
 
 
 .container{
@@ -349,8 +357,15 @@ section{
 						@media (min-width: 992px){
 						    display: block;
 						}
-					}	
+					}
+					span.full-scree-open{
+						@media (min-width: 992px){
+						    display: block;
+						}	
+					}
+						
 				}
+				
 				div.pult-slider{
 					display: none;
 					cursor: pointer;
@@ -372,6 +387,7 @@ section{
 					@media (max-width: 767px){
 						display: none;
 					}
+					
 
 				}
 				span.left{
@@ -385,8 +401,10 @@ section{
 					}
 				}
 				span.right{
-					left: 430px;
 					top: 120px;
+					right: 40px;
+				/*left: 430px;
+					
 					@media (max-width: 1199px){
 						left: 350px;
 					    top: 110px;
@@ -394,9 +412,78 @@ section{
 					@media (max-width: 991px){
 						left: 350px;
 					    top: 110px;
+					}*/
+				}
+				span.full-scree-open{
+					position: absolute;
+					color: @color-white;
+					cursor: pointer;
+					display: none;
+					top:10px;
+					right: 40px;
+					@media (max-width: 1199px){
+						left: 350px;
 					}
 				}
+				&:-webkit-full-screen {
+					padding-left: 0px;
+					border-right: 0px solid @border-color;
+					max-width: 100%;
+				 	height: auto;
+				   .img-responsive{
+						max-width: 100%;
+						height: auto;
+					}
+					
+					span.right, span.full-scree-open, span.left, div.pult-slider{
+						
+						display: block;
+					}
+					span.right, span.left{
+						top: 400px;
+					}
+					
+				}
+				&:-mox-full-screen {
+					padding-left: 0px;
+					border-right: 0px solid @border-color;
+					max-width: 100%;
+				 	height: auto;
+				   .img-responsive{
+						max-width: 100%;
+						height: auto;
+					}
+					
+					span.right, span.full-scree-open, span.left, div.pult-slider{
+						
+						display: block;
+					}
+					span.right, span.left{
+						top: 400px;
+					}
+				}
+				&:full-screen {
+					padding-left: 0px;
+					border-right: 0px solid @border-color;
+					max-width: 100%;
+				 	height: auto;
+				   .img-responsive{
+						max-width: 100%;
+						height: auto;
+					}
+					
+					span.right, span.full-scree-open, span.left, div.pult-slider{
+						
+						display: block;
+					}
+					span.right, span.left{
+						top: 400px;
+					}
+					
+				}
+				
 			}
+			
 			div.block-total{
 				padding: 5px;
 				font-size: 18px;

@@ -25,6 +25,9 @@ echo Html::beginTag('div',['class' => 'image-slider']);
     echo Html::beginTag('span',['class' => 'right']);
     	echo Html::tag('i','',['class' => 'fa fa-chevron-right fa-2x', 'aria-hidden' => 'true']);
     echo Html::endTag('span');
+    echo Html::beginTag('span',['class' => 'full-scree-open']);
+        echo Html::tag('i','',['class' => 'fa fa-expand fa-2x', 'aria-hidden' => 'true']);
+    echo Html::endTag('span');
 echo Html::endTag('div');
 
 ?>

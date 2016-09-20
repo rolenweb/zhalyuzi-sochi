@@ -54,6 +54,14 @@
     transform: translate3d(10px, 0, 0);
   }
 }
+/*div.image-slider:-webkit-full-screen{
+				.img-responsive{
+					@media (min-width: 992px){
+						max-width: 100%;
+						height: auto;
+					}
+	}					
+}*/
 @media (min-width: 1200px) {
   .container {
     width: 1000px;
@@ -291,6 +299,11 @@ section div.container div.block-slider div.image-slider {
     display: block;
   }
 }
+@media (min-width: 992px) {
+  section div.container div.block-slider div.image-slider:hover span.full-scree-open {
+    display: block;
+  }
+}
 section div.container div.block-slider div.image-slider div.pult-slider {
   display: none;
   cursor: pointer;
@@ -334,20 +347,91 @@ section div.container div.block-slider div.image-slider span.left {
   }
 }
 section div.container div.block-slider div.image-slider span.right {
-  left: 430px;
   top: 120px;
+  right: 40px;
+  /*left: 430px;
+					
+					@media (max-width: 1199px){
+						left: 350px;
+					    top: 110px;
+					}
+					@media (max-width: 991px){
+						left: 350px;
+					    top: 110px;
+					}*/
+}
+section div.container div.block-slider div.image-slider span.full-scree-open {
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  top: 10px;
+  right: 40px;
 }
 @media (max-width: 1199px) {
-  section div.container div.block-slider div.image-slider span.right {
+  section div.container div.block-slider div.image-slider span.full-scree-open {
     left: 350px;
-    top: 110px;
   }
 }
-@media (max-width: 991px) {
-  section div.container div.block-slider div.image-slider span.right {
-    left: 350px;
-    top: 110px;
-  }
+section div.container div.block-slider div.image-slider:-webkit-full-screen {
+  padding-left: 0px;
+  border-right: 0px solid #ccc;
+  max-width: 100%;
+  height: auto;
+}
+section div.container div.block-slider div.image-slider:-webkit-full-screen .img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+section div.container div.block-slider div.image-slider:-webkit-full-screen span.right,
+section div.container div.block-slider div.image-slider:-webkit-full-screen span.full-scree-open,
+section div.container div.block-slider div.image-slider:-webkit-full-screen span.left,
+section div.container div.block-slider div.image-slider:-webkit-full-screen div.pult-slider {
+  display: block;
+}
+section div.container div.block-slider div.image-slider:-webkit-full-screen span.right,
+section div.container div.block-slider div.image-slider:-webkit-full-screen span.left {
+  top: 400px;
+}
+section div.container div.block-slider div.image-slider:-mox-full-screen {
+  padding-left: 0px;
+  border-right: 0px solid #ccc;
+  max-width: 100%;
+  height: auto;
+}
+section div.container div.block-slider div.image-slider:-mox-full-screen .img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+section div.container div.block-slider div.image-slider:-mox-full-screen span.right,
+section div.container div.block-slider div.image-slider:-mox-full-screen span.full-scree-open,
+section div.container div.block-slider div.image-slider:-mox-full-screen span.left,
+section div.container div.block-slider div.image-slider:-mox-full-screen div.pult-slider {
+  display: block;
+}
+section div.container div.block-slider div.image-slider:-mox-full-screen span.right,
+section div.container div.block-slider div.image-slider:-mox-full-screen span.left {
+  top: 400px;
+}
+section div.container div.block-slider div.image-slider:full-screen {
+  padding-left: 0px;
+  border-right: 0px solid #ccc;
+  max-width: 100%;
+  height: auto;
+}
+section div.container div.block-slider div.image-slider:full-screen .img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+section div.container div.block-slider div.image-slider:full-screen span.right,
+section div.container div.block-slider div.image-slider:full-screen span.full-scree-open,
+section div.container div.block-slider div.image-slider:full-screen span.left,
+section div.container div.block-slider div.image-slider:full-screen div.pult-slider {
+  display: block;
+}
+section div.container div.block-slider div.image-slider:full-screen span.right,
+section div.container div.block-slider div.image-slider:full-screen span.left {
+  top: 400px;
 }
 section div.container div.block-slider div.block-total {
   padding: 5px;
