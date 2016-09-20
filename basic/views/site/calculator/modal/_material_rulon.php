@@ -50,7 +50,7 @@ if ($groups != NULL) {
 					echo Html::endTag('ul');
 				echo Html::endTag('div');
 			echo Html::endTag('div');
-			echo Html::beginTag('div',['class' => 'row top-10 text-left']);
+			echo Html::beginTag('div',['class' => 'row text-left']);
 			if ($group->materials != NULL) {
 				foreach ($group->materials as $key => $material) {
 					if ($key == 5 || $key == 11 || $key == 17 || $key == 23 || $key == 29) {
