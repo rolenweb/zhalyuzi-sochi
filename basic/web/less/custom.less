@@ -10,6 +10,8 @@
 @color-black2: #000;
 @button-order-color: #27ca8b;
 @button-order-color-hover: #3c763d;
+@spiner-hover-color: #ccd232;
+@spiner-focus-color: #db4865;
 @proz: rgba(0,0,0,0.0);
 
 @border-radius: 5px;
@@ -603,6 +605,20 @@ section{
 						span{
 							background-color: @color-blue;
 							border-color: @color-blue;
+							&:hover{
+								background-color: @spiner-hover-color;
+								border: 1px solid #93c3cd;
+
+							}
+							&:focus{
+									background-color: @spiner-hover-color;	
+									border: 1px solid #93c3cd;							
+							}
+							&:active{
+								background-color: @spiner-focus-color;
+								border: 1px solid #ff6b7f;									
+							}
+							
 							@media (max-width: 991px){
 							    width: 2em;
 							    height: 2em;

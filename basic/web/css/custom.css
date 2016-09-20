@@ -583,6 +583,27 @@ section div.container div.block-calculator ul.block-slider-height li div#slider-
   background-color: #51a5d4;
   border-color: #51a5d4;
 }
+section div.container div.block-calculator ul.block-slider-width li div#slider-width span:hover,
+section div.container div.block-calculator ul.block-slider-height li div#slider-width span:hover,
+section div.container div.block-calculator ul.block-slider-width li div#slider-height span:hover,
+section div.container div.block-calculator ul.block-slider-height li div#slider-height span:hover {
+  background-color: #ccd232;
+  border: 1px solid #93c3cd;
+}
+section div.container div.block-calculator ul.block-slider-width li div#slider-width span:focus,
+section div.container div.block-calculator ul.block-slider-height li div#slider-width span:focus,
+section div.container div.block-calculator ul.block-slider-width li div#slider-height span:focus,
+section div.container div.block-calculator ul.block-slider-height li div#slider-height span:focus {
+  background-color: #ccd232;
+  border: 1px solid #93c3cd;
+}
+section div.container div.block-calculator ul.block-slider-width li div#slider-width span:active,
+section div.container div.block-calculator ul.block-slider-height li div#slider-width span:active,
+section div.container div.block-calculator ul.block-slider-width li div#slider-height span:active,
+section div.container div.block-calculator ul.block-slider-height li div#slider-height span:active {
+  background-color: #db4865;
+  border: 1px solid #ff6b7f;
+}
 @media (max-width: 991px) {
   section div.container div.block-calculator ul.block-slider-width li div#slider-width span,
   section div.container div.block-calculator ul.block-slider-height li div#slider-width span,

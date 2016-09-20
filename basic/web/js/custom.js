@@ -136,6 +136,8 @@ $(function() {
 		}
 	});
 
+	
+
 	//modal
 	modal.on('click', 'div.material',function( event ) {  
 		var page = home.find('div.block-calculator').attr('page-name');
