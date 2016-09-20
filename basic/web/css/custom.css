@@ -694,7 +694,7 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.title-color {
   margin-top: 5px;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 20px;
 }
 @media (max-width: 767px) {
   section div.container div.block-calculator ul.block-choose-color li.choose-color div.title-color {
@@ -702,14 +702,15 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
   }
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.title-material {
-  margin-top: 10px;
+  margin-top: 5px;
+  font-size: 14px;
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.price-color {
   margin-top: 30px;
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.price-color span.number {
   color: #27ca8b;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
 }
 @media (max-width: 991px) {
