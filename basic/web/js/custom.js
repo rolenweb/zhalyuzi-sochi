@@ -2,6 +2,7 @@ $(function() {
 	var home = $('body');
 	var modal = home.find('#choose-color');
 	//backlightMenu();
+	
 
 	home.on('click', 'div.top-header li[name = "show-contact"]',function( event ) {  
 		$(this).find('i').toggleClass('active');
@@ -136,7 +137,7 @@ $(function() {
 		}
 	});
 
-	
+	calculatorRulon();
 
 	//modal
 	modal.on('click', 'div.material',function( event ) {  
