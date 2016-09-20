@@ -720,6 +720,7 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.price-color span.text {
   margin-left: 5px;
+  font-weight: bold;
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.btn-choose-color {
   margin-top: 20px;
