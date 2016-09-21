@@ -627,7 +627,7 @@ section div.container div.block-calculator {
 }
 section div.container div.block-calculator ul.block-slider-width,
 section div.container div.block-calculator ul.block-slider-height {
-  padding: 5px 10px 0px 20px;
+  padding: 1px 10px 0px 20px;
 }
 section div.container div.block-calculator ul.block-slider-width li:last-child,
 section div.container div.block-calculator ul.block-slider-height li:last-child {
@@ -643,8 +643,15 @@ section div.container div.block-calculator ul.block-slider-width li span.input-w
 section div.container div.block-calculator ul.block-slider-height li span.input-width input,
 section div.container div.block-calculator ul.block-slider-width li span.input-height input,
 section div.container div.block-calculator ul.block-slider-height li span.input-height input {
-  width: 20%;
-  padding: 1px 5px;
+  width: 40px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  padding-bottom: 0px;
+  font-weight: bold;
+  color: #f6931f;
+  font-size: 18px;
+  line-height: 1;
 }
 section div.container div.block-calculator ul.block-slider-width li span.unit,
 section div.container div.block-calculator ul.block-slider-height li span.unit {
@@ -787,7 +794,8 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.title-material {
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.price-color {
   margin-top: 18px;
@@ -805,6 +813,7 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.price-color span.text {
   margin-left: 5px;
   font-weight: bold;
+  font-size: 16px;
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.btn-choose-color {
   margin-top: 20px;

@@ -8,6 +8,7 @@
 @color-dark: #ccc;
 @color-black: #333;
 @color-black2: #000;
+@color-yelow: #f6931f;
 @button-order-color: #27ca8b;
 @button-order-color-hover: #3c763d;
 @spiner-hover-color: #ccd232;
@@ -666,7 +667,7 @@ section{
 			background-color: @color-white;
 			padding-top: 5px;
 			ul.block-slider-width, ul.block-slider-height{
-				padding: 5px 10px 0px 20px;
+				padding: 1px 10px 0px 20px;
 				li{
 					span.title{
 
@@ -677,9 +678,15 @@ section{
 					span.input-width, span.input-height{
 						margin-left:20px;
 						input{
-							width: 20%;
-							padding: 1px 5px;
-
+							width: 40px;
+							padding-left: 3px;
+							padding-right: 3px;
+							padding-top: 3px;
+							padding-bottom: 0px;
+							font-weight: bold;
+							color: @color-yelow;
+							font-size: 18px;
+							line-height: 1;
 						}
 					}
 					span.unit{
@@ -764,7 +771,8 @@ section{
 					}
 					div.title-material{
 							margin-top: 5px;
-							font-size: 14px;
+							font-size: 16px;
+							font-weight: bold;
 					}
 					div.price-color{
 							margin-top: 18px;
@@ -779,6 +787,7 @@ section{
 							span.text{
 								margin-left: 5px;
 								font-weight: bold;
+								font-size: 16px;
 							}
 						}
 					div.btn-choose-color{

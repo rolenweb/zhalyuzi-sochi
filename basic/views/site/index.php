@@ -1,6 +1,18 @@
 <?php
 use yii\helpers\Html;
-
+$this->title = 'Жалюзи, Москитные сетки, Окна в Сочи" (zhalyuzi-sochi.ru)';
+$this->registerMetaTag(
+    [
+        'name' => 'description',
+        'content' => 'Жалюзи, Москитные сетки, Окна в Сочи" (zhalyuzi-sochi.ru).',
+    ]
+);
+$this->registerMetaTag(
+    [
+        'name' => 'keywords',
+        'content' => 'Жалюзи, Москитные сетки, Окна в Сочи" (zhalyuzi-sochi.ru)',
+    ]
+);
 echo Html::beginTag('section');
   echo Html::beginTag('div',['class' => 'container']);
     echo $this->render('slider/_block_slider',[

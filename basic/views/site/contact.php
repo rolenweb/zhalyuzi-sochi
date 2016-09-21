@@ -10,6 +10,18 @@ $this->registerJsFile('@web/js/jquery.fancybox.js', ['depends' => [\yii\web\Jque
 $this->registerCssFile('@web/css/jquery.fancybox.css', ['depends' => [\yii\web\JqueryAsset::className()]]);
 
 $this->title = 'Жалюзи, Москитные сетки, Окна в Сочи" (zhalyuzi-sochi.ru)';
+$this->registerMetaTag(
+    [
+        'name' => 'description',
+        'content' => 'Жалюзи, Москитные сетки, Окна в Сочи" (zhalyuzi-sochi.ru).',
+    ]
+);
+$this->registerMetaTag(
+    [
+        'name' => 'keywords',
+        'content' => 'Жалюзи, Москитные сетки, Окна в Сочи" (zhalyuzi-sochi.ru)',
+    ]
+);
 
 echo Html::beginTag('section');
   echo Html::beginTag('div',['class' => 'container']);

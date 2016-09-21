@@ -119,6 +119,15 @@ class SiteController extends Controller
                     ]
             ]
         )->limit(1)->one();
+
+        Yii::$app->view->registerMetaTag(
+                    [
+                        'name' => 'generator',
+                        'content' => 'RolenWeb(http://rolenweb.ru)',
+
+                    ]
+                );
+
         return $this->render('index',[
                 'group1' => $group1,
                 'group2' => $group2,
@@ -180,6 +189,15 @@ class SiteController extends Controller
                     ]
             ]
         )->limit(1)->one();
+
+        Yii::$app->view->registerMetaTag(
+                    [
+                        'name' => 'generator',
+                        'content' => 'RolenWeb(http://rolenweb.ru)',
+
+                    ]
+                );
+
         return $this->render('vertical_blinds',[
                 'group1' => $group1,
                 'group2' => $group2,
@@ -242,6 +260,15 @@ class SiteController extends Controller
                     ]
             ]
         )->limit(1)->one();
+
+        Yii::$app->view->registerMetaTag(
+                    [
+                        'name' => 'generator',
+                        'content' => 'RolenWeb(http://rolenweb.ru)',
+
+                    ]
+                );
+
         return $this->render('horizontal_blinds',[
                 'group1' => $group1,
                 'group2' => $group2,
@@ -283,6 +310,14 @@ class SiteController extends Controller
                     ]
             ]
         )->limit(1)->one();
+
+        Yii::$app->view->registerMetaTag(
+                    [
+                        'name' => 'generator',
+                        'content' => 'RolenWeb(http://rolenweb.ru)',
+
+                    ]
+                );
 
         return $this->render('plisse',[
                 'group1' => $group1,
@@ -338,6 +373,14 @@ class SiteController extends Controller
                     ]
             ]
         )->limit(1)->one();
+
+        Yii::$app->view->registerMetaTag(
+                    [
+                        'name' => 'generator',
+                        'content' => 'RolenWeb(http://rolenweb.ru)',
+
+                    ]
+                );
         
         return $this->render('cornice',[
                 'group1' => $group1,
@@ -405,6 +448,14 @@ class SiteController extends Controller
                     ]
             ]
         )->limit(1)->one();
+
+        Yii::$app->view->registerMetaTag(
+                    [
+                        'name' => 'generator',
+                        'content' => 'RolenWeb(http://rolenweb.ru)',
+
+                    ]
+                );
         
         return $this->render('mosquito-nets',[
                 'group1' => $group1,
@@ -430,6 +481,13 @@ class SiteController extends Controller
             ]
         )->limit(1)->one();
         
+        Yii::$app->view->registerMetaTag(
+                    [
+                        'name' => 'generator',
+                        'content' => 'RolenWeb(http://rolenweb.ru)',
+
+                    ]
+                );
         
         return $this->render('electro-blinds',[
                 'group1' => $group1,
