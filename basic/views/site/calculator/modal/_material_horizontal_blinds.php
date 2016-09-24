@@ -9,8 +9,13 @@ if ($groups != NULL) {
 			
 			echo Html::beginTag('div',['class' => 'row top-10 text-left']);
 			if ($group->materials != NULL) {
-				foreach ($group->materials as $material) {
-					echo Html::beginTag('div',['class' => 'col-xs-6 col-sm-3 material animation-right', 'name' => $material->title]);
+				foreach ($group->materials as $key => $material) {
+					if ( is_int(($key+1)/4)) {
+							$material_opt = ['class' => 'col-xs-6 col-sm-3 material animation-left', 'name' => $material->title];
+						}else{
+							$material_opt = ['class' => 'col-xs-6 col-sm-3 material animation-right', 'name' => $material->title];
+					}
+					echo Html::beginTag('div',$material_opt);
 						echo Html::beginTag('div',['class' => 'single-material']);
 
 							echo Html::beginTag('div');
