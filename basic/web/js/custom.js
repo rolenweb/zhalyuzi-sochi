@@ -176,7 +176,7 @@ $(function() {
 		sliderImg('yes','right',3000);
 		defaultCalculator();
 		var pr_li = $(this).parents('li[name = "category-slider"]');
-		updateTotal(pr_li.attr('price'));
+		//updateTotal(pr_li.attr('price'));
 		updateColor(pr_li.attr('file'),pr_li.attr('price'),pr_li.attr('name-group'),pr_li.attr('material-title'), pr_li.attr('slider'))
     });
 	//select category
@@ -415,11 +415,12 @@ $(function() {
 	function defaultCalculator() {
 		var page = home.find('div.block-calculator').attr('page-name');
 		if (page === 'index' || page === 'vertical-blinds' || page === 'horizontal-blinds' || page === 'plisse' || page === 'cornice' || page == 'mosquito-nets') {
-			$('#slider-width').slider( "option", "value", 100);
+			$('#slider-width').slider( "option", "value", 50);
 			$('#slider-height').slider( "option", "value", 100);
-			$('div.block-calculator ul.block-slider-width input[name = "width"]').val(100);
+			$('div.block-calculator ul.block-slider-width input[name = "width"]').val(50);
 			$('div.block-calculator ul.block-slider-height input[name = "height"]').val(100);
 		}
+		calculatorRulon();
 	}
 
 	function updateTotal(total) {
