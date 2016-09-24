@@ -174,10 +174,11 @@ $(function() {
 		home.find('div.block-slider div.title-slider').text($(this).find('span.title').text());
 		var slider = home.find('.image-slider').find('img[status = "active"]').stop();	
 		sliderImg('yes','right',3000);
-		defaultCalculator();
+		
 		var pr_li = $(this).parents('li[name = "category-slider"]');
 		//updateTotal(pr_li.attr('price'));
 		updateColor(pr_li.attr('file'),pr_li.attr('price'),pr_li.attr('name-group'),pr_li.attr('material-title'), pr_li.attr('slider'))
+		defaultCalculator();
     });
 	//select category
 	//
