@@ -615,12 +615,12 @@ $(function() {
 	home.on('click', 'div.image-slider span.full-scree-open',function( event ) { 
 		var slider = $(this).parents('div.image-slider');
 		if ($(this).find('i.fa-expand').length === 1) {
-			
+			slider.find('.img-responsive').css({'width':'100%'});
 			$(this).find('i.fa-expand').removeClass('fa-expand').addClass('fa-compress');
 			fullScreen(slider[0]);
 		}else{
 			if ($(this).find('i.fa-compress').length === 1) {
-				
+				slider.find('.img-responsive').css({'width':'450px'});
 				$(this).find('i.fa-compress').removeClass('fa-compress').addClass('fa-expand');
 				cancelFullscreen();
 			} 	
