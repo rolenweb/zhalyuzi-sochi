@@ -4,7 +4,7 @@ echo Html::beginTag('div',['class' => 'image-slider']);
 	echo Html::img('@web/images/slider/roll/1/1.gif',['class' => 'img-responsive', 'status' => 'active', 'slider' => '1']);
     echo Html::img('@web/images/slider/roll/1/2.gif',['class' => 'img-responsive visible', 'status' => 'pending', 'slider' => '1']);
     
-    echo Html::img('@web/images/slider/roll/1/3.gif',['class' => 'img-responsive visible', 'status' => 'active', 'slider' => '1']);  
+    echo Html::img('@web/images/slider/roll/1/3.gif',['class' => 'img-responsive visible', 'status' => 'pending', 'slider' => '1']);  
     echo Html::img('@web/images/slider/roll/1/4.gif',['class' => 'img-responsive visible', 'status' => 'pending', 'slider' => '1']);  
     echo Html::img('@web/images/slider/roll/2/1.jpg',['class' => 'img-responsive visible', 'status' => 'active', 'slider' => '2']);  
     echo Html::img('@web/images/slider/roll/2/2.jpg',['class' => 'img-responsive visible', 'status' => 'pending', 'slider' => '2']);  
