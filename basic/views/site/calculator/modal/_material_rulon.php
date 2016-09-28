@@ -63,7 +63,7 @@ if ($groups != NULL) {
 						echo Html::beginTag('div',['class' => 'material-container']);
 							echo Html::beginTag('ul',['class' => 'list-unstyled']);
 								echo Html::beginTag('li',['class' => 'image-material']);
-									echo Html::img('@web/images/material/'.$material->id.'.'.$material->extension,['class' => 'img-responsive']);
+									echo Html::img('@web/images/material/'.$material->id.'.'.$material->extension,['class' => 'img-responsive goriz']);
 								echo Html::endTag('li');
 								echo Html::beginTag('li',['class' => 'description-material text-center']);
 									echo $material->title;

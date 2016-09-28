@@ -1017,7 +1017,7 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
   margin-top: 10px;
 }
 @media (min-width: 768px) {
-  section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material li.image-material img {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material li.image-material img.goriz {
     height: 100px;
     width: 100px;
   }
