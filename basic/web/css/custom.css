@@ -1016,9 +1016,11 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material li.image-material {
   margin-top: 10px;
 }
-section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material li.image-material img {
-  height: 100px;
-  width: 100px;
+@media (min-width: 768px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material li.image-material img {
+    height: 100px;
+    width: 100px;
+  }
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.modal-content div.modal-body div.material li.description-material {
   width: 100%;
