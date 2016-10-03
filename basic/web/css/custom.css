@@ -766,10 +766,22 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
   height: 100px;
   background-color: #555;
 }
+@media (max-width: 420px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color div.preview-color {
+    width: 50px;
+    height: 50px;
+  }
+}
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.preview-color img {
   width: 100px;
   height: 100px;
   vertical-align: -1px;
+}
+@media (max-width: 420px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color div.preview-color img {
+    width: 50px;
+    height: 50px;
+  }
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.preview-color img:hover {
   -webkit-animation: zoom_not_t 0.3s ease-out;
@@ -787,6 +799,11 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
   text-transform: uppercase;
   font-size: 20px;
 }
+@media (max-width: 420px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color div.title-color {
+    font-size: 12px;
+  }
+}
 @media (max-width: 767px) {
   section div.container div.block-calculator ul.block-choose-color li.choose-color div.title-color {
     font-size: 14px;
@@ -797,8 +814,18 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
   font-size: 16px;
   font-weight: bold;
 }
+@media (max-width: 420px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color div.title-material {
+    font-size: 10px;
+  }
+}
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.price-color {
   margin-top: 18px;
+}
+@media (max-width: 420px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color div.price-color {
+    margin-top: 5px;
+  }
 }
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.price-color span.number {
   color: #27ca8b;
@@ -815,8 +842,23 @@ section div.container div.block-calculator ul.block-choose-color li.choose-color
   font-weight: bold;
   font-size: 16px;
 }
+@media (max-width: 420px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color div.price-color span.text {
+    font-size: 12px;
+  }
+}
 section div.container div.block-calculator ul.block-choose-color li.choose-color div.btn-choose-color {
   margin-top: 20px;
+}
+@media (max-width: 420px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color div.btn-choose-color {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 420px) {
+  section div.container div.block-calculator ul.block-choose-color li.choose-color div.btn-choose-color button {
+    padding: 6px 7px;
+  }
 }
 @media (max-width: 991px) {
   section div.container div.block-calculator ul.block-choose-color li.choose-color div.btn-choose-color button {
